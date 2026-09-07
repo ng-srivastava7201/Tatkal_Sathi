@@ -1,0 +1,1001 @@
+train_id,route,source,destination,distance_km,class,quota,date,day_of_week,is_holiday_or_festival,total_seats,seats_requested,seats_available_at_booking_time,booking_outcome,booking_attempt_timestamp
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,Tatkal,11-07-2027,Sunday,1,72,1,14,success,01-07-2027 04:23
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,1A,Tatkal,07-01-2027,Thursday,0,24,2,11,success,09-12-2026 01:41
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,General,21-03-2027,Sunday,1,72,1,41,success,12-03-2027 10:04
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,General,13-07-2027,Tuesday,0,72,6,39,success,09-07-2027 08:44
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,17-11-2027,Wednesday,0,72,2,28,success,08-11-2027 18:16
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,1A,Tatkal,12-10-2027,Tuesday,0,24,6,19,success,23-09-2027 06:07
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,General,15-07-2027,Thursday,0,64,4,35,success,04-07-2027 18:48
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,General,30-01-2027,Saturday,1,72,7,32,success,31-12-2026 03:24
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,Tatkal,31-05-2027,Monday,0,64,2,33,success,08-05-2027 20:16
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,Tatkal,20-03-2027,Saturday,1,64,6,12,success,02-03-2027 15:53
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,Tatkal,09-04-2027,Friday,0,72,1,25,success,31-03-2027 11:38
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,2A,General,20-12-2027,Monday,0,46,2,24,success,23-11-2027 00:21
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,Tatkal,27-08-2027,Friday,0,72,1,38,success,29-07-2027 09:00
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,18-11-2027,Thursday,0,72,2,24,success,05-11-2027 08:02
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,10-09-2027,Friday,0,72,1,25,success,10-08-2027 21:31
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,General,27-04-2027,Tuesday,0,72,6,48,success,24-04-2027 22:02
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,1A,Tatkal,07-10-2027,Thursday,0,24,5,6,success,20-09-2027 22:00
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,Tatkal,25-02-2027,Thursday,0,72,5,28,success,28-01-2027 00:27
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,Tatkal,09-05-2027,Sunday,1,72,2,21,success,11-04-2027 22:50
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,20-03-2027,Saturday,1,72,3,17,success,06-03-2027 15:10
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,2A,General,28-11-2027,Sunday,1,46,1,33,success,08-11-2027 06:01
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,General,20-06-2027,Sunday,1,72,5,34,success,23-05-2027 13:10
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,Tatkal,06-07-2027,Tuesday,0,72,7,23,success,09-06-2027 13:23
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,3A,General,21-10-2027,Thursday,0,64,7,33,success,20-09-2027 19:15
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,Tatkal,14-04-2027,Wednesday,0,64,4,30,success,29-03-2027 19:11
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,2A,General,26-06-2027,Saturday,1,46,7,29,success,10-06-2027 22:23
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,Tatkal,02-09-2027,Thursday,0,72,4,31,success,23-08-2027 01:50
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,Tatkal,11-02-2027,Thursday,0,72,5,27,success,14-01-2027 19:35
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,Tatkal,29-06-2027,Tuesday,0,72,6,25,success,26-06-2027 01:28
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,General,21-08-2027,Saturday,1,64,2,30,success,24-07-2027 04:10
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,Tatkal,12-10-2027,Tuesday,0,64,1,24,success,01-10-2027 02:45
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,Tatkal,09-02-2027,Tuesday,0,72,3,33,success,15-01-2027 22:57
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,2A,Tatkal,18-07-2027,Sunday,1,46,4,13,success,21-06-2027 08:48
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,06-09-2027,Monday,0,72,2,24,success,17-08-2027 21:47
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,2A,Tatkal,26-09-2027,Sunday,1,46,6,18,success,28-08-2027 02:58
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,1A,Tatkal,07-07-2027,Wednesday,0,24,3,4,success,08-06-2027 17:09
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,General,04-03-2027,Thursday,0,72,5,39,success,15-02-2027 17:16
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,Tatkal,06-05-2027,Thursday,0,64,7,25,success,15-04-2027 05:45
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,Tatkal,24-02-2027,Wednesday,0,72,2,27,success,13-02-2027 05:14
+T010,Delhi-Pune,New Delhi,Pune,1450,1A,Tatkal,09-12-2027,Thursday,0,24,4,9,success,05-12-2027 15:45
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,Tatkal,01-05-2027,Saturday,1,64,4,27,success,16-04-2027 06:14
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,1A,General,30-06-2027,Wednesday,0,24,6,13,success,27-06-2027 16:11
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,2A,General,29-07-2027,Thursday,0,46,2,22,success,19-07-2027 08:03
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,2A,Tatkal,07-10-2027,Thursday,0,46,4,27,success,25-09-2027 10:30
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,26-08-2027,Thursday,0,72,2,37,success,06-08-2027 23:02
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,Tatkal,20-09-2027,Monday,0,72,6,39,success,03-09-2027 19:48
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,General,13-02-2027,Saturday,1,64,2,31,success,08-02-2027 05:41
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,2A,General,10-07-2027,Saturday,1,46,2,20,success,30-06-2027 10:36
+T009,Pune-Delhi,Pune,New Delhi,1450,1A,Tatkal,12-01-2027,Tuesday,0,24,4,3,fail,21-12-2026 19:25
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,11-02-2027,Thursday,0,72,5,35,success,30-01-2027 10:29
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,2A,Tatkal,15-06-2027,Tuesday,0,46,6,16,success,15-05-2027 15:08
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,2A,General,09-06-2027,Wednesday,0,46,6,25,success,12-05-2027 04:12
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,Tatkal,28-04-2027,Wednesday,0,72,5,27,success,17-04-2027 14:02
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,3A,Tatkal,19-02-2027,Friday,0,64,6,21,success,02-02-2027 12:33
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,Tatkal,21-03-2027,Sunday,1,64,2,24,success,09-03-2027 18:31
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,2A,Tatkal,09-02-2027,Tuesday,0,46,5,13,success,19-01-2027 20:55
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,Tatkal,31-07-2027,Saturday,1,72,4,26,success,11-07-2027 07:27
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,1A,Tatkal,08-10-2027,Friday,0,24,5,3,fail,02-10-2027 02:35
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,General,25-04-2027,Sunday,1,64,7,37,success,21-04-2027 17:53
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,Tatkal,05-01-2027,Tuesday,0,64,6,23,success,07-12-2026 15:16
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,General,09-10-2027,Saturday,1,64,3,39,success,24-09-2027 00:49
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,2A,Tatkal,14-11-2027,Sunday,1,46,5,8,success,18-10-2027 10:17
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,Tatkal,18-09-2027,Saturday,1,72,1,27,success,14-09-2027 00:28
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,07-03-2027,Sunday,1,72,4,30,success,09-02-2027 23:17
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,05-12-2027,Sunday,1,72,1,24,success,25-11-2027 02:26
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,2A,Tatkal,25-06-2027,Friday,0,46,1,13,success,26-05-2027 06:40
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,Tatkal,21-10-2027,Thursday,0,64,2,27,success,10-10-2027 10:56
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,Tatkal,22-02-2027,Monday,0,72,3,37,success,16-02-2027 06:12
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,Tatkal,01-09-2027,Wednesday,0,64,4,30,success,11-08-2027 22:26
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,General,04-08-2027,Wednesday,0,64,6,33,success,28-07-2027 21:38
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,General,05-09-2027,Sunday,1,64,1,43,success,12-08-2027 03:34
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,Tatkal,30-05-2027,Sunday,1,72,5,17,success,15-05-2027 10:15
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,Tatkal,17-01-2027,Sunday,1,64,1,24,success,27-12-2026 19:38
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,03-07-2027,Saturday,1,72,1,18,success,17-06-2027 13:23
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,General,02-06-2027,Wednesday,0,72,2,39,success,30-05-2027 21:59
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,Tatkal,07-12-2027,Tuesday,0,64,3,30,success,25-11-2027 14:44
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,General,23-09-2027,Thursday,0,64,1,40,success,26-08-2027 01:05
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,Tatkal,21-10-2027,Thursday,0,72,3,25,success,13-10-2027 14:15
+T009,Pune-Delhi,Pune,New Delhi,1450,1A,Tatkal,27-09-2027,Monday,0,24,6,17,success,28-08-2027 11:15
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,General,15-08-2027,Sunday,1,72,3,42,success,06-08-2027 18:29
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,Tatkal,25-09-2027,Saturday,1,64,1,26,success,19-09-2027 00:39
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,Tatkal,09-07-2027,Friday,0,72,5,37,success,01-07-2027 03:27
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,Tatkal,16-04-2027,Friday,0,72,7,30,success,29-03-2027 13:10
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,3A,General,23-11-2027,Tuesday,0,64,6,47,success,06-11-2027 19:23
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,11-02-2027,Thursday,0,72,1,29,success,26-01-2027 05:48
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,Tatkal,25-05-2027,Tuesday,0,72,4,35,success,26-04-2027 13:15
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,Tatkal,17-12-2027,Friday,0,64,5,31,success,01-12-2027 18:31
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,Tatkal,26-12-2027,Sunday,1,72,6,21,success,08-12-2027 19:03
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,Tatkal,04-09-2027,Saturday,1,72,3,16,success,18-08-2027 20:03
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,General,06-05-2027,Thursday,0,64,4,38,success,22-04-2027 07:06
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,2A,General,31-07-2027,Saturday,1,46,6,22,success,24-07-2027 13:00
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,2A,Tatkal,25-08-2027,Wednesday,0,46,2,19,success,30-07-2027 11:23
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,General,02-02-2027,Tuesday,0,64,2,41,success,22-01-2027 22:23
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,10-05-2027,Monday,0,72,4,28,success,28-04-2027 19:55
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,General,24-06-2027,Thursday,0,72,4,47,success,20-06-2027 14:58
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,General,28-10-2027,Thursday,0,72,7,49,success,12-10-2027 05:28
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,General,01-03-2027,Monday,0,64,2,37,success,05-02-2027 00:04
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,Tatkal,21-12-2027,Tuesday,0,72,7,33,success,21-11-2027 21:36
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,Tatkal,18-05-2027,Tuesday,0,64,5,26,success,02-05-2027 14:44
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,13-10-2027,Wednesday,0,72,4,36,success,05-10-2027 07:14
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,2A,General,29-06-2027,Tuesday,0,46,3,37,success,17-06-2027 19:37
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,1A,Tatkal,02-03-2027,Tuesday,0,24,5,5,success,06-02-2027 10:25
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,General,07-09-2027,Tuesday,0,72,2,50,success,12-08-2027 20:50
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,2A,Tatkal,30-01-2027,Saturday,1,46,3,21,success,16-01-2027 14:30
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,2A,Tatkal,23-06-2027,Wednesday,0,46,7,25,success,06-06-2027 23:12
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,General,16-05-2027,Sunday,1,64,4,42,success,22-04-2027 02:26
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,General,21-12-2027,Tuesday,0,64,6,39,success,27-11-2027 17:52
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,Tatkal,05-12-2027,Sunday,1,72,7,25,success,04-11-2027 08:12
+T009,Pune-Delhi,Pune,New Delhi,1450,2A,Tatkal,20-05-2027,Thursday,0,46,7,22,success,14-05-2027 16:21
+T010,Delhi-Pune,New Delhi,Pune,1450,2A,General,25-08-2027,Wednesday,0,46,3,21,success,03-08-2027 13:09
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,Tatkal,08-12-2027,Wednesday,0,64,4,34,success,04-12-2027 19:40
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,General,11-10-2027,Monday,0,72,1,50,success,17-09-2027 05:28
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,General,13-02-2027,Saturday,1,64,6,30,success,06-02-2027 01:12
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,3A,Tatkal,18-03-2027,Thursday,0,64,6,30,success,26-02-2027 15:09
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,Tatkal,26-10-2027,Tuesday,0,64,5,34,success,18-10-2027 13:13
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,Tatkal,03-11-2027,Wednesday,0,64,5,35,success,17-10-2027 16:08
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,General,12-06-2027,Saturday,1,72,3,47,success,29-05-2027 06:51
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,2A,Tatkal,28-02-2027,Sunday,1,46,4,18,success,04-02-2027 02:11
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,Tatkal,21-04-2027,Wednesday,0,64,6,30,success,12-04-2027 22:51
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,27-11-2027,Saturday,1,72,7,27,success,28-10-2027 19:52
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,General,27-03-2027,Saturday,1,72,1,40,success,16-03-2027 21:22
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,General,16-06-2027,Wednesday,0,64,2,40,success,02-06-2027 20:23
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,Tatkal,12-04-2027,Monday,0,64,5,31,success,04-04-2027 03:38
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,2A,General,01-05-2027,Saturday,1,46,2,25,success,28-04-2027 21:31
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,22-02-2027,Monday,0,72,4,23,success,22-01-2027 15:06
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,General,25-12-2027,Saturday,1,72,5,44,success,25-11-2027 04:55
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,Tatkal,02-10-2027,Saturday,1,72,7,20,success,15-09-2027 10:26
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,Tatkal,14-02-2027,Sunday,1,72,2,30,success,06-02-2027 21:20
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,General,02-12-2027,Thursday,0,64,5,45,success,01-11-2027 08:22
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,Tatkal,28-04-2027,Wednesday,0,64,5,26,success,14-04-2027 18:54
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,Tatkal,15-01-2027,Friday,0,72,6,26,success,12-01-2027 21:43
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,2A,Tatkal,04-07-2027,Sunday,1,46,6,18,success,15-06-2027 08:16
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,2A,Tatkal,10-07-2027,Saturday,1,46,7,21,success,14-06-2027 13:29
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,2A,Tatkal,16-12-2027,Thursday,0,46,5,21,success,12-12-2027 09:49
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,General,12-08-2027,Thursday,0,72,6,37,success,29-07-2027 11:46
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,Tatkal,17-12-2027,Friday,0,72,5,26,success,17-11-2027 00:36
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,Tatkal,19-04-2027,Monday,0,64,4,30,success,09-04-2027 04:42
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,General,23-08-2027,Monday,0,64,4,39,success,16-08-2027 11:39
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,General,09-03-2027,Tuesday,0,64,4,40,success,06-02-2027 03:46
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,25-04-2027,Sunday,1,72,5,22,success,07-04-2027 14:42
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,Tatkal,10-07-2027,Saturday,1,72,6,24,success,04-07-2027 20:23
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,2A,Tatkal,29-01-2027,Friday,0,46,3,25,success,05-01-2027 21:17
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,General,01-11-2027,Monday,0,64,2,38,success,26-10-2027 05:17
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,01-11-2027,Monday,0,72,3,36,success,26-10-2027 18:22
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,2A,General,27-05-2027,Thursday,0,46,1,35,success,17-05-2027 12:03
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,Tatkal,18-02-2027,Thursday,0,64,2,29,success,22-01-2027 23:31
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,General,19-11-2027,Friday,0,72,2,49,success,05-11-2027 12:41
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,Tatkal,06-05-2027,Thursday,0,72,4,31,success,08-04-2027 08:07
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,Tatkal,28-03-2027,Sunday,1,72,4,30,success,25-02-2027 01:29
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,General,17-06-2027,Thursday,0,72,2,50,success,07-06-2027 02:37
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,Tatkal,08-05-2027,Saturday,1,72,1,23,success,14-04-2027 20:12
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,Tatkal,13-12-2027,Monday,0,72,3,28,success,09-12-2027 14:55
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,2A,General,18-06-2027,Friday,0,46,3,28,success,08-06-2027 12:34
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,17-01-2027,Sunday,1,72,1,21,success,08-01-2027 06:20
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,Tatkal,07-03-2027,Sunday,1,64,7,18,success,27-02-2027 14:43
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,Tatkal,11-01-2027,Monday,0,72,1,34,success,09-01-2027 10:57
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,2A,General,04-04-2027,Sunday,1,46,4,31,success,01-04-2027 18:52
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,Tatkal,21-01-2027,Thursday,0,64,2,22,success,11-01-2027 19:53
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,Tatkal,23-05-2027,Sunday,1,64,4,13,success,21-05-2027 16:55
+T010,Delhi-Pune,New Delhi,Pune,1450,2A,General,09-01-2027,Saturday,1,46,7,25,success,03-01-2027 03:50
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,Tatkal,14-09-2027,Tuesday,0,72,1,23,success,12-09-2027 07:47
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,Tatkal,15-01-2027,Friday,0,64,4,26,success,04-01-2027 14:56
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,General,27-07-2027,Tuesday,0,72,1,44,success,02-07-2027 19:25
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,3A,General,30-11-2027,Tuesday,0,64,3,44,success,01-11-2027 08:48
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,14-03-2027,Sunday,1,72,6,14,success,24-02-2027 22:23
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,2A,Tatkal,11-12-2027,Saturday,1,46,7,8,success,23-11-2027 22:54
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,General,14-06-2027,Monday,0,64,7,32,success,14-05-2027 11:16
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,General,22-11-2027,Monday,0,72,3,46,success,01-11-2027 21:12
+T009,Pune-Delhi,Pune,New Delhi,1450,2A,Tatkal,20-04-2027,Tuesday,0,46,3,17,success,18-04-2027 16:33
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,25-07-2027,Sunday,1,72,4,21,success,24-06-2027 08:41
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,Tatkal,08-12-2027,Wednesday,0,72,2,31,success,01-12-2027 10:23
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,Tatkal,25-10-2027,Monday,0,72,5,27,success,08-10-2027 03:08
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,2A,Tatkal,29-11-2027,Monday,0,46,2,12,success,25-11-2027 03:51
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,18-04-2027,Sunday,1,72,5,28,success,12-04-2027 00:15
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,2A,Tatkal,23-11-2027,Tuesday,0,46,6,12,success,27-10-2027 09:09
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,General,03-01-2027,Sunday,1,72,6,48,success,29-12-2026 21:52
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,General,30-12-2027,Thursday,0,64,3,43,success,22-12-2027 10:05
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,Tatkal,05-10-2027,Tuesday,0,64,1,34,success,22-09-2027 23:54
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,Tatkal,07-10-2027,Thursday,0,72,6,26,success,25-09-2027 10:04
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,26-08-2027,Thursday,0,72,5,29,success,09-08-2027 15:06
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,Tatkal,06-06-2027,Sunday,1,64,7,21,success,21-05-2027 20:03
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,Tatkal,18-05-2027,Tuesday,0,64,4,35,success,29-04-2027 08:43
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,Tatkal,23-01-2027,Saturday,1,64,1,18,success,12-01-2027 05:38
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,3A,Tatkal,02-06-2027,Wednesday,0,64,4,23,success,31-05-2027 17:55
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,Tatkal,03-10-2027,Sunday,1,64,6,27,success,18-09-2027 20:50
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,2A,Tatkal,29-01-2027,Friday,0,46,4,15,success,07-01-2027 08:26
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,Tatkal,08-08-2027,Sunday,1,64,1,20,success,03-08-2027 18:58
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,Tatkal,23-08-2027,Monday,0,64,6,24,success,11-08-2027 20:32
+T009,Pune-Delhi,Pune,New Delhi,1450,1A,Tatkal,15-10-2027,Friday,0,24,3,11,success,04-10-2027 20:39
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,02-05-2027,Sunday,1,72,6,30,success,13-04-2027 10:39
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,General,18-11-2027,Thursday,0,72,2,48,success,27-10-2027 19:46
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,General,04-02-2027,Thursday,0,64,7,36,success,15-01-2027 06:12
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,Tatkal,14-08-2027,Saturday,1,72,1,24,success,06-08-2027 17:32
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,3A,Tatkal,04-10-2027,Monday,0,64,4,19,success,16-09-2027 01:06
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,09-07-2027,Friday,0,72,6,39,success,13-06-2027 13:44
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,2A,General,17-02-2027,Wednesday,0,46,7,33,success,08-02-2027 22:31
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,2A,Tatkal,09-10-2027,Saturday,1,46,7,6,fail,03-10-2027 19:39
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,Tatkal,05-08-2027,Thursday,0,72,5,33,success,29-07-2027 19:10
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,Tatkal,08-04-2027,Thursday,0,72,6,38,success,22-03-2027 09:48
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,General,15-08-2027,Sunday,1,72,5,36,success,30-07-2027 18:35
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,Tatkal,10-04-2027,Saturday,1,72,2,20,success,08-04-2027 19:53
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,2A,Tatkal,07-06-2027,Monday,0,46,7,22,success,05-06-2027 01:15
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,Tatkal,30-11-2027,Tuesday,0,72,7,34,success,23-11-2027 23:43
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,3A,Tatkal,17-05-2027,Monday,0,64,7,25,success,06-05-2027 00:12
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,Tatkal,12-04-2027,Monday,0,64,5,23,success,06-04-2027 18:07
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,Tatkal,04-08-2027,Wednesday,0,72,6,25,success,08-07-2027 18:59
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,Tatkal,16-05-2027,Sunday,1,64,6,13,success,12-05-2027 16:26
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,Tatkal,07-02-2027,Sunday,1,72,6,16,success,18-01-2027 17:38
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,General,27-02-2027,Saturday,1,72,5,38,success,10-02-2027 06:49
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,06-05-2027,Thursday,0,72,2,29,success,27-04-2027 11:42
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,2A,General,18-10-2027,Monday,0,46,7,25,success,24-09-2027 11:57
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,General,01-08-2027,Sunday,1,72,4,41,success,17-07-2027 07:12
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,1A,Tatkal,24-06-2027,Thursday,0,24,5,12,success,06-06-2027 10:31
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,3A,General,11-07-2027,Sunday,1,64,4,36,success,30-06-2027 07:19
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,2A,Tatkal,12-12-2027,Sunday,1,46,2,16,success,08-12-2027 21:25
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,General,09-01-2027,Saturday,1,64,5,35,success,28-12-2026 06:05
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,Tatkal,06-05-2027,Thursday,0,64,4,22,success,05-04-2027 17:24
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,2A,General,26-05-2027,Wednesday,0,46,3,28,success,23-05-2027 10:33
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,General,03-03-2027,Wednesday,0,72,5,47,success,04-02-2027 09:55
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,12-04-2027,Monday,0,72,7,30,success,15-03-2027 15:54
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,2A,Tatkal,13-02-2027,Saturday,1,46,6,22,success,13-01-2027 13:36
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,2A,Tatkal,25-03-2027,Thursday,0,46,6,16,success,14-03-2027 20:47
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,General,11-11-2027,Thursday,0,72,3,39,success,31-10-2027 19:19
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,17-12-2027,Friday,0,72,3,37,success,09-12-2027 05:24
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,General,15-03-2027,Monday,0,64,5,38,success,01-03-2027 16:39
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,2A,Tatkal,04-10-2027,Monday,0,46,1,26,success,01-10-2027 23:07
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,Tatkal,22-08-2027,Sunday,1,64,2,13,success,16-08-2027 19:42
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,Tatkal,25-03-2027,Thursday,0,64,1,22,success,26-02-2027 15:19
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,General,15-03-2027,Monday,0,64,1,34,success,01-03-2027 14:32
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,Tatkal,13-10-2027,Wednesday,0,64,1,22,success,23-09-2027 08:24
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,Tatkal,21-04-2027,Wednesday,0,64,5,29,success,14-04-2027 09:43
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,Tatkal,28-09-2027,Tuesday,0,64,3,27,success,28-08-2027 13:44
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,Tatkal,12-01-2027,Tuesday,0,64,6,30,success,04-01-2027 19:30
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,08-04-2027,Thursday,0,72,2,30,success,19-03-2027 13:59
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,10-11-2027,Wednesday,0,72,2,28,success,18-10-2027 14:30
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,General,08-07-2027,Thursday,0,64,4,41,success,05-07-2027 14:05
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,General,28-05-2027,Friday,0,72,6,43,success,14-05-2027 18:29
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,Tatkal,20-01-2027,Wednesday,0,72,1,35,success,18-01-2027 12:27
+T009,Pune-Delhi,Pune,New Delhi,1450,2A,Tatkal,05-12-2027,Sunday,1,46,1,14,success,09-11-2027 06:12
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,Tatkal,04-04-2027,Sunday,1,64,2,18,success,20-03-2027 07:19
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,Tatkal,08-09-2027,Wednesday,0,72,5,37,success,30-08-2027 05:35
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,Tatkal,22-11-2027,Monday,0,64,3,21,success,20-11-2027 10:48
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,Tatkal,08-02-2027,Monday,0,64,6,22,success,26-01-2027 09:08
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,3A,Tatkal,29-06-2027,Tuesday,0,64,1,27,success,29-05-2027 20:44
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,2A,General,29-10-2027,Friday,0,46,7,29,success,25-10-2027 18:37
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,Tatkal,20-09-2027,Monday,0,72,7,33,success,10-09-2027 04:15
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,Tatkal,14-11-2027,Sunday,1,72,5,21,success,06-11-2027 12:41
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,2A,Tatkal,13-10-2027,Wednesday,0,46,5,21,success,07-10-2027 09:58
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,General,14-12-2027,Tuesday,0,64,5,40,success,19-11-2027 23:38
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,09-02-2027,Tuesday,0,72,6,27,success,07-02-2027 14:02
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,2A,Tatkal,08-04-2027,Thursday,0,46,4,19,success,17-03-2027 22:27
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,Tatkal,21-07-2027,Wednesday,0,64,2,34,success,09-07-2027 06:57
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,2A,General,05-03-2027,Friday,0,46,1,33,success,03-03-2027 01:45
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,General,11-05-2027,Tuesday,0,72,5,40,success,01-05-2027 23:41
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,1A,Tatkal,04-12-2027,Saturday,1,24,2,9,success,12-11-2027 11:07
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,1A,Tatkal,09-01-2027,Saturday,1,24,2,15,success,14-12-2026 03:57
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,Tatkal,04-07-2027,Sunday,1,64,3,21,success,25-06-2027 15:32
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,Tatkal,03-09-2027,Friday,0,64,5,26,success,09-08-2027 04:53
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,Tatkal,20-03-2027,Saturday,1,64,5,12,success,09-03-2027 23:51
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,General,31-07-2027,Saturday,1,72,7,34,success,24-07-2027 04:36
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,Tatkal,23-09-2027,Thursday,0,72,6,39,success,23-08-2027 13:27
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,General,19-03-2027,Friday,0,64,3,34,success,25-02-2027 10:40
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,Tatkal,08-12-2027,Wednesday,0,72,5,33,success,29-11-2027 11:23
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,1A,General,22-11-2027,Monday,0,24,6,10,success,04-11-2027 01:01
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,General,17-12-2027,Friday,0,64,3,40,success,08-12-2027 18:49
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,Tatkal,04-11-2027,Thursday,0,64,1,25,success,06-10-2027 07:02
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,Tatkal,21-09-2027,Tuesday,0,72,4,37,success,22-08-2027 00:38
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,General,17-01-2027,Sunday,1,72,1,42,success,18-12-2026 17:12
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,General,12-05-2027,Wednesday,0,64,7,38,success,22-04-2027 14:47
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,Tatkal,31-01-2027,Sunday,1,64,3,23,success,12-01-2027 21:20
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,General,05-11-2027,Friday,0,64,3,45,success,13-10-2027 03:33
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,2A,General,05-10-2027,Tuesday,0,46,2,28,success,24-09-2027 09:27
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,2A,General,04-03-2027,Thursday,0,46,7,34,success,02-02-2027 03:56
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,25-05-2027,Tuesday,0,72,2,38,success,26-04-2027 14:32
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,General,15-06-2027,Tuesday,0,72,4,38,success,15-05-2027 18:32
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,Tatkal,17-11-2027,Wednesday,0,64,6,25,success,31-10-2027 21:52
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,1A,Tatkal,07-10-2027,Thursday,0,24,4,19,success,06-09-2027 22:43
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,Tatkal,16-12-2027,Thursday,0,64,1,21,success,12-12-2027 11:08
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,Tatkal,08-07-2027,Thursday,0,72,7,39,success,13-06-2027 02:28
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,26-11-2027,Friday,0,72,4,24,success,07-11-2027 07:41
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,General,14-12-2027,Tuesday,0,72,1,53,success,04-12-2027 11:50
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,Tatkal,04-06-2027,Friday,0,64,5,23,success,05-05-2027 01:35
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,Tatkal,13-10-2027,Wednesday,0,64,3,34,success,18-09-2027 12:30
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,2A,Tatkal,11-08-2027,Wednesday,0,46,1,12,success,05-08-2027 17:26
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,16-11-2027,Tuesday,0,72,6,29,success,24-10-2027 05:15
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,General,28-11-2027,Sunday,1,64,3,32,success,03-11-2027 13:03
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,Tatkal,19-05-2027,Wednesday,0,64,2,29,success,02-05-2027 21:04
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,Tatkal,30-08-2027,Monday,0,64,2,34,success,21-08-2027 09:19
+T009,Pune-Delhi,Pune,New Delhi,1450,2A,Tatkal,06-10-2027,Wednesday,0,46,6,20,success,29-09-2027 12:57
+T010,Delhi-Pune,New Delhi,Pune,1450,2A,Tatkal,04-02-2027,Thursday,0,46,5,13,success,10-01-2027 15:52
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,Tatkal,21-02-2027,Sunday,1,72,7,24,success,29-01-2027 00:00
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,Tatkal,24-07-2027,Saturday,1,72,1,17,success,12-07-2027 01:58
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,Tatkal,19-08-2027,Thursday,0,64,2,22,success,10-08-2027 01:11
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,07-03-2027,Sunday,1,72,6,22,success,16-02-2027 14:57
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,Tatkal,11-11-2027,Thursday,0,64,2,32,success,06-11-2027 18:53
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,Tatkal,07-09-2027,Tuesday,0,64,1,26,success,13-08-2027 08:58
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,General,24-08-2027,Tuesday,0,72,4,48,success,31-07-2027 02:07
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,General,15-09-2027,Wednesday,0,64,6,48,success,20-08-2027 22:16
+T009,Pune-Delhi,Pune,New Delhi,1450,2A,Tatkal,08-03-2027,Monday,1,46,3,17,success,01-03-2027 13:57
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,20-08-2027,Friday,0,72,7,28,success,06-08-2027 18:43
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,General,07-02-2027,Sunday,1,64,1,35,success,27-01-2027 15:24
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,Tatkal,14-06-2027,Monday,0,64,4,26,success,02-06-2027 15:31
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,Tatkal,02-09-2027,Thursday,0,64,4,32,success,31-08-2027 12:56
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,19-03-2027,Friday,0,72,1,36,success,19-02-2027 16:49
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,Tatkal,18-09-2027,Saturday,1,64,1,19,success,19-08-2027 21:16
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,General,04-12-2027,Saturday,1,64,4,36,success,06-11-2027 14:11
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,Tatkal,22-02-2027,Monday,0,64,3,21,success,27-01-2027 16:48
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,Tatkal,17-01-2027,Sunday,1,72,2,18,success,24-12-2026 18:37
+T009,Pune-Delhi,Pune,New Delhi,1450,1A,General,20-06-2027,Sunday,1,24,5,15,success,10-06-2027 10:22
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,30-07-2027,Friday,0,72,4,39,success,15-07-2027 10:18
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,Tatkal,06-11-2027,Saturday,1,64,5,17,success,07-10-2027 22:04
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,General,22-11-2027,Monday,0,64,7,48,success,14-11-2027 05:46
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,General,04-04-2027,Sunday,1,72,5,41,success,30-03-2027 09:10
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,General,30-11-2027,Tuesday,0,72,2,53,success,11-11-2027 07:46
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,23-12-2027,Thursday,0,72,6,33,success,09-12-2027 00:24
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,1A,General,15-12-2027,Wednesday,0,24,7,17,success,02-12-2027 07:06
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,Tatkal,16-01-2027,Saturday,1,72,6,27,success,27-12-2026 13:23
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,Tatkal,24-05-2027,Monday,0,64,4,20,success,23-04-2027 13:44
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,General,04-08-2027,Wednesday,0,64,3,37,success,27-07-2027 17:56
+T010,Delhi-Pune,New Delhi,Pune,1450,2A,General,25-01-2027,Monday,0,46,1,25,success,13-01-2027 10:13
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,Tatkal,19-08-2027,Thursday,0,64,6,25,success,29-07-2027 20:23
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,General,04-10-2027,Monday,0,72,5,37,success,20-09-2027 22:27
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,General,04-01-2027,Monday,0,72,2,53,success,31-12-2026 23:03
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,General,18-05-2027,Tuesday,0,72,3,49,success,07-05-2027 01:12
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,2A,Tatkal,02-05-2027,Sunday,1,46,3,9,success,10-04-2027 12:44
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,2A,Tatkal,25-06-2027,Friday,0,46,4,13,success,10-06-2027 12:19
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,Tatkal,06-12-2027,Monday,0,64,4,25,success,02-12-2027 03:47
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,Tatkal,03-09-2027,Friday,0,64,2,35,success,12-08-2027 00:06
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,Tatkal,24-10-2027,Sunday,1,64,5,19,success,06-10-2027 03:20
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,Tatkal,12-04-2027,Monday,0,64,7,27,success,18-03-2027 02:52
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,General,06-10-2027,Wednesday,0,72,1,42,success,01-10-2027 17:38
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,General,06-04-2027,Tuesday,0,72,2,41,success,17-03-2027 04:53
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,General,08-05-2027,Saturday,1,72,7,48,success,15-04-2027 11:11
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,2A,General,26-12-2027,Sunday,1,46,5,18,success,21-12-2027 12:34
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,22-07-2027,Thursday,0,72,5,27,success,10-07-2027 18:41
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,General,28-07-2027,Wednesday,0,64,2,44,success,08-07-2027 11:43
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,Tatkal,27-02-2027,Saturday,1,72,4,30,success,07-02-2027 18:48
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,1A,Tatkal,31-01-2027,Sunday,1,24,2,11,success,10-01-2027 00:47
+T009,Pune-Delhi,Pune,New Delhi,1450,1A,General,06-02-2027,Saturday,1,24,4,13,success,01-02-2027 18:31
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,General,31-03-2027,Wednesday,0,72,3,52,success,17-03-2027 00:16
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,General,01-04-2027,Thursday,0,64,4,32,success,22-03-2027 10:47
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,Tatkal,03-10-2027,Sunday,1,72,2,28,success,08-09-2027 17:59
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,General,28-11-2027,Sunday,1,72,1,44,success,28-10-2027 19:50
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,01-05-2027,Saturday,1,72,5,25,success,22-04-2027 08:30
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,08-12-2027,Wednesday,0,72,5,27,success,14-11-2027 01:07
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,2A,General,25-07-2027,Sunday,1,46,5,32,success,06-07-2027 03:20
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,Tatkal,01-06-2027,Tuesday,0,72,3,26,success,10-05-2027 09:54
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,Tatkal,28-07-2027,Wednesday,0,72,1,30,success,07-07-2027 02:26
+T009,Pune-Delhi,Pune,New Delhi,1450,2A,General,08-07-2027,Thursday,0,46,6,28,success,03-07-2027 01:04
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,08-05-2027,Saturday,1,72,3,18,success,26-04-2027 16:25
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,2A,Tatkal,09-07-2027,Friday,0,46,5,13,success,07-07-2027 13:54
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,Tatkal,29-12-2027,Wednesday,0,72,1,33,success,28-11-2027 16:21
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,2A,General,04-12-2027,Saturday,1,46,2,19,success,27-11-2027 09:01
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,2A,General,28-04-2027,Wednesday,0,46,4,33,success,23-04-2027 15:49
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,06-03-2027,Saturday,1,72,4,23,success,04-02-2027 08:18
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,Tatkal,22-05-2027,Saturday,1,64,4,23,success,08-05-2027 08:10
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,Tatkal,02-12-2027,Thursday,0,64,7,19,success,10-11-2027 00:30
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,Tatkal,22-12-2027,Wednesday,0,64,4,30,success,01-12-2027 08:37
+T009,Pune-Delhi,Pune,New Delhi,1450,2A,Tatkal,05-03-2027,Friday,0,46,2,27,success,04-02-2027 03:31
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,17-02-2027,Wednesday,0,72,4,32,success,08-02-2027 21:30
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,2A,General,17-12-2027,Friday,0,46,5,29,success,20-11-2027 05:24
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,2A,Tatkal,13-11-2027,Saturday,1,46,7,16,success,23-10-2027 13:55
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,General,23-05-2027,Sunday,1,72,3,36,success,16-05-2027 01:57
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,General,22-10-2027,Friday,0,72,1,43,success,08-10-2027 03:50
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,1A,Tatkal,22-03-2027,Monday,0,24,6,10,success,20-02-2027 10:27
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,Tatkal,03-09-2027,Friday,0,72,6,28,success,07-08-2027 10:39
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,2A,Tatkal,07-07-2027,Wednesday,0,46,7,15,success,13-06-2027 16:59
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,Tatkal,07-10-2027,Thursday,0,72,7,32,success,06-09-2027 06:35
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,General,04-06-2027,Friday,0,64,4,36,success,13-05-2027 14:55
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,Tatkal,27-07-2027,Tuesday,0,64,4,22,success,11-07-2027 21:30
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,Tatkal,06-04-2027,Tuesday,0,64,1,27,success,26-03-2027 00:42
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,General,16-02-2027,Tuesday,0,64,6,43,success,14-02-2027 08:19
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,Tatkal,19-10-2027,Tuesday,0,72,1,30,success,02-10-2027 02:29
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,2A,Tatkal,12-02-2027,Friday,0,46,2,26,success,13-01-2027 09:11
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,2A,Tatkal,13-11-2027,Saturday,1,46,1,18,success,09-11-2027 09:56
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,1A,General,18-08-2027,Wednesday,0,24,7,9,success,10-08-2027 20:46
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,Tatkal,29-11-2027,Monday,0,72,5,31,success,31-10-2027 18:50
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,2A,Tatkal,07-08-2027,Saturday,1,46,6,11,success,18-07-2027 12:55
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,Tatkal,31-05-2027,Monday,0,72,2,37,success,10-05-2027 11:27
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,11-12-2027,Saturday,1,72,6,15,success,03-12-2027 10:38
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,General,07-06-2027,Monday,0,64,3,44,success,19-05-2027 05:06
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,1A,Tatkal,06-04-2027,Tuesday,0,24,6,16,success,06-03-2027 03:08
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,2A,Tatkal,02-08-2027,Monday,0,46,5,24,success,08-07-2027 18:21
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,3A,General,13-07-2027,Tuesday,0,64,4,40,success,12-06-2027 07:07
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,General,26-01-2027,Tuesday,1,72,4,48,success,03-01-2027 20:37
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,2A,General,08-07-2027,Thursday,0,46,6,21,success,15-06-2027 23:52
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,Tatkal,08-11-2027,Monday,0,64,3,26,success,15-10-2027 10:13
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,General,21-08-2027,Saturday,1,64,6,27,success,27-07-2027 03:32
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,Tatkal,27-06-2027,Sunday,1,64,2,14,success,30-05-2027 06:44
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,20-11-2027,Saturday,1,72,1,21,success,12-11-2027 13:22
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,Tatkal,10-06-2027,Thursday,0,64,3,19,success,04-06-2027 06:58
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,Tatkal,22-07-2027,Thursday,0,72,3,39,success,13-07-2027 19:51
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,Tatkal,28-02-2027,Sunday,1,72,4,26,success,24-02-2027 07:20
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,3A,Tatkal,04-08-2027,Wednesday,0,64,2,19,success,05-07-2027 21:54
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,2A,Tatkal,28-12-2027,Tuesday,0,46,2,20,success,30-11-2027 15:24
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,Tatkal,17-03-2027,Wednesday,0,72,1,27,success,14-02-2027 03:39
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,Tatkal,11-06-2027,Friday,0,72,4,32,success,30-05-2027 12:30
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,Tatkal,22-01-2027,Friday,0,72,5,24,success,20-01-2027 18:00
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,General,06-11-2027,Saturday,1,72,3,33,success,15-10-2027 10:21
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,General,22-03-2027,Monday,0,64,1,34,success,25-02-2027 03:08
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,General,12-01-2027,Tuesday,0,64,2,45,success,30-12-2026 23:30
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,Tatkal,18-06-2027,Friday,0,72,5,24,success,14-06-2027 02:30
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,Tatkal,07-03-2027,Sunday,1,72,7,20,success,11-02-2027 13:27
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,1A,General,05-10-2027,Tuesday,0,24,1,13,success,16-09-2027 02:55
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,18-03-2027,Thursday,0,72,1,30,success,17-02-2027 08:48
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,Tatkal,11-10-2027,Monday,0,72,7,37,success,15-09-2027 09:59
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,Tatkal,07-01-2027,Thursday,0,72,5,35,success,05-01-2027 18:20
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,Tatkal,23-08-2027,Monday,0,72,2,30,success,11-08-2027 20:17
+T009,Pune-Delhi,Pune,New Delhi,1450,2A,Tatkal,24-06-2027,Thursday,0,46,3,12,success,04-06-2027 13:35
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,Tatkal,13-05-2027,Thursday,0,64,2,24,success,14-04-2027 21:13
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,Tatkal,12-04-2027,Monday,0,64,6,21,success,06-04-2027 18:08
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,2A,Tatkal,12-04-2027,Monday,0,46,3,25,success,15-03-2027 04:28
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,Tatkal,27-06-2027,Sunday,1,72,4,16,success,24-06-2027 02:14
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,3A,Tatkal,08-01-2027,Friday,0,64,1,32,success,08-12-2026 23:11
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,1A,Tatkal,23-03-2027,Tuesday,0,24,4,8,success,03-03-2027 18:45
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,General,21-01-2027,Thursday,0,72,7,40,success,17-01-2027 15:26
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,General,13-05-2027,Thursday,0,64,4,38,success,29-04-2027 05:36
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,Tatkal,21-04-2027,Wednesday,0,72,4,32,success,08-04-2027 04:16
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,General,28-07-2027,Wednesday,0,64,5,39,success,23-07-2027 00:53
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,Tatkal,22-08-2027,Sunday,1,64,1,28,success,16-08-2027 22:02
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,Tatkal,27-08-2027,Friday,0,64,1,30,success,01-08-2027 22:58
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,Tatkal,06-03-2027,Saturday,1,72,5,28,success,05-02-2027 15:19
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,2A,General,16-01-2027,Saturday,1,46,7,31,success,02-01-2027 21:32
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,2A,Tatkal,21-02-2027,Sunday,1,46,7,9,success,30-01-2027 08:59
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,General,10-01-2027,Sunday,1,64,5,37,success,21-12-2026 22:26
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,2A,Tatkal,03-07-2027,Saturday,1,46,1,12,success,18-06-2027 00:37
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,Tatkal,27-07-2027,Tuesday,0,72,1,30,success,17-07-2027 06:22
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,General,01-01-2027,Friday,0,64,6,47,success,05-12-2026 13:06
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,Tatkal,12-04-2027,Monday,0,72,3,28,success,27-03-2027 10:10
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,General,25-08-2027,Wednesday,0,72,4,42,success,16-08-2027 08:22
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,General,14-04-2027,Wednesday,0,72,7,51,success,27-03-2027 00:53
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,Tatkal,05-01-2027,Tuesday,0,72,7,29,success,27-12-2026 21:03
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,Tatkal,09-01-2027,Saturday,1,72,7,30,success,23-12-2026 22:26
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,General,29-03-2027,Monday,0,72,6,53,success,25-03-2027 05:37
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,Tatkal,27-07-2027,Tuesday,0,64,3,34,success,12-07-2027 09:19
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,Tatkal,22-06-2027,Tuesday,0,72,4,29,success,30-05-2027 21:02
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,Tatkal,17-11-2027,Wednesday,0,72,4,36,success,22-10-2027 22:49
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,General,23-10-2027,Saturday,1,72,1,33,success,09-10-2027 20:28
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,General,21-04-2027,Wednesday,0,64,6,48,success,22-03-2027 18:25
+T010,Delhi-Pune,New Delhi,Pune,1450,2A,General,05-07-2027,Monday,0,46,7,24,success,28-06-2027 14:12
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,2A,Tatkal,07-10-2027,Thursday,0,46,5,18,success,02-10-2027 17:29
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,Tatkal,20-11-2027,Saturday,1,64,3,15,success,07-11-2027 14:51
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,Tatkal,22-01-2027,Friday,0,72,3,35,success,15-01-2027 21:23
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,13-10-2027,Wednesday,0,72,7,36,success,20-09-2027 14:37
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,02-09-2027,Thursday,0,72,5,35,success,05-08-2027 08:38
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,2A,Tatkal,16-03-2027,Tuesday,0,46,6,27,success,17-02-2027 22:04
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,General,12-09-2027,Sunday,1,72,6,38,success,31-08-2027 06:41
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,2A,Tatkal,31-08-2027,Tuesday,0,46,4,16,success,02-08-2027 09:33
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,Tatkal,18-08-2027,Wednesday,0,64,1,30,success,19-07-2027 07:56
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,Tatkal,13-01-2027,Wednesday,0,64,1,22,success,11-01-2027 21:34
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,General,13-12-2027,Monday,0,72,5,45,success,02-12-2027 19:41
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,Tatkal,19-06-2027,Saturday,1,64,4,28,success,12-06-2027 00:14
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,Tatkal,09-12-2027,Thursday,0,72,2,24,success,06-12-2027 10:46
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,General,07-04-2027,Wednesday,0,72,3,38,success,14-03-2027 22:04
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,Tatkal,05-03-2027,Friday,0,64,5,25,success,07-02-2027 22:42
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,Tatkal,05-05-2027,Wednesday,0,72,4,38,success,19-04-2027 21:36
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,Tatkal,03-02-2027,Wednesday,0,64,4,20,success,29-01-2027 00:48
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,2A,General,16-08-2027,Monday,0,46,4,34,success,02-08-2027 22:01
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,General,10-09-2027,Friday,0,64,2,36,success,22-08-2027 22:55
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,08-07-2027,Thursday,0,72,1,23,success,05-07-2027 12:00
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,General,12-04-2027,Monday,0,72,6,37,success,31-03-2027 16:26
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,2A,Tatkal,02-04-2027,Friday,0,46,6,13,success,03-03-2027 19:57
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,2A,General,13-12-2027,Monday,0,46,5,22,success,14-11-2027 03:49
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,1A,Tatkal,07-07-2027,Wednesday,0,24,4,16,success,20-06-2027 00:09
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,17-08-2027,Tuesday,0,72,4,34,success,30-07-2027 05:51
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,General,03-06-2027,Thursday,0,72,5,48,success,15-05-2027 14:14
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,2A,Tatkal,30-11-2027,Tuesday,0,46,1,23,success,31-10-2027 02:37
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,General,14-11-2027,Sunday,1,64,5,32,success,16-10-2027 07:04
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,General,20-04-2027,Tuesday,0,64,2,37,success,26-03-2027 07:14
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,Tatkal,07-01-2027,Thursday,0,64,2,30,success,03-01-2027 03:16
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,Tatkal,09-04-2027,Friday,0,72,4,26,success,24-03-2027 07:39
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,General,22-05-2027,Saturday,1,64,5,33,success,15-05-2027 08:15
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,Tatkal,26-06-2027,Saturday,1,64,6,27,success,01-06-2027 00:32
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,02-05-2027,Sunday,1,72,7,20,success,28-04-2027 08:55
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,2A,Tatkal,12-09-2027,Sunday,1,46,7,12,success,21-08-2027 13:41
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,General,27-02-2027,Saturday,1,72,2,36,success,11-02-2027 05:26
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,Tatkal,24-01-2027,Sunday,1,72,7,25,success,07-01-2027 14:45
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,1A,General,24-09-2027,Friday,0,24,1,20,success,22-09-2027 05:12
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,General,06-07-2027,Tuesday,0,72,5,46,success,12-06-2027 23:21
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,Tatkal,09-01-2027,Saturday,1,64,2,26,success,24-12-2026 10:11
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,Tatkal,20-10-2027,Wednesday,0,72,4,38,success,26-09-2027 14:57
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,2A,Tatkal,08-11-2027,Monday,0,46,4,14,success,25-10-2027 02:37
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,Tatkal,19-03-2027,Friday,0,64,1,28,success,10-03-2027 08:43
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,1A,Tatkal,10-09-2027,Friday,0,24,6,14,success,12-08-2027 10:19
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,20-12-2027,Monday,0,72,2,30,success,12-12-2027 17:28
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,2A,Tatkal,05-01-2027,Tuesday,0,46,4,16,success,17-12-2026 15:01
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,2A,General,22-08-2027,Sunday,1,46,5,27,success,27-07-2027 04:03
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,Tatkal,03-08-2027,Tuesday,0,72,7,33,success,11-07-2027 12:19
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,General,21-06-2027,Monday,0,72,6,53,success,24-05-2027 05:53
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,General,30-10-2027,Saturday,1,64,2,34,success,23-10-2027 03:08
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,General,01-01-2027,Friday,0,72,5,43,success,18-12-2026 01:01
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,Tatkal,24-02-2027,Wednesday,0,72,7,30,success,29-01-2027 15:34
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,General,17-10-2027,Sunday,1,64,7,33,success,07-10-2027 02:06
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,2A,General,16-08-2027,Monday,0,46,2,21,success,07-08-2027 04:41
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,17-09-2027,Friday,0,72,2,39,success,07-09-2027 15:39
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,2A,Tatkal,21-08-2027,Saturday,1,46,6,10,success,15-08-2027 10:21
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,Tatkal,23-01-2027,Saturday,1,64,4,20,success,25-12-2026 01:37
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,General,06-07-2027,Tuesday,0,64,2,37,success,29-06-2027 10:38
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,Tatkal,25-01-2027,Monday,0,72,4,24,success,06-01-2027 19:50
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,26-07-2027,Monday,0,72,6,26,success,10-07-2027 19:20
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,2A,Tatkal,15-11-2027,Monday,0,46,5,17,success,04-11-2027 01:51
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,Tatkal,25-03-2027,Thursday,0,72,3,39,success,10-03-2027 11:16
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,General,12-10-2027,Tuesday,0,72,7,37,success,17-09-2027 13:10
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,3A,Tatkal,16-01-2027,Saturday,1,64,2,27,success,06-01-2027 17:00
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,2A,General,03-01-2027,Sunday,1,46,1,25,success,17-12-2026 15:42
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,General,17-06-2027,Thursday,0,64,5,40,success,28-05-2027 01:08
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,1A,General,25-03-2027,Thursday,0,24,6,13,success,08-03-2027 06:49
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,2A,Tatkal,04-11-2027,Thursday,0,46,7,28,success,06-10-2027 16:03
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,Tatkal,26-02-2027,Friday,0,72,2,25,success,04-02-2027 23:45
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,Tatkal,30-06-2027,Wednesday,0,64,5,28,success,27-06-2027 23:26
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,2A,Tatkal,10-11-2027,Wednesday,0,46,4,15,success,08-11-2027 02:59
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,General,10-03-2027,Wednesday,0,72,4,46,success,21-02-2027 12:24
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,2A,General,05-03-2027,Friday,0,46,1,28,success,03-02-2027 12:32
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,General,25-12-2027,Saturday,1,72,6,45,success,10-12-2027 00:18
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,2A,General,06-06-2027,Sunday,1,46,7,20,success,11-05-2027 13:33
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,Tatkal,22-12-2027,Wednesday,0,72,5,38,success,10-12-2027 15:57
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,2A,Tatkal,20-06-2027,Sunday,1,46,6,21,success,11-06-2027 00:18
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,Tatkal,01-02-2027,Monday,0,72,1,29,success,26-01-2027 12:43
+T009,Pune-Delhi,Pune,New Delhi,1450,1A,General,27-06-2027,Sunday,1,24,7,17,success,27-05-2027 04:42
+T010,Delhi-Pune,New Delhi,Pune,1450,1A,Tatkal,20-04-2027,Tuesday,0,24,7,14,success,14-04-2027 02:04
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,General,10-01-2027,Sunday,1,72,1,41,success,29-12-2026 02:04
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,Tatkal,01-08-2027,Sunday,1,72,4,14,success,08-07-2027 10:20
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,General,29-09-2027,Wednesday,0,64,1,36,success,22-09-2027 17:58
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,2A,Tatkal,08-06-2027,Tuesday,0,46,6,15,success,31-05-2027 04:40
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,General,01-04-2027,Thursday,0,72,1,52,success,03-03-2027 00:20
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,Tatkal,02-04-2027,Friday,0,72,1,28,success,11-03-2027 05:45
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,1A,Tatkal,03-10-2027,Sunday,1,24,6,6,success,05-09-2027 09:38
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,Tatkal,02-11-2027,Tuesday,0,64,5,20,success,06-10-2027 14:59
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,General,31-03-2027,Wednesday,0,64,3,44,success,07-03-2027 09:37
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,Tatkal,29-04-2027,Thursday,0,64,7,25,success,12-04-2027 22:56
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,Tatkal,22-09-2027,Wednesday,0,64,6,24,success,11-09-2027 05:15
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,Tatkal,22-11-2027,Monday,0,72,6,27,success,11-11-2027 15:41
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,2A,General,03-01-2027,Sunday,1,46,6,19,success,05-12-2026 10:19
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,3A,Tatkal,29-05-2027,Saturday,1,64,3,16,success,04-05-2027 00:59
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,General,20-11-2027,Saturday,1,72,2,38,success,15-11-2027 06:18
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,Tatkal,13-06-2027,Sunday,1,64,4,18,success,19-05-2027 10:34
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,Tatkal,13-08-2027,Friday,0,72,6,28,success,02-08-2027 14:29
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,General,09-01-2027,Saturday,1,72,4,43,success,25-12-2026 19:38
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,General,05-01-2027,Tuesday,0,64,3,36,success,28-12-2026 16:53
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,02-09-2027,Thursday,0,72,1,24,success,14-08-2027 05:02
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,General,15-04-2027,Thursday,0,72,1,53,success,10-04-2027 22:25
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,Tatkal,27-12-2027,Monday,0,72,6,38,success,10-12-2027 05:06
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,Tatkal,08-01-2027,Friday,0,72,5,33,success,06-01-2027 13:32
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,3A,General,13-03-2027,Saturday,1,64,2,29,success,08-03-2027 17:21
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,1A,Tatkal,28-05-2027,Friday,0,24,1,3,success,25-05-2027 07:14
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,Tatkal,01-06-2027,Tuesday,0,64,3,33,success,24-05-2027 06:19
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,General,04-06-2027,Friday,0,64,6,36,success,02-06-2027 00:31
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,Tatkal,17-12-2027,Friday,0,72,4,31,success,18-11-2027 11:30
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,Tatkal,24-08-2027,Tuesday,0,72,6,32,success,18-08-2027 07:31
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,General,19-01-2027,Tuesday,0,72,5,48,success,01-01-2027 05:03
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,General,28-10-2027,Thursday,0,72,1,51,success,07-10-2027 15:26
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,Tatkal,08-02-2027,Monday,0,72,5,32,success,06-02-2027 19:43
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,Tatkal,02-02-2027,Tuesday,0,72,3,34,success,24-01-2027 04:02
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,General,22-05-2027,Saturday,1,72,5,37,success,29-04-2027 11:35
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,Tatkal,23-11-2027,Tuesday,0,64,2,29,success,10-11-2027 03:19
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,General,18-07-2027,Sunday,1,64,2,38,success,20-06-2027 14:12
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,General,12-09-2027,Sunday,1,72,5,35,success,12-08-2027 13:09
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,General,29-10-2027,Friday,0,64,1,44,success,02-10-2027 12:49
+T009,Pune-Delhi,Pune,New Delhi,1450,2A,Tatkal,28-12-2027,Tuesday,0,46,3,14,success,05-12-2027 12:01
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,General,30-10-2027,Saturday,1,64,2,34,success,25-10-2027 02:38
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,General,30-09-2027,Thursday,0,72,6,48,success,03-09-2027 04:40
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,Tatkal,06-10-2027,Wednesday,0,72,6,30,success,15-09-2027 07:56
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,Tatkal,17-08-2027,Tuesday,0,64,7,32,success,21-07-2027 08:45
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,3A,Tatkal,26-12-2027,Sunday,1,64,6,25,success,09-12-2027 20:54
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,23-02-2027,Tuesday,0,72,7,36,success,28-01-2027 14:27
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,General,16-01-2027,Saturday,1,72,2,33,success,07-01-2027 21:11
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,Tatkal,30-09-2027,Thursday,0,64,3,33,success,28-09-2027 13:50
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,General,03-03-2027,Wednesday,0,72,1,43,success,02-02-2027 10:31
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,General,22-12-2027,Wednesday,0,72,5,49,success,28-11-2027 16:49
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,09-09-2027,Thursday,0,72,3,25,success,31-08-2027 03:20
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,Tatkal,09-11-2027,Tuesday,0,72,4,23,success,06-11-2027 06:22
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,Tatkal,14-12-2027,Tuesday,0,72,4,36,success,08-12-2027 22:19
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,Tatkal,21-12-2027,Tuesday,0,72,2,25,success,18-12-2027 05:22
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,30-11-2027,Tuesday,0,72,7,23,success,13-11-2027 09:08
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,General,11-07-2027,Sunday,1,72,1,47,success,15-06-2027 04:40
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,Tatkal,17-09-2027,Friday,0,64,7,30,success,02-09-2027 04:42
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,General,25-09-2027,Saturday,1,72,1,34,success,03-09-2027 17:16
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,Tatkal,19-06-2027,Saturday,1,64,7,24,success,07-06-2027 13:43
+T009,Pune-Delhi,Pune,New Delhi,1450,2A,Tatkal,13-06-2027,Sunday,1,46,2,11,success,07-06-2027 23:12
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,27-03-2027,Saturday,1,72,4,21,success,04-03-2027 14:38
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,General,08-06-2027,Tuesday,0,72,2,38,success,28-05-2027 19:36
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,General,17-09-2027,Friday,0,72,6,38,success,19-08-2027 14:34
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,General,17-08-2027,Tuesday,0,72,5,41,success,22-07-2027 17:03
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,General,16-03-2027,Tuesday,0,72,4,52,success,18-02-2027 22:16
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,Tatkal,21-07-2027,Wednesday,0,64,4,32,success,11-07-2027 04:01
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,General,25-11-2027,Thursday,0,64,1,47,success,17-11-2027 08:40
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,General,03-05-2027,Monday,0,72,7,44,success,19-04-2027 22:19
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,Tatkal,30-03-2027,Tuesday,0,72,7,35,success,15-03-2027 06:06
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,Tatkal,20-11-2027,Saturday,1,72,7,15,success,26-10-2027 08:34
+T010,Delhi-Pune,New Delhi,Pune,1450,2A,Tatkal,19-07-2027,Monday,0,46,3,28,success,15-07-2027 02:37
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,Tatkal,25-02-2027,Thursday,0,72,7,36,success,17-02-2027 12:15
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,1A,General,05-12-2027,Sunday,1,24,4,10,success,19-11-2027 10:06
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,2A,General,26-07-2027,Monday,0,46,3,22,success,03-07-2027 16:58
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,16-08-2027,Monday,0,72,2,36,success,11-08-2027 05:42
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,02-02-2027,Tuesday,0,72,1,32,success,14-01-2027 11:33
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,General,09-02-2027,Tuesday,0,64,1,35,success,25-01-2027 15:49
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,Tatkal,25-03-2027,Thursday,0,64,5,21,success,26-02-2027 19:25
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,Tatkal,08-01-2027,Friday,0,72,5,35,success,30-12-2026 06:14
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,Tatkal,27-03-2027,Saturday,1,72,5,18,success,20-03-2027 16:32
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,Tatkal,06-06-2027,Sunday,1,64,5,15,success,20-05-2027 21:55
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,Tatkal,09-01-2027,Saturday,1,72,6,28,success,31-12-2026 11:50
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,2A,Tatkal,02-07-2027,Friday,0,46,6,27,success,22-06-2027 10:15
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,General,11-05-2027,Tuesday,0,64,5,41,success,14-04-2027 00:53
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,3A,General,06-10-2027,Wednesday,0,64,2,37,success,13-09-2027 02:01
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,1A,Tatkal,22-05-2027,Saturday,1,24,5,0,fail,01-05-2027 21:40
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,Tatkal,03-04-2027,Saturday,1,64,5,22,success,27-03-2027 06:12
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,General,12-09-2027,Sunday,1,64,1,42,success,12-08-2027 19:27
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,Tatkal,14-07-2027,Wednesday,0,64,4,32,success,04-07-2027 10:02
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,Tatkal,14-05-2027,Friday,0,72,6,30,success,10-05-2027 14:28
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,Tatkal,01-06-2027,Tuesday,0,64,6,29,success,20-05-2027 04:12
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,Tatkal,04-03-2027,Thursday,0,64,6,32,success,07-02-2027 10:44
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,General,29-03-2027,Monday,0,72,3,47,success,26-03-2027 16:42
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,Tatkal,15-07-2027,Thursday,0,72,7,39,success,20-06-2027 10:26
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,2A,General,02-04-2027,Friday,0,46,4,26,success,16-03-2027 06:59
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,General,02-03-2027,Tuesday,0,64,2,48,success,22-02-2027 15:33
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,Tatkal,27-09-2027,Monday,0,72,5,33,success,11-09-2027 16:11
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,General,01-08-2027,Sunday,1,72,3,47,success,16-07-2027 22:26
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,2A,Tatkal,21-07-2027,Wednesday,0,46,5,25,success,02-07-2027 21:46
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,Tatkal,21-07-2027,Wednesday,0,72,2,34,success,04-07-2027 11:30
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,08-09-2027,Wednesday,0,72,7,24,success,16-08-2027 19:07
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,Tatkal,11-03-2027,Thursday,0,72,1,26,success,14-02-2027 12:01
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,General,26-09-2027,Sunday,1,64,2,37,success,09-09-2027 01:48
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,Tatkal,03-04-2027,Saturday,1,72,3,29,success,29-03-2027 21:30
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,16-05-2027,Sunday,1,72,3,30,success,27-04-2027 16:20
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,General,18-08-2027,Wednesday,0,64,3,37,success,16-08-2027 10:21
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,Tatkal,22-08-2027,Sunday,1,72,6,17,success,19-08-2027 20:02
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,1A,Tatkal,21-02-2027,Sunday,1,24,7,1,fail,14-02-2027 11:12
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,General,20-12-2027,Monday,0,72,4,44,success,20-11-2027 03:23
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,General,29-04-2027,Thursday,0,72,7,37,success,21-04-2027 05:41
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,07-03-2027,Sunday,1,72,4,15,success,16-02-2027 22:00
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,Tatkal,09-01-2027,Saturday,1,64,2,14,success,11-12-2026 08:38
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,2A,General,30-01-2027,Saturday,1,46,5,25,success,12-01-2027 01:56
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,Tatkal,21-10-2027,Thursday,0,72,2,24,success,28-09-2027 00:26
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,3A,Tatkal,01-06-2027,Tuesday,0,64,7,31,success,29-05-2027 04:41
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,Tatkal,24-07-2027,Saturday,1,64,4,17,success,24-06-2027 16:50
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,Tatkal,21-09-2027,Tuesday,0,64,5,32,success,15-09-2027 22:38
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,Tatkal,06-01-2027,Wednesday,0,72,7,30,success,30-12-2026 23:00
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,Tatkal,29-11-2027,Monday,0,64,1,27,success,24-11-2027 23:31
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,Tatkal,12-03-2027,Friday,0,72,3,24,success,17-02-2027 01:15
+T010,Delhi-Pune,New Delhi,Pune,1450,2A,Tatkal,06-04-2027,Tuesday,0,46,2,12,success,13-03-2027 08:50
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,2A,Tatkal,19-09-2027,Sunday,1,46,1,18,success,05-09-2027 10:20
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,Tatkal,30-01-2027,Saturday,1,64,6,16,success,23-01-2027 20:25
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,Tatkal,17-05-2027,Monday,0,72,7,27,success,15-05-2027 18:28
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,3A,General,15-07-2027,Thursday,0,64,6,40,success,10-07-2027 00:28
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,15-07-2027,Thursday,0,72,7,27,success,24-06-2027 12:25
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,General,11-10-2027,Monday,0,72,7,49,success,15-09-2027 21:53
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,2A,General,01-05-2027,Saturday,1,46,6,31,success,25-04-2027 10:59
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,General,24-08-2027,Tuesday,0,72,2,47,success,12-08-2027 12:27
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,General,07-10-2027,Thursday,0,72,2,51,success,03-10-2027 09:45
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,General,19-10-2027,Tuesday,0,72,3,44,success,19-09-2027 18:06
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,2A,Tatkal,27-04-2027,Tuesday,0,46,1,18,success,29-03-2027 20:08
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,General,05-04-2027,Monday,0,72,6,39,success,03-04-2027 13:06
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,General,08-07-2027,Thursday,0,72,2,46,success,10-06-2027 02:10
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,01-06-2027,Tuesday,0,72,3,34,success,01-05-2027 22:01
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,31-03-2027,Wednesday,0,72,6,39,success,08-03-2027 07:49
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,General,01-09-2027,Wednesday,0,72,6,37,success,09-08-2027 02:27
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,Tatkal,07-07-2027,Wednesday,0,64,4,21,success,17-06-2027 18:46
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,2A,Tatkal,14-01-2027,Thursday,0,46,7,26,success,18-12-2026 04:53
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,Tatkal,05-09-2027,Sunday,1,64,5,23,success,14-08-2027 05:42
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,Tatkal,02-03-2027,Tuesday,0,64,6,31,success,22-02-2027 11:13
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,Tatkal,09-08-2027,Monday,0,64,5,22,success,11-07-2027 07:33
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,Tatkal,18-02-2027,Thursday,0,72,3,23,success,07-02-2027 01:14
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,Tatkal,31-05-2027,Monday,0,72,7,28,success,27-05-2027 18:18
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,3A,Tatkal,12-07-2027,Monday,0,64,7,25,success,13-06-2027 11:04
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,General,01-10-2027,Friday,0,72,7,52,success,11-09-2027 05:17
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,General,20-07-2027,Tuesday,0,72,1,38,success,13-07-2027 02:56
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,Tatkal,15-08-2027,Sunday,1,72,4,16,success,06-08-2027 12:18
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,Tatkal,30-07-2027,Friday,0,72,1,34,success,17-07-2027 17:55
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,General,14-12-2027,Tuesday,0,64,3,48,success,09-12-2027 21:00
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,General,25-11-2027,Thursday,0,64,3,44,success,26-10-2027 02:32
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,2A,Tatkal,26-03-2027,Friday,0,46,4,24,success,07-03-2027 07:19
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,Tatkal,11-05-2027,Tuesday,0,72,1,37,success,16-04-2027 05:27
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,1A,Tatkal,28-02-2027,Sunday,1,24,6,5,fail,03-02-2027 05:27
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,2A,Tatkal,31-05-2027,Monday,0,46,3,27,success,30-04-2027 17:12
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,23-03-2027,Tuesday,0,72,2,39,success,10-03-2027 18:28
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,General,02-08-2027,Monday,0,72,4,41,success,24-07-2027 13:46
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,Tatkal,12-10-2027,Tuesday,0,72,1,25,success,05-10-2027 06:50
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,Tatkal,10-08-2027,Tuesday,0,72,2,30,success,07-08-2027 20:05
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,Tatkal,20-06-2027,Sunday,1,72,2,27,success,30-05-2027 01:48
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,General,16-04-2027,Friday,0,72,2,53,success,25-03-2027 13:21
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,2A,Tatkal,29-07-2027,Thursday,0,46,5,28,success,15-07-2027 06:56
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,General,26-12-2027,Sunday,1,72,2,44,success,03-12-2027 11:34
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,Tatkal,24-02-2027,Wednesday,0,64,7,26,success,11-02-2027 02:47
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,General,04-05-2027,Tuesday,0,72,2,42,success,22-04-2027 17:36
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,2A,General,05-08-2027,Thursday,0,46,2,26,success,22-07-2027 16:30
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,Tatkal,20-06-2027,Sunday,1,64,2,20,success,06-06-2027 02:15
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,2A,General,31-08-2027,Tuesday,0,46,4,33,success,26-08-2027 02:19
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,2A,Tatkal,12-09-2027,Sunday,1,46,4,7,success,22-08-2027 09:41
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,Tatkal,20-08-2027,Friday,0,64,7,33,success,27-07-2027 00:37
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,18-02-2027,Thursday,0,72,7,26,success,03-02-2027 08:49
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,Tatkal,07-02-2027,Sunday,1,64,5,28,success,01-02-2027 06:01
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,Tatkal,18-08-2027,Wednesday,0,72,6,38,success,03-08-2027 21:41
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,2A,General,23-02-2027,Tuesday,0,46,3,24,success,28-01-2027 23:39
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,05-09-2027,Sunday,1,72,4,20,success,10-08-2027 16:59
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,16-07-2027,Friday,0,72,4,30,success,17-06-2027 03:16
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,Tatkal,19-10-2027,Tuesday,0,72,3,29,success,27-09-2027 01:22
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,Tatkal,06-04-2027,Tuesday,0,72,2,36,success,18-03-2027 06:45
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,General,21-06-2027,Monday,0,72,6,52,success,27-05-2027 15:53
+T009,Pune-Delhi,Pune,New Delhi,1450,1A,Tatkal,17-02-2027,Wednesday,0,24,7,14,success,02-02-2027 00:15
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,General,16-01-2027,Saturday,1,64,4,30,success,31-12-2026 15:18
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,Tatkal,27-06-2027,Sunday,1,72,5,15,success,25-06-2027 21:22
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,Tatkal,27-09-2027,Monday,0,72,5,25,success,04-09-2027 01:02
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,1A,General,16-04-2027,Friday,0,24,7,8,success,22-03-2027 21:42
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,2A,General,27-06-2027,Sunday,1,46,5,28,success,07-06-2027 00:38
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,General,18-06-2027,Friday,0,72,2,49,success,26-05-2027 20:20
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,2A,Tatkal,09-06-2027,Wednesday,0,46,6,22,success,26-05-2027 11:52
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,Tatkal,28-12-2027,Tuesday,0,64,2,29,success,29-11-2027 04:36
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,Tatkal,02-10-2027,Saturday,1,64,2,19,success,14-09-2027 13:49
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,Tatkal,23-01-2027,Saturday,1,64,7,12,success,24-12-2026 23:45
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,Tatkal,28-04-2027,Wednesday,0,64,1,26,success,28-03-2027 04:23
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,2A,Tatkal,16-06-2027,Wednesday,0,46,7,19,success,25-05-2027 03:16
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,Tatkal,28-09-2027,Tuesday,0,64,3,31,success,31-08-2027 07:30
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,Tatkal,17-08-2027,Tuesday,0,64,6,32,success,19-07-2027 14:58
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,11-12-2027,Saturday,1,72,6,24,success,29-11-2027 11:10
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,Tatkal,09-08-2027,Monday,0,64,1,22,success,02-08-2027 15:19
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,Tatkal,23-11-2027,Tuesday,0,64,2,23,success,25-10-2027 14:27
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,1A,Tatkal,21-03-2027,Sunday,1,24,4,8,success,22-02-2027 07:08
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,General,12-08-2027,Thursday,0,64,6,32,success,01-08-2027 23:46
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,Tatkal,22-03-2027,Monday,0,72,7,33,success,25-02-2027 16:41
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,05-02-2027,Friday,0,72,1,34,success,22-01-2027 14:09
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,Tatkal,19-07-2027,Monday,0,64,4,23,success,09-07-2027 03:52
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,General,07-12-2027,Tuesday,0,72,1,51,success,07-11-2027 18:37
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,Tatkal,24-10-2027,Sunday,1,64,6,18,success,25-09-2027 04:28
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,17-09-2027,Friday,0,72,2,24,success,03-09-2027 14:47
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,31-08-2027,Tuesday,0,72,4,38,success,17-08-2027 02:21
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,General,24-05-2027,Monday,0,72,6,37,success,30-04-2027 11:39
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,2A,Tatkal,15-12-2027,Wednesday,0,46,2,17,success,01-12-2027 03:48
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,2A,Tatkal,20-03-2027,Saturday,1,46,6,22,success,05-03-2027 21:08
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,General,21-01-2027,Thursday,0,72,3,37,success,27-12-2026 19:37
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,General,20-06-2027,Sunday,1,72,5,41,success,08-06-2027 16:17
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,Tatkal,14-12-2027,Tuesday,0,72,1,32,success,03-12-2027 05:15
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,2A,General,26-06-2027,Saturday,1,46,7,34,success,22-06-2027 06:24
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,2A,Tatkal,19-05-2027,Wednesday,0,46,6,14,success,16-05-2027 00:44
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,13-08-2027,Friday,0,72,3,32,success,04-08-2027 11:20
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,2A,Tatkal,09-06-2027,Wednesday,0,46,6,22,success,17-05-2027 16:32
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,General,13-09-2027,Monday,0,72,6,47,success,19-08-2027 07:45
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,Tatkal,11-05-2027,Tuesday,0,64,2,27,success,27-04-2027 06:25
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,2A,General,31-08-2027,Tuesday,0,46,7,21,success,12-08-2027 08:03
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,Tatkal,12-10-2027,Tuesday,0,72,6,28,success,05-10-2027 12:28
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,Tatkal,13-01-2027,Wednesday,0,64,1,25,success,27-12-2026 18:32
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,2A,Tatkal,27-12-2027,Monday,0,46,5,15,success,07-12-2027 21:02
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,General,24-11-2027,Wednesday,0,64,1,32,success,22-11-2027 10:43
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,2A,General,16-12-2027,Thursday,0,46,3,37,success,23-11-2027 12:15
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,29-03-2027,Monday,0,72,6,33,success,14-03-2027 12:32
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,25-12-2027,Saturday,1,72,3,23,success,15-12-2027 19:55
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,2A,Tatkal,07-01-2027,Thursday,0,46,4,19,success,08-12-2026 13:36
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,General,29-09-2027,Wednesday,0,72,3,48,success,30-08-2027 17:27
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,1A,Tatkal,02-12-2027,Thursday,0,24,1,19,success,04-11-2027 01:21
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,Tatkal,16-09-2027,Thursday,0,64,1,27,success,20-08-2027 08:31
+T010,Delhi-Pune,New Delhi,Pune,1450,2A,Tatkal,11-03-2027,Thursday,0,46,6,22,success,05-03-2027 09:16
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,2A,Tatkal,26-07-2027,Monday,0,46,5,18,success,28-06-2027 04:10
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,Tatkal,21-02-2027,Sunday,1,72,3,22,success,31-01-2027 06:09
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,2A,General,01-02-2027,Monday,0,46,2,36,success,09-01-2027 09:15
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,10-03-2027,Wednesday,0,72,6,27,success,06-03-2027 13:56
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,20-03-2027,Saturday,1,72,1,22,success,21-02-2027 21:30
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,General,20-01-2027,Wednesday,0,64,2,41,success,08-01-2027 15:20
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,Tatkal,28-02-2027,Sunday,1,72,5,23,success,15-02-2027 22:34
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,General,20-06-2027,Sunday,1,72,4,44,success,15-06-2027 10:32
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,General,08-12-2027,Wednesday,0,64,4,48,success,19-11-2027 09:01
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,Tatkal,29-01-2027,Friday,0,64,3,27,success,22-01-2027 09:44
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,Tatkal,13-04-2027,Tuesday,0,64,5,22,success,17-03-2027 17:19
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,2A,General,18-11-2027,Thursday,0,46,4,28,success,12-11-2027 12:30
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,1A,Tatkal,17-02-2027,Wednesday,0,24,4,19,success,24-01-2027 00:57
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,2A,General,05-12-2027,Sunday,1,46,3,29,success,11-11-2027 13:18
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,10-08-2027,Tuesday,0,72,1,34,success,04-08-2027 00:14
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,Tatkal,16-10-2027,Saturday,1,72,5,19,success,05-10-2027 13:52
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,Tatkal,01-09-2027,Wednesday,0,72,3,34,success,28-08-2027 02:12
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,Tatkal,31-10-2027,Sunday,1,72,1,20,success,21-10-2027 09:58
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,Tatkal,10-06-2027,Thursday,0,64,3,33,success,25-05-2027 08:41
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,Tatkal,05-04-2027,Monday,0,64,7,29,success,27-03-2027 05:48
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,Tatkal,06-06-2027,Sunday,1,72,2,25,success,16-05-2027 07:43
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,General,26-03-2027,Friday,0,64,6,33,success,07-03-2027 13:18
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,General,23-12-2027,Thursday,0,64,2,34,success,01-12-2027 23:54
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,3A,Tatkal,22-09-2027,Wednesday,0,64,5,27,success,26-08-2027 16:56
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,General,10-05-2027,Monday,0,72,6,37,success,22-04-2027 22:46
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,General,11-12-2027,Saturday,1,64,2,29,success,30-11-2027 03:31
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,Tatkal,11-06-2027,Friday,0,72,1,26,success,08-06-2027 20:18
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,General,12-03-2027,Friday,0,64,7,37,success,24-02-2027 06:49
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,Tatkal,05-08-2027,Thursday,0,64,1,26,success,14-07-2027 10:37
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,Tatkal,28-02-2027,Sunday,1,64,3,12,success,20-02-2027 18:51
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,Tatkal,27-08-2027,Friday,0,64,4,33,success,20-08-2027 21:39
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,General,10-02-2027,Wednesday,0,72,3,43,success,18-01-2027 02:10
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,Tatkal,05-12-2027,Sunday,1,64,7,15,success,14-11-2027 08:28
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,15-11-2027,Monday,0,72,4,31,success,28-10-2027 00:01
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,Tatkal,11-02-2027,Thursday,0,64,1,31,success,21-01-2027 10:17
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,Tatkal,10-06-2027,Thursday,0,72,5,23,success,11-05-2027 16:11
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,General,15-07-2027,Thursday,0,64,4,44,success,13-07-2027 12:35
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,General,25-06-2027,Friday,0,72,1,48,success,13-06-2027 00:07
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,Tatkal,21-07-2027,Wednesday,0,72,3,38,success,24-06-2027 23:41
+T010,Delhi-Pune,New Delhi,Pune,1450,1A,Tatkal,01-12-2027,Wednesday,0,24,6,12,success,10-11-2027 00:30
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,Tatkal,02-03-2027,Tuesday,0,64,7,29,success,17-02-2027 03:43
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,Tatkal,18-11-2027,Thursday,0,64,7,31,success,04-11-2027 06:52
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,General,15-03-2027,Monday,0,72,7,42,success,04-03-2027 11:51
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,02-12-2027,Thursday,0,72,2,36,success,18-11-2027 14:56
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,General,06-12-2027,Monday,0,72,2,45,success,18-11-2027 10:57
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,General,12-10-2027,Tuesday,0,64,7,44,success,06-10-2027 21:09
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,General,26-06-2027,Saturday,1,64,1,42,success,13-06-2027 19:40
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,2A,Tatkal,12-04-2027,Monday,0,46,3,16,success,10-04-2027 16:26
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,Tatkal,12-07-2027,Monday,0,64,6,19,success,19-06-2027 10:04
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,Tatkal,13-11-2027,Saturday,1,64,6,13,success,02-11-2027 16:50
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,Tatkal,22-11-2027,Monday,0,64,3,28,success,26-10-2027 03:38
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,Tatkal,01-07-2027,Thursday,0,64,4,27,success,22-06-2027 14:02
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,Tatkal,11-09-2027,Saturday,1,72,6,27,success,22-08-2027 13:26
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,General,12-03-2027,Friday,0,72,7,48,success,24-02-2027 00:42
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,General,31-07-2027,Saturday,1,64,7,41,success,09-07-2027 23:40
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,Tatkal,24-09-2027,Friday,0,64,4,26,success,27-08-2027 14:08
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,Tatkal,06-12-2027,Monday,0,72,7,28,success,28-11-2027 18:05
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,Tatkal,10-07-2027,Saturday,1,64,6,13,success,18-06-2027 12:19
+T009,Pune-Delhi,Pune,New Delhi,1450,1A,Tatkal,26-12-2027,Sunday,1,24,3,4,success,29-11-2027 18:49
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,23-02-2027,Tuesday,0,72,4,36,success,26-01-2027 20:24
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,2A,General,03-01-2027,Sunday,1,46,1,26,success,04-12-2026 09:08
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,Tatkal,16-10-2027,Saturday,1,64,6,16,success,22-09-2027 03:19
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,2A,Tatkal,25-11-2027,Thursday,0,46,3,21,success,25-10-2027 09:49
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,2A,General,27-01-2027,Wednesday,0,46,3,28,success,23-01-2027 23:22
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,General,30-11-2027,Tuesday,0,72,5,40,success,12-11-2027 00:09
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,Tatkal,10-09-2027,Friday,0,72,1,31,success,28-08-2027 02:56
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,Tatkal,22-10-2027,Friday,0,64,2,33,success,11-10-2027 11:28
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,Tatkal,04-12-2027,Saturday,1,64,2,15,success,04-11-2027 08:45
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,Tatkal,28-08-2027,Saturday,1,72,5,21,success,24-08-2027 16:51
+T010,Delhi-Pune,New Delhi,Pune,1450,2A,General,11-09-2027,Saturday,1,46,3,22,success,07-09-2027 01:34
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,Tatkal,05-12-2027,Sunday,1,72,3,18,success,08-11-2027 09:43
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,General,23-07-2027,Friday,0,72,6,44,success,09-07-2027 08:28
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,2A,Tatkal,02-01-2027,Saturday,1,46,3,10,success,09-12-2026 04:33
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,General,23-01-2027,Saturday,1,72,1,36,success,26-12-2026 23:33
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,General,24-10-2027,Sunday,1,72,2,48,success,15-10-2027 10:15
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,2A,General,04-05-2027,Tuesday,0,46,5,25,success,13-04-2027 07:26
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,Tatkal,24-10-2027,Sunday,1,64,3,15,success,27-09-2027 00:22
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,General,24-08-2027,Tuesday,0,72,7,40,success,03-08-2027 14:27
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,General,29-04-2027,Thursday,0,72,2,45,success,07-04-2027 19:42
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,General,07-01-2027,Thursday,0,72,1,46,success,09-12-2026 17:31
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,Tatkal,22-06-2027,Tuesday,0,72,7,37,success,18-06-2027 09:00
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,General,08-06-2027,Tuesday,0,72,5,37,success,15-05-2027 13:27
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,General,21-09-2027,Tuesday,0,64,4,41,success,19-09-2027 05:12
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,3A,General,14-07-2027,Wednesday,0,64,4,46,success,18-06-2027 05:52
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,General,27-10-2027,Wednesday,0,64,1,45,success,08-10-2027 02:08
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,General,23-05-2027,Sunday,1,72,7,35,success,22-04-2027 12:41
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,General,31-07-2027,Saturday,1,72,7,33,success,13-07-2027 01:49
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,General,10-07-2027,Saturday,1,72,1,35,success,09-06-2027 07:05
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,Tatkal,19-01-2027,Tuesday,0,64,7,32,success,24-12-2026 18:09
+T010,Delhi-Pune,New Delhi,Pune,1450,2A,Tatkal,23-09-2027,Thursday,0,46,1,26,success,12-09-2027 16:19
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,General,05-04-2027,Monday,0,72,2,53,success,29-03-2027 19:42
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,General,14-08-2027,Saturday,1,64,4,43,success,26-07-2027 04:58
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,Tatkal,10-07-2027,Saturday,1,64,4,15,success,24-06-2027 12:24
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,09-10-2027,Saturday,1,72,4,20,success,26-09-2027 11:19
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,Tatkal,06-05-2027,Thursday,0,64,7,28,success,20-04-2027 15:05
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,Tatkal,13-10-2027,Wednesday,0,72,4,38,success,11-10-2027 18:54
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,General,18-02-2027,Thursday,0,72,5,43,success,19-01-2027 02:57
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,General,04-02-2027,Thursday,0,72,2,37,success,28-01-2027 07:12
+T009,Pune-Delhi,Pune,New Delhi,1450,1A,Tatkal,14-11-2027,Sunday,1,24,4,2,fail,19-10-2027 21:02
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,General,07-05-2027,Friday,0,64,3,47,success,14-04-2027 00:41
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,1A,General,19-08-2027,Thursday,0,24,7,13,success,12-08-2027 13:41
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,2A,Tatkal,03-05-2027,Monday,0,46,1,24,success,04-04-2027 19:41
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,General,23-02-2027,Tuesday,0,64,3,33,success,26-01-2027 18:43
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,2A,Tatkal,18-05-2027,Tuesday,0,46,3,12,success,28-04-2027 18:03
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,1A,Tatkal,01-04-2027,Thursday,0,24,7,8,success,07-03-2027 15:20
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,Tatkal,24-07-2027,Saturday,1,64,6,23,success,30-06-2027 07:23
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,Tatkal,23-07-2027,Friday,0,72,6,34,success,11-07-2027 06:34
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,Tatkal,03-08-2027,Tuesday,0,72,2,35,success,10-07-2027 01:12
+T009,Pune-Delhi,Pune,New Delhi,1450,2A,Tatkal,15-12-2027,Wednesday,0,46,4,19,success,16-11-2027 07:58
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,Tatkal,04-03-2027,Thursday,0,64,6,32,success,09-02-2027 01:53
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,General,07-08-2027,Saturday,1,64,4,27,success,09-07-2027 22:24
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,General,17-01-2027,Sunday,1,72,5,44,success,21-12-2026 04:26
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,General,23-01-2027,Saturday,1,72,6,44,success,03-01-2027 07:48
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,3A,General,25-01-2027,Monday,0,64,5,34,success,29-12-2026 08:51
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,Tatkal,16-06-2027,Wednesday,0,64,4,24,success,29-05-2027 16:27
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,General,06-10-2027,Wednesday,0,72,6,40,success,22-09-2027 16:06
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,Tatkal,27-11-2027,Saturday,1,72,1,17,success,29-10-2027 20:11
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,General,25-05-2027,Tuesday,0,64,2,37,success,04-05-2027 01:23
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,Tatkal,15-06-2027,Tuesday,0,64,3,19,success,28-05-2027 10:00
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,28-03-2027,Sunday,1,72,7,27,success,22-03-2027 08:21
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,2A,Tatkal,22-06-2027,Tuesday,0,46,5,14,success,01-06-2027 16:17
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,Tatkal,18-07-2027,Sunday,1,64,2,28,success,08-07-2027 14:59
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,General,06-09-2027,Monday,0,72,1,44,success,12-08-2027 03:32
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,14-01-2027,Thursday,0,72,5,25,success,18-12-2026 23:07
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,Tatkal,31-12-2027,Friday,0,64,4,33,success,29-12-2027 15:53
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,Tatkal,17-05-2027,Monday,0,72,4,27,success,28-04-2027 21:31
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,Tatkal,28-12-2027,Tuesday,0,64,2,24,success,16-12-2027 23:16
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,2A,General,29-09-2027,Wednesday,0,46,5,27,success,09-09-2027 04:17
+T009,Pune-Delhi,Pune,New Delhi,1450,2A,Tatkal,25-04-2027,Sunday,1,46,2,20,success,12-04-2027 04:37
+T010,Delhi-Pune,New Delhi,Pune,1450,2A,General,03-09-2027,Friday,0,46,1,32,success,13-08-2027 04:26
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,General,23-06-2027,Wednesday,0,64,5,40,success,20-06-2027 03:55
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,General,02-05-2027,Sunday,1,72,4,45,success,05-04-2027 09:21
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,General,16-07-2027,Friday,0,64,2,39,success,05-07-2027 16:36
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,3A,Tatkal,28-07-2027,Wednesday,0,64,4,30,success,21-07-2027 03:48
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,1A,Tatkal,12-08-2027,Thursday,0,24,5,15,success,04-08-2027 16:29
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,2A,Tatkal,27-10-2027,Wednesday,0,46,4,15,success,01-10-2027 17:41
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,Tatkal,20-02-2027,Saturday,1,72,4,25,success,12-02-2027 18:32
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,General,07-07-2027,Wednesday,0,72,2,44,success,16-06-2027 03:15
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,Tatkal,21-09-2027,Tuesday,0,72,4,26,success,23-08-2027 12:17
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,28-01-2027,Thursday,0,72,3,31,success,12-01-2027 19:52
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,Tatkal,22-09-2027,Wednesday,0,72,6,34,success,06-09-2027 14:01
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,General,03-07-2027,Saturday,1,72,6,40,success,18-06-2027 19:13
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,2A,General,16-03-2027,Tuesday,0,46,5,32,success,09-03-2027 09:39
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,13-03-2027,Saturday,1,72,6,20,success,25-02-2027 14:57
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,Tatkal,01-06-2027,Tuesday,0,64,1,32,success,26-05-2027 05:54
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,2A,General,16-01-2027,Saturday,1,46,5,22,success,09-01-2027 00:03
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,2A,Tatkal,07-02-2027,Sunday,1,46,7,13,success,17-01-2027 12:56
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,General,08-04-2027,Thursday,0,72,4,51,success,09-03-2027 07:34
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,General,17-04-2027,Saturday,1,72,2,34,success,23-03-2027 12:18
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,General,02-03-2027,Tuesday,0,72,6,48,success,15-02-2027 21:49
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,Tatkal,19-07-2027,Monday,0,72,7,26,success,19-06-2027 03:48
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,General,06-05-2027,Thursday,0,64,7,35,success,06-04-2027 16:34
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,2A,General,23-07-2027,Friday,0,46,1,30,success,16-07-2027 14:53
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,3A,Tatkal,03-02-2027,Wednesday,0,64,5,27,success,04-01-2027 16:10
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,General,25-05-2027,Tuesday,0,64,2,42,success,25-04-2027 00:12
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,General,11-09-2027,Saturday,1,72,5,40,success,31-08-2027 04:15
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,General,19-05-2027,Wednesday,0,72,1,40,success,11-05-2027 16:27
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,Tatkal,07-08-2027,Saturday,1,64,7,15,success,22-07-2027 05:07
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,Tatkal,16-01-2027,Saturday,1,72,1,14,success,01-01-2027 11:12
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,Tatkal,19-03-2027,Friday,0,64,4,31,success,12-03-2027 08:57
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,Tatkal,18-11-2027,Thursday,0,72,2,23,success,08-11-2027 01:56
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,2A,Tatkal,21-10-2027,Thursday,0,46,1,18,success,17-10-2027 03:08
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,General,15-11-2027,Monday,0,64,3,37,success,19-10-2027 03:58
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,General,29-06-2027,Tuesday,0,72,5,49,success,21-06-2027 08:05
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,2A,Tatkal,09-05-2027,Sunday,1,46,5,8,success,12-04-2027 08:18
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,2A,Tatkal,06-05-2027,Thursday,0,46,7,21,success,25-04-2027 14:34
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,1A,General,07-07-2027,Wednesday,0,24,1,22,success,18-06-2027 04:35
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,General,26-07-2027,Monday,0,64,3,46,success,20-07-2027 05:15
+T009,Pune-Delhi,Pune,New Delhi,1450,2A,Tatkal,15-02-2027,Monday,0,46,1,25,success,10-02-2027 15:32
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,Tatkal,16-06-2027,Wednesday,0,64,6,30,success,18-05-2027 08:48
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,Tatkal,07-05-2027,Friday,0,64,7,33,success,28-04-2027 22:36
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,Tatkal,13-07-2027,Tuesday,0,72,3,26,success,07-07-2027 12:06
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,Tatkal,06-04-2027,Tuesday,0,72,5,26,success,20-03-2027 15:58
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,2A,Tatkal,22-03-2027,Monday,0,46,5,22,success,11-03-2027 04:28
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,12-10-2027,Tuesday,0,72,7,38,success,22-09-2027 11:28
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,General,17-11-2027,Wednesday,0,72,6,41,success,24-10-2027 01:16
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,Tatkal,28-08-2027,Saturday,1,64,2,23,success,22-08-2027 03:49
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,Tatkal,16-01-2027,Saturday,1,64,3,15,success,03-01-2027 14:47
+T009,Pune-Delhi,Pune,New Delhi,1450,2A,Tatkal,02-12-2027,Thursday,0,46,2,25,success,12-11-2027 09:55
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,10-08-2027,Tuesday,0,72,7,34,success,07-08-2027 07:47
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,Tatkal,19-03-2027,Friday,0,72,3,27,success,04-03-2027 07:11
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,General,26-11-2027,Friday,0,64,3,43,success,05-11-2027 22:48
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,General,01-06-2027,Tuesday,0,72,2,44,success,29-05-2027 09:34
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,2A,Tatkal,08-04-2027,Thursday,0,46,1,13,success,21-03-2027 20:14
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,Tatkal,20-10-2027,Wednesday,0,64,1,34,success,13-10-2027 11:34
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,Tatkal,15-12-2027,Wednesday,0,64,3,25,success,28-11-2027 17:51
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,Tatkal,12-10-2027,Tuesday,0,72,3,26,success,24-09-2027 11:37
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,General,07-08-2027,Saturday,1,64,3,39,success,24-07-2027 07:49
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,General,06-07-2027,Tuesday,0,64,2,46,success,23-06-2027 21:56
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,Tatkal,04-07-2027,Sunday,1,64,1,16,success,29-06-2027 19:29
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,General,21-01-2027,Thursday,0,64,3,40,success,10-01-2027 01:33
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,2A,Tatkal,07-05-2027,Friday,0,46,5,28,success,26-04-2027 12:54
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,1A,General,24-06-2027,Thursday,0,24,1,12,success,29-05-2027 02:58
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,General,21-04-2027,Wednesday,0,72,7,39,success,10-04-2027 11:45
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,Tatkal,21-08-2027,Saturday,1,72,3,27,success,10-08-2027 08:43
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,2A,Tatkal,12-08-2027,Thursday,0,46,4,16,success,03-08-2027 01:05
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,General,05-05-2027,Wednesday,0,72,3,53,success,02-05-2027 17:33
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,General,23-10-2027,Saturday,1,72,4,34,success,26-09-2027 04:11
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,Tatkal,16-09-2027,Thursday,0,64,5,22,success,09-09-2027 03:19
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,27-09-2027,Monday,0,72,4,37,success,04-09-2027 06:33
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,2A,Tatkal,19-10-2027,Tuesday,0,46,6,17,success,06-10-2027 22:44
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,SL,Tatkal,02-08-2027,Monday,0,72,4,23,success,23-07-2027 19:40
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,Tatkal,13-01-2027,Wednesday,0,64,2,29,success,30-12-2026 05:23
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,General,18-11-2027,Thursday,0,72,1,50,success,03-11-2027 22:17
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,General,06-07-2027,Tuesday,0,64,1,36,success,24-06-2027 16:48
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,Tatkal,13-05-2027,Thursday,0,64,1,22,success,13-04-2027 06:18
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,1A,Tatkal,20-12-2027,Monday,0,24,3,17,success,23-11-2027 23:53
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,General,25-03-2027,Thursday,0,72,3,49,success,27-02-2027 10:20
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,Tatkal,04-12-2027,Saturday,1,72,4,17,success,03-11-2027 23:12
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,General,18-09-2027,Saturday,1,72,2,45,success,31-08-2027 18:49
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,General,01-11-2027,Monday,0,72,3,41,success,09-10-2027 01:03
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,2A,Tatkal,15-03-2027,Monday,0,46,2,26,success,10-03-2027 13:40
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,1A,General,12-03-2027,Friday,0,24,1,12,success,03-03-2027 21:01
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,3A,Tatkal,08-07-2027,Thursday,0,64,7,27,success,12-06-2027 05:16
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,General,24-07-2027,Saturday,1,72,3,32,success,22-07-2027 19:00
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,General,18-12-2027,Saturday,1,72,1,41,success,07-12-2027 02:31
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,Tatkal,02-10-2027,Saturday,1,72,5,21,success,16-09-2027 05:28
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,SL,General,14-08-2027,Saturday,1,72,3,33,success,05-08-2027 02:16
+T009,Pune-Delhi,Pune,New Delhi,1450,SL,Tatkal,20-11-2027,Saturday,1,72,5,14,success,17-11-2027 16:45
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,16-10-2027,Saturday,1,72,7,24,success,12-10-2027 09:00
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,SL,Tatkal,08-08-2027,Sunday,1,72,5,24,success,20-07-2027 04:35
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,Tatkal,20-03-2027,Saturday,1,64,6,15,success,06-03-2027 06:47
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,Tatkal,09-09-2027,Thursday,0,64,4,29,success,23-08-2027 12:39
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,General,07-05-2027,Friday,0,72,4,43,success,16-04-2027 11:36
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,Tatkal,25-07-2027,Sunday,1,64,7,28,success,23-07-2027 02:40
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,2A,Tatkal,20-08-2027,Friday,0,46,1,15,success,05-08-2027 03:06
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,Tatkal,02-08-2027,Monday,0,72,3,38,success,25-07-2027 07:23
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,Tatkal,05-10-2027,Tuesday,0,64,7,22,success,04-09-2027 02:50
+T009,Pune-Delhi,Pune,New Delhi,1450,3A,General,16-12-2027,Thursday,0,64,6,44,success,10-12-2027 23:29
+T010,Delhi-Pune,New Delhi,Pune,1450,2A,General,09-05-2027,Sunday,1,46,3,22,success,11-04-2027 11:43
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,3A,General,09-09-2027,Thursday,0,64,2,42,success,16-08-2027 16:57
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,Tatkal,13-05-2027,Thursday,0,64,5,34,success,20-04-2027 19:15
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,3A,Tatkal,30-11-2027,Tuesday,0,64,3,26,success,21-11-2027 18:27
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,3A,General,13-01-2027,Wednesday,0,64,6,40,success,21-12-2026 20:13
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,SL,General,14-01-2027,Thursday,0,72,1,46,success,08-01-2027 22:24
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,3A,Tatkal,13-02-2027,Saturday,1,64,3,27,success,06-02-2027 03:35
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,3A,Tatkal,21-05-2027,Friday,0,64,4,33,success,13-05-2027 15:05
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,General,17-08-2027,Tuesday,0,64,4,42,success,07-08-2027 05:51
+T009,Pune-Delhi,Pune,New Delhi,1450,1A,Tatkal,22-04-2027,Thursday,0,24,7,8,success,18-04-2027 20:41
+T010,Delhi-Pune,New Delhi,Pune,1450,SL,Tatkal,25-06-2027,Friday,0,72,3,30,success,01-06-2027 17:34
+T001,Delhi-Mumbai,New Delhi,Mumbai,1384,2A,Tatkal,05-06-2027,Saturday,1,46,2,14,success,06-05-2027 00:00
+T002,Mumbai-Delhi,Mumbai,New Delhi,1384,3A,Tatkal,13-11-2027,Saturday,1,64,3,20,success,25-10-2027 15:51
+T003,Delhi-Kolkata,New Delhi,Kolkata,1450,SL,Tatkal,06-04-2027,Tuesday,0,72,7,35,success,05-04-2027 00:00
+T004,Kolkata-Delhi,Kolkata,New Delhi,1450,SL,Tatkal,28-11-2027,Sunday,1,72,2,24,success,07-11-2027 13:21
+T005,Chennai-Bengaluru,Chennai,Bengaluru,350,3A,Tatkal,03-02-2027,Wednesday,0,64,5,31,success,26-01-2027 20:17
+T006,Bengaluru-Chennai,Bengaluru,Chennai,350,SL,Tatkal,16-05-2027,Sunday,1,72,2,16,success,24-04-2027 21:16
+T007,Hyderabad-Mumbai,Hyderabad,Mumbai,710,SL,General,21-12-2027,Tuesday,0,72,3,40,success,11-12-2027 22:50
+T008,Mumbai-Hyderabad,Mumbai,Hyderabad,710,3A,Tatkal,23-08-2027,Monday,0,64,1,32,success,24-07-2027 10:40
+T009,Pune-Delhi,Pune,New Delhi,1450,1A,Tatkal,27-02-2027,Saturday,1,24,7,10,success,29-01-2027 00:17
+T010,Delhi-Pune,New Delhi,Pune,1450,3A,Tatkal,10-09-2027,Friday,0,64,5,24,success,10-08-2027 07:21
