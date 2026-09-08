@@ -6,8 +6,10 @@ from booking_simulator import simulate_booking
 
 
 def tatkal_booking_job():
-    print("\n10:00 AM AUTO-TRIGGER EXECUTED")
-    print("Trigger time:", datetime.now())
+    print("\n================================")
+    print("TATKAL BOOKING AUTO-TRIGGER")
+    print("Trigger Time:", datetime.now())
+    print("================================")
 
     simulate_booking()
 
@@ -18,18 +20,22 @@ scheduler.add_job(
     tatkal_booking_job,
     "cron",
     hour=10,
-    minute=0
+    minute=0,
+    id="tatkal_booking_trigger",
+    replace_existing=True
 )
 
 scheduler.start()
 
 print("Tatkal Sathi Scheduler Started")
-print("Waiting for 10:00 AM auto-trigger...")
+print("Daily booking trigger scheduled for 10:00 AM.")
+print("Waiting for scheduled trigger...")
+
 
 try:
     while True:
         time.sleep(1)
 
 except (KeyboardInterrupt, SystemExit):
-    print("Scheduler stopped.")
+    print("\nScheduler stopped.")
     scheduler.shutdown()
