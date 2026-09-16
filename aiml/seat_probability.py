@@ -15,9 +15,6 @@ import os
 
 RANDOM_STATE = 42
 
-# ---------------------------------------------------------------------------
-# 1. Load data
-# ---------------------------------------------------------------------------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH = os.path.join(BASE_DIR, "..", "data", "tatkal_sathi_dataset_generated.xlsx")
 df = pd.read_excel(DATA_PATH)
@@ -25,15 +22,10 @@ df = pd.read_excel(DATA_PATH)
 print(f"Loaded {len(df)} rows, {df.shape[1]} columns")
 print(df["booking_outcome"].value_counts(normalize=True))
 
-# ---------------------------------------------------------------------------
-# 2. Feature engineering
-#    Only use features known BEFORE the booking window opens.
-# ---------------------------------------------------------------------------
 df["date"] = pd.to_datetime(df["date"])
 df["month"] = df["date"].dt.month
 df["is_weekend"] = df["day_of_week"].isin(["Saturday", "Sunday"]).astype(int)
 
-# Ratio of requested seats to total seats on the train (known in advance)
 df["seat_pressure"] = df["seats_requested"] / df["total_seats"]
 
 FEATURES = [
@@ -52,28 +44,20 @@ FEATURES = [
 TARGET = "booking_outcome"
 
 X = df[FEATURES]
-y = (df[TARGET] == "success").astype(int)  # 1 = success, 0 = fail
+y = (df[TARGET] == "success").astype(int)  
 
 CATEGORICAL = ["route", "class", "quota", "day_of_week"]
 NUMERIC = [c for c in FEATURES if c not in CATEGORICAL]
 
-# ---------------------------------------------------------------------------
-# 3. Train/test split (stratify so both sets keep the same success/fail ratio)
-# ---------------------------------------------------------------------------
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=RANDOM_STATE, stratify=y
 )
 
-# ---------------------------------------------------------------------------
-# 4. Build pipeline: one-hot encode categoricals -> RandomForest
-#    class_weight="balanced" handles the 74/26 imbalance without needing
-#    a separate oversampling step (SMOTE) for a dataset this small.
-# ---------------------------------------------------------------------------
 preprocessor = ColumnTransformer(
     transformers=[
         ("cat", OneHotEncoder(handle_unknown="ignore"), CATEGORICAL),
     ],
-    remainder="passthrough",  # numeric columns pass through unchanged
+    remainder="passthrough",  
 )
 
 model = RandomForestClassifier(
@@ -85,14 +69,8 @@ model = RandomForestClassifier(
 
 pipeline = Pipeline(steps=[("preprocess", preprocessor), ("model", model)])
 
-# ---------------------------------------------------------------------------
-# 5. Train
-# ---------------------------------------------------------------------------
 pipeline.fit(X_train, y_train)
 
-# ---------------------------------------------------------------------------
-# 6. Evaluate
-# ---------------------------------------------------------------------------
 y_pred = pipeline.predict(X_test)
 y_proba = pipeline.predict_proba(X_test)[:, 1]
 
@@ -101,7 +79,6 @@ print(classification_report(y_test, y_pred, target_names=["fail", "success"]))
 print("ROC-AUC:", round(roc_auc_score(y_test, y_proba), 3))
 print("Confusion matrix:\n", confusion_matrix(y_test, y_pred))
 
-# Feature importance (helps you explain the model in your report/demo)
 ohe = pipeline.named_steps["preprocess"].named_transformers_["cat"]
 cat_names = ohe.get_feature_names_out(CATEGORICAL)
 all_feature_names = list(cat_names) + NUMERIC
@@ -113,21 +90,15 @@ imp_df = pd.DataFrame(
 ).sort_values("importance", ascending=False)
 print(imp_df.head(10).to_string(index=False))
 
-# ---------------------------------------------------------------------------
-# 7. Save the trained pipeline (this is what you hand off to Backend)
-# ---------------------------------------------------------------------------
 joblib.dump(pipeline, "model1_seat_probability.pkl")
 print("\nSaved model to model1_seat_probability.pkl")
 
 
-# ---------------------------------------------------------------------------
-# 8. Prediction function — THIS is the function signature Backend will call
-# ---------------------------------------------------------------------------
 def predict_seat_probability(
     route: str,
     train_class: str,
     quota: str,
-    date: str,             # "YYYY-MM-DD"
+    date: str,             
     seats_requested: int = 1,
     total_seats: int = 72,
     is_holiday_or_festival: int = 0,

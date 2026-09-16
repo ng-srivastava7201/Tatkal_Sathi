@@ -1,23 +1,3 @@
-"""
-Tatkal Sathi - Synthetic Training Data Generator
---------------------------------------------------
-Fixes the two problems found in the uploaded datasets:
-  1. `seats_available_at_booking_time` must always be present (never blank).
-  2. Success/fail ratio must be realistic (Tatkal mostly FAILS), not 99% success.
-
-Design principle (discussed with the AI/ML engineer):
-  - Faker is used ONLY for cosmetic fields (PNR numbers) - it has no concept
-    of real-world booking patterns.
-  - The actual success/fail pattern is RULE-BASED, driven by factors that
-    genuinely affect real Tatkal outcomes:
-        route popularity (metro-to-metro routes are harder)
-        class (higher class = more seats = easier)
-        quota (Tatkal is harder than General)
-        festival/holiday proximity (demand spikes, harder)
-        seats_requested (asking for more seats is harder)
-
-"""
-
 import numpy as np
 import pandas as pd
 from faker import Faker
@@ -30,10 +10,7 @@ rng = np.random.default_rng(RANDOM_SEED)
 fake = Faker()
 Faker.seed(RANDOM_SEED)
 
-# ---------------------------------------------------------------------------
-# 1. Reference data: routes with a realistic "popularity tier"
-#    Higher popularity -> more demand -> harder to get a Tatkal seat.
-# ---------------------------------------------------------------------------
+
 ROUTES = [
     # (train_id, route, source, destination, distance_km, popularity 0-1)
     ("T001", "Delhi-Mumbai",      "New Delhi", "Mumbai",     1384, 0.95),
@@ -54,7 +31,7 @@ ROUTES = [
 ]
 
 CLASSES = {
-    # class: (total_seats, base_ease 0-1 -> higher = easier to get a seat)
+    
     "SL": (72, 0.35),
     "3A": (64, 0.45),
     "2A": (46, 0.60),
@@ -63,7 +40,6 @@ CLASSES = {
 
 QUOTA_EASE = {"Tatkal": 0.30, "General": 0.65}
 
-# A handful of known Indian festival/holiday dates for 2026-2027 (extend as needed)
 FESTIVAL_DATES = {
     "2026-01-26", "2026-03-14", "2026-04-14", "2026-08-15", "2026-10-02",
     "2026-10-20", "2026-11-08", "2026-12-25",
@@ -96,9 +72,6 @@ def booking_hour(quota: str) -> int:
     return int(rng.integers(8, 21))
 
 
-# ---------------------------------------------------------------------------
-# 2. Generate rows
-# ---------------------------------------------------------------------------
 rows = []
 for _ in range(N_ROWS):
     train_id, route, source, dest, distance, popularity = ROUTES[
@@ -116,7 +89,6 @@ for _ in range(N_ROWS):
 
     seats_requested = int(rng.choice([1, 2, 3, 4], p=[0.55, 0.30, 0.10, 0.05]))
 
-    # --- Core probability model (this is the "learnable pattern") ---
     p_success = (
         0.55 * class_ease
         + 0.30 * quota_ease
@@ -126,16 +98,14 @@ for _ in range(N_ROWS):
         p_success *= 0.55
     if is_weekend:
         p_success *= 0.85
-    p_success *= max(0.25, 1 - 0.15 * (seats_requested - 1))  # more seats = harder
+    p_success *= max(0.25, 1 - 0.15 * (seats_requested - 1)) 
     p_success = float(np.clip(p_success + rng.normal(0, 0.05), 0.02, 0.97))
 
     outcome = "success" if rng.random() < p_success else "fail"
 
-    # seats_available_at_booking_time must be consistent with the outcome
     if outcome == "success":
         seats_available = int(rng.integers(seats_requested, max(seats_requested + 1, int(total_seats * 0.25))))
     else:
-        # either genuinely 0, or fewer than requested
         if rng.random() < 0.7:
             seats_available = 0
         else:
@@ -143,7 +113,6 @@ for _ in range(N_ROWS):
 
     hour = booking_hour(quota)
     minute = int(rng.integers(0, 60))
-    # booking attempt happens same day the Tatkal window opens (1 day before travel date, typically)
     attempt_dt = date - timedelta(days=1)
     attempt_dt = attempt_dt.replace(hour=hour, minute=minute, second=0, microsecond=0)
 
@@ -168,9 +137,6 @@ for _ in range(N_ROWS):
 
 df = pd.DataFrame(rows)
 
-# ---------------------------------------------------------------------------
-# 3. Sanity checks before saving
-# ---------------------------------------------------------------------------
 print("Generated rows:", len(df))
 print("\nOverall outcome distribution:")
 print(df["booking_outcome"].value_counts(normalize=True).round(3))
@@ -191,9 +157,6 @@ inconsistent = df[
 ]
 print("Inconsistent rows:", len(inconsistent), "(should be 0)")
 
-# ---------------------------------------------------------------------------
-# 4. Save
-# ---------------------------------------------------------------------------
 OUT_PATH = "tatkal_sathi_dataset_generated.xlsx"
 df.to_excel(OUT_PATH, index=False)
 print(f"\nSaved {len(df)} rows to {OUT_PATH}")
