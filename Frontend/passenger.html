@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passenger Details - Tatkal Sathi</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f4f7fb;
+            color: #172033;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            height: 70px;
+            background: #102a43;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-right {
+            font-size: 14px;
+            color: #d9e6f2;
+        }
+
+        /* MAIN */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 35px auto;
+        }
+
+        /* PROGRESS */
+        .progress-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 35px;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+        }
+
+        .circle {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #d9e2ec;
+            color: #52606d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .circle.active {
+            background: #1976d2;
+            color: white;
+        }
+
+        .line {
+            width: 80px;
+            height: 3px;
+            background: #d9e2ec;
+        }
+
+        .line.active {
+            background: #1976d2;
+        }
+
+        /* PAGE TITLE */
+        .page-title {
+            margin-bottom: 25px;
+        }
+
+        .page-title h1 {
+            font-size: 28px;
+            color: #102a43;
+            margin-bottom: 8px;
+        }
+
+        .page-title p {
+            color: #627d98;
+            font-size: 15px;
+        }
+
+        /* SELECTED TRAIN */
+        .train-summary {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            border: 1px solid #d9e2ec;
+            box-shadow: 0 4px 12px rgba(16, 42, 67, 0.06);
+        }
+
+        .train-summary h3 {
+            color: #102a43;
+            margin-bottom: 15px;
+        }
+
+        .train-info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .info-item {
+            min-width: 150px;
+        }
+
+        .info-label {
+            font-size: 12px;
+            color: #829ab1;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            font-size: 15px;
+            font-weight: bold;
+            color: #243b53;
+        }
+
+        /* FORM CARD */
+        .form-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            border: 1px solid #d9e2ec;
+            box-shadow: 0 4px 12px rgba(16, 42, 67, 0.06);
+        }
+
+        .form-card h2 {
+            color: #102a43;
+            font-size: 21px;
+            margin-bottom: 25px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full {
+            grid-column: span 2;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #243b53;
+            margin-bottom: 8px;
+        }
+
+        .required {
+            color: #d64545;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 12px 13px;
+            border: 1px solid #bcccdc;
+            border-radius: 7px;
+            font-size: 14px;
+            outline: none;
+            background: white;
+            color: #243b53;
+        }
+
+        input:focus,
+        select:focus {
+            border-color: #1976d2;
+            box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.08);
+        }
+
+        .hint {
+            margin-top: 6px;
+            font-size: 12px;
+            color: #829ab1;
+        }
+
+        /* PASSENGER HEADER */
+        .passenger-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .passenger-number {
+            background: #e8f1fb;
+            color: #1976d2;
+            padding: 7px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        /* BUTTONS */
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 13px 25px;
+            border-radius: 7px;
+            border: none;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn-back {
+            background: #edf2f7;
+            color: #243b53;
+        }
+
+        .btn-back:hover {
+            background: #d9e2ec;
+        }
+
+        .btn-next {
+            background: #1976d2;
+            color: white;
+        }
+
+        .btn-next:hover {
+            background: #1565b8;
+        }
+
+        /* ERROR */
+        .error-message {
+            display: none;
+            background: #fff1f0;
+            color: #c53030;
+            border: 1px solid #feb2b2;
+            padding: 12px;
+            border-radius: 7px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 700px) {
+
+            .navbar {
+                padding: 0 5%;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full {
+                grid-column: span 1;
+            }
+
+            .train-info {
+                flex-direction: column;
+            }
+
+            .line {
+                width: 35px;
+            }
+
+            .form-card {
+                padding: 20px;
+            }
+
+            .button-container {
+                gap: 10px;
+            }
+
+            .btn {
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="logo">Tatkal Sathi</div>
+        <div class="nav-right">Secure Booking Assistant</div>
+    </div>
+
+
+    <div class="container">
+
+        <!-- PROGRESS BAR -->
+        <div class="progress-container">
+
+            <div class="step">
+                <div class="circle active">1</div>
+            </div>
+
+            <div class="line active"></div>
+
+            <div class="step">
+                <div class="circle active">2</div>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="step">
+                <div class="circle">3</div>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="step">
+                <div class="circle">4</div>
+            </div>
+
+        </div>
+
+
+        <!-- TITLE -->
+        <div class="page-title">
+            <h1>Passenger Details</h1>
+            <p>Enter the passenger information required for your ticket.</p>
+        </div>
+
+
+        <!-- SELECTED TRAIN -->
+        <div class="train-summary">
+
+            <h3>Selected Train</h3>
+
+            <div class="train-info">
+
+                <div class="info-item">
+                    <div class="info-label">TRAIN</div>
+                    <div class="info-value">12001 - Bhopal Express</div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-label">FROM</div>
+                    <div class="info-value">Bhopal</div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-label">TO</div>
+                    <div class="info-value">New Delhi</div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-label">DATE</div>
+                    <div class="info-value">25 Aug 2026</div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-label">CLASS</div>
+                    <div class="info-value">3A - AC 3 Tier</div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FORM -->
+        <div class="form-card">
+
+            <div class="passenger-header">
+                <h2>Passenger 1</h2>
+                <div class="passenger-number">Primary Passenger</div>
+            </div>
+
+
+            <div id="errorMessage" class="error-message">
+                Please fill all required fields correctly.
+            </div>
+
+
+            <form id="passengerForm">
+
+                <div class="form-grid">
+
+                    <!-- NAME -->
+                    <div class="form-group full">
+                        <label for="name">
+                            Full Name <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter passenger full name"
+                            required
+                        >
+
+                        <div class="hint">
+                            Enter the name as it should appear on the ticket.
+                        </div>
+                    </div>
+
+
+                    <!-- AGE -->
+                    <div class="form-group">
+
+                        <label for="age">
+                            Age <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="number"
+                            id="age"
+                            min="1"
+                            max="120"
+                            placeholder="Enter age"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- GENDER -->
+                    <div class="form-group">
+
+                        <label for="gender">
+                            Gender <span class="required">*</span>
+                        </label>
+
+                        <select id="gender" required>
+
+                            <option value="">Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- MOBILE -->
+                    <div class="form-group">
+
+                        <label for="mobile">
+                            Mobile Number <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="mobile"
+                            placeholder="10-digit mobile number"
+                            maxlength="10"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="example@email.com"
+                        >
+
+                    </div>
+
+
+                    <!-- ID TYPE -->
+                    <div class="form-group">
+
+                        <label for="idType">
+                            ID Proof Type
+                        </label>
+
+                        <select id="idType">
+
+                            <option value="">Select ID Type</option>
+                            <option value="Aadhaar">Aadhaar Card</option>
+                            <option value="PAN">PAN Card</option>
+                            <option value="Passport">Passport</option>
+                            <option value="Driving Licence">
+                                Driving Licence
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- ID NUMBER -->
+                    <div class="form-group">
+
+                        <label for="idNumber">
+                            ID Proof Number
+                        </label>
+
+                        <input
+                            type="text"
+                            id="idNumber"
+                            placeholder="Enter ID number"
+                        >
+
+                    </div>
+
+
+                    <!-- BERTH -->
+                    <div class="form-group full">
+
+                        <label for="berth">
+                            Berth Preference
+                        </label>
+
+                        <select id="berth">
+
+                            <option value="No Preference">
+                                No Preference
+                            </option>
+
+                            <option value="Lower">
+                                Lower
+                            </option>
+
+                            <option value="Middle">
+                                Middle
+                            </option>
+
+                            <option value="Upper">
+                                Upper
+                            </option>
+
+                            <option value="Side Lower">
+                                Side Lower
+                            </option>
+
+                            <option value="Side Upper">
+                                Side Upper
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BUTTONS -->
+                <div class="button-container">
+
+                    <button
+                        type="button"
+                        class="btn btn-back"
+                        onclick="goBack()"
+                    >
+                        Back to Search
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-next"
+                    >
+                        Continue to Preferences
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        const form = document.getElementById("passengerForm");
+        const errorMessage = document.getElementById("errorMessage");
+
+        form.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const age = document.getElementById("age").value;
+            const gender = document.getElementById("gender").value;
+            const mobile = document.getElementById("mobile").value.trim();
+
+            // Basic validation
+            if (
+                name === "" ||
+                age === "" ||
+                gender === "" ||
+                mobile === ""
+            ) {
+
+                errorMessage.style.display = "block";
+                errorMessage.textContent =
+                    "Please fill all required fields.";
+
+                return;
+            }
+
+
+            // Validate age
+            if (age < 1 || age > 120) {
+
+                errorMessage.style.display = "block";
+                errorMessage.textContent =
+                    "Please enter a valid age.";
+
+                return;
+            }
+
+
+            // Validate mobile
+            if (!/^[0-9]{10}$/.test(mobile)) {
+
+                errorMessage.style.display = "block";
+                errorMessage.textContent =
+                    "Please enter a valid 10-digit mobile number.";
+
+                return;
+            }
+
+
+            // Hide error
+            errorMessage.style.display = "none";
+
+
+            // Save sample passenger data
+            localStorage.setItem(
+                "passengerName",
+                name
+            );
+
+            localStorage.setItem(
+                "passengerAge",
+                age
+            );
+
+            localStorage.setItem(
+                "passengerGender",
+                gender
+            );
+
+            localStorage.setItem(
+                "passengerMobile",
+                mobile
+            );
+
+
+            localStorage.setItem(
+                "passengerEmail",
+                document.getElementById("email").value
+            );
+
+            localStorage.setItem(
+                "berthPreference",
+                document.getElementById("berth").value
+            );
+
+
+            // Go to next page
+            window.location.href = "preferences.html";
+
+        });
+
+
+        function goBack() {
+
+            window.location.href = "booking.html";
+
+        }
+
+    </script>
+
+</body>
+</html>

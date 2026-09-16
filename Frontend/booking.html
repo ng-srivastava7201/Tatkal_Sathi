@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Tatkal Sathi | Book Ticket</title>
+
+
+    <style>
+
+        /* ==========================
+           RESET
+        =========================== */
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+        /* ==========================
+           BODY
+        =========================== */
+
+        body {
+
+            background: #f4f7fb;
+
+            color: #172033;
+
+            min-height: 100vh;
+        }
+
+
+        /* ==========================
+           NAVBAR
+        =========================== */
+
+        .navbar {
+
+            height: 70px;
+
+            background: white;
+
+            border-bottom: 1px solid #e2e8f0;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 0 6%;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 10;
+        }
+
+
+        .brand {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+        }
+
+
+        .brand-logo {
+
+            width: 40px;
+
+            height: 40px;
+
+            border-radius: 10px;
+
+            background: #285b89;
+
+            color: white;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            font-size: 13px;
+
+            font-weight: bold;
+        }
+
+
+        .brand-name {
+
+            font-size: 19px;
+
+            font-weight: bold;
+
+            color: #183b63;
+        }
+
+
+        .user {
+
+            color: #64748b;
+
+            font-size: 13px;
+        }
+
+
+        /* ==========================
+           MAIN
+        =========================== */
+
+        .main {
+
+            width: 92%;
+
+            max-width: 1100px;
+
+            margin: 35px auto 60px;
+        }
+
+
+        /* ==========================
+           PAGE HEADING
+        =========================== */
+
+        .heading {
+
+            margin-bottom: 22px;
+        }
+
+
+        .heading h1 {
+
+            font-size: 28px;
+
+            color: #172033;
+
+            margin-bottom: 6px;
+        }
+
+
+        .heading p {
+
+            color: #64748b;
+
+            font-size: 14px;
+        }
+
+
+        /* ==========================
+           BOOKING CARD
+        =========================== */
+
+        .booking-card {
+
+            background: white;
+
+            border-radius: 18px;
+
+            padding: 30px;
+
+            box-shadow:
+                0 8px 30px rgba(15, 23, 42, 0.07);
+        }
+
+
+        .card-title {
+
+            font-size: 20px;
+
+            font-weight: bold;
+
+            margin-bottom: 5px;
+        }
+
+
+        .card-subtitle {
+
+            color: #64748b;
+
+            font-size: 13px;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* ==========================
+           FORM GRID
+        =========================== */
+
+        .form-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .field label {
+
+            display: block;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            color: #334155;
+
+            margin-bottom: 8px;
+        }
+
+
+        .field input,
+        .field select {
+
+            width: 100%;
+
+            padding: 13px;
+
+            border: 1px solid #d6dee8;
+
+            border-radius: 9px;
+
+            outline: none;
+
+            font-size: 14px;
+
+            background: white;
+        }
+
+
+        .field input:focus,
+        .field select:focus {
+
+            border-color: #3974a8;
+
+            box-shadow:
+                0 0 0 3px #e5f0fa;
+        }
+
+
+        /* ==========================
+           QUOTA
+        =========================== */
+
+        .quota-section {
+
+            margin-top: 25px;
+        }
+
+
+        .quota-title {
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            margin-bottom: 10px;
+        }
+
+
+        .quota-buttons {
+
+            display: flex;
+
+            gap: 10px;
+        }
+
+
+        .quota {
+
+            padding: 11px 20px;
+
+            border-radius: 9px;
+
+            border: 1px solid #d6dee8;
+
+            background: white;
+
+            color: #475569;
+
+            cursor: pointer;
+
+            font-weight: 600;
+        }
+
+
+        .quota.active {
+
+            background: #eaf2f9;
+
+            border-color: #3974a8;
+
+            color: #183b63;
+        }
+
+
+        /* ==========================
+           SEARCH BUTTON
+        =========================== */
+
+        .search-area {
+
+            display: flex;
+
+            justify-content: flex-end;
+
+            margin-top: 28px;
+        }
+
+
+        .search-btn {
+
+            padding: 13px 30px;
+
+            border: none;
+
+            border-radius: 9px;
+
+            background: #285b89;
+
+            color: white;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+
+        .search-btn:hover {
+
+            background: #183b63;
+        }
+
+
+        /* ==========================
+           RESULTS
+        =========================== */
+
+        #results {
+
+            display: none;
+
+            margin-top: 25px;
+        }
+
+
+        .results-heading {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin-bottom: 15px;
+        }
+
+
+        .results-heading h2 {
+
+            font-size: 20px;
+        }
+
+
+        .results-heading span {
+
+            color: #64748b;
+
+            font-size: 12px;
+        }
+
+
+        /* ==========================
+           TRAIN CARD
+        =========================== */
+
+        .train-card {
+
+            background: white;
+
+            border: 1px solid #e2e8f0;
+
+            border-radius: 14px;
+
+            padding: 20px;
+
+            margin-bottom: 14px;
+
+            display: grid;
+
+            grid-template-columns:
+                1.5fr 1fr 0.7fr;
+
+            gap: 20px;
+
+            align-items: center;
+        }
+
+
+        .train-name {
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            color: #172033;
+        }
+
+
+        .train-number {
+
+            font-size: 12px;
+
+            color: #64748b;
+
+            margin-top: 3px;
+        }
+
+
+        .route {
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            margin-top: 10px;
+        }
+
+
+        .time {
+
+            color: #64748b;
+
+            font-size: 12px;
+
+            margin-top: 4px;
+        }
+
+
+        .availability {
+
+            text-align: center;
+        }
+
+
+        .probability {
+
+            display: inline-block;
+
+            padding: 6px 10px;
+
+            background: #effaf3;
+
+            color: #166534;
+
+            border-radius: 20px;
+
+            font-size: 12px;
+
+            font-weight: bold;
+        }
+
+
+        .seats {
+
+            font-size: 12px;
+
+            color: #64748b;
+
+            margin-top: 7px;
+        }
+
+
+        .fare {
+
+            text-align: right;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            margin-bottom: 9px;
+        }
+
+
+        .book-btn {
+
+            padding: 10px 18px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: #285b89;
+
+            color: white;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+
+        .book-btn:hover {
+
+            background: #183b63;
+        }
+
+
+        /* ==========================
+           ALTERNATIVE ROUTE
+        =========================== */
+
+        .alternative {
+
+            margin-top: 25px;
+
+            padding: 20px;
+
+            background: #f7fafc;
+
+            border: 1px solid #dce6ef;
+
+            border-radius: 14px;
+        }
+
+
+        .alternative h3 {
+
+            color: #183b63;
+
+            font-size: 16px;
+
+            margin-bottom: 6px;
+        }
+
+
+        .alternative p {
+
+            color: #64748b;
+
+            font-size: 13px;
+
+            line-height: 1.6;
+        }
+
+
+        .alternative-btn {
+
+            margin-top: 13px;
+
+            padding: 9px 17px;
+
+            background: white;
+
+            color: #285b89;
+
+            border: 1px solid #3974a8;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+
+        /* ==========================
+           RESPONSIVE
+        =========================== */
+
+        @media (max-width: 800px) {
+
+            .train-card {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .availability {
+
+                text-align: left;
+            }
+
+
+            .fare {
+
+                text-align: left;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .form-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .navbar {
+
+                padding: 0 4%;
+            }
+
+
+            .booking-card {
+
+                padding: 20px;
+            }
+
+
+            .heading h1 {
+
+                font-size: 24px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================
+         NAVBAR
+    =========================== -->
+
+    <nav class="navbar">
+
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                TS
+            </div>
+
+            <div class="brand-name">
+                Tatkal Sathi
+            </div>
+
+        </div>
+
+
+        <div class="user">
+
+            Welcome, Demo User
+
+        </div>
+
+
+    </nav>
+
+
+
+    <!-- ==========================
+         MAIN
+    =========================== -->
+
+    <main class="main">
+
+
+        <div class="heading">
+
+            <h1>
+                Search & Book Ticket
+            </h1>
+
+            <p>
+                Find available trains for your Tatkal journey.
+            </p>
+
+        </div>
+
+
+
+        <!-- ==========================
+             BOOKING FORM
+        =========================== -->
+
+        <section class="booking-card">
+
+
+            <div class="card-title">
+
+                Journey Details
+
+            </div>
+
+
+            <div class="card-subtitle">
+
+                Enter your journey information to search trains.
+
+            </div>
+
+
+
+            <div class="form-grid">
+
+
+                <!-- FROM -->
+
+                <div class="field">
+
+                    <label for="from">
+                        From Station
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="from"
+                        list="stations"
+                        placeholder="e.g. Bhopal"
+                    >
+
+                </div>
+
+
+
+                <!-- TO -->
+
+                <div class="field">
+
+                    <label for="to">
+                        To Station
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="to"
+                        list="stations"
+                        placeholder="e.g. New Delhi"
+                    >
+
+                </div>
+
+
+
+                <!-- DATE -->
+
+                <div class="field">
+
+                    <label for="date">
+                        Journey Date
+                    </label>
+
+
+                    <input
+                        type="date"
+                        id="date"
+                    >
+
+                </div>
+
+
+
+                <!-- CLASS -->
+
+                <div class="field">
+
+                    <label for="classType">
+                        Travel Class
+                    </label>
+
+
+                    <select id="classType">
+
+                        <option value="SL">
+                            Sleeper (SL)
+                        </option>
+
+                        <option value="3A">
+                            AC 3 Tier (3A)
+                        </option>
+
+                        <option value="2A">
+                            AC 2 Tier (2A)
+                        </option>
+
+                        <option value="1A">
+                            First AC (1A)
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- STATION SUGGESTIONS -->
+
+            <datalist id="stations">
+
+                <option value="Bhopal">
+
+                <option value="New Delhi">
+
+                <option value="Mumbai">
+
+                <option value="Hyderabad">
+
+                <option value="Bengaluru">
+
+                <option value="Indore">
+
+            </datalist>
+
+
+
+            <!-- QUOTA -->
+
+            <div class="quota-section">
+
+                <div class="quota-title">
+
+                    Booking Quota
+
+                </div>
+
+
+                <div class="quota-buttons">
+
+
+                    <button
+                        class="quota active"
+                        onclick="selectQuota(this)"
+                    >
+
+                        Tatkal
+
+                    </button>
+
+
+                    <button
+                        class="quota"
+                        onclick="selectQuota(this)"
+                    >
+
+                        General
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SEARCH -->
+
+            <div class="search-area">
+
+                <button
+                    class="search-btn"
+                    onclick="searchTrains()"
+                >
+
+                    Search Trains
+
+                </button>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==========================
+             TRAIN RESULTS
+        =========================== -->
+
+        <section id="results">
+
+
+            <div class="results-heading">
+
+                <h2>
+                    Available Trains
+                </h2>
+
+                <span>
+                    Sample availability data
+                </span>
+
+            </div>
+
+
+
+            <!-- TRAIN 1 -->
+
+            <div class="train-card">
+
+
+                <div>
+
+                    <div class="train-name">
+
+                        Bhopal Shatabdi
+
+                    </div>
+
+
+                    <div class="train-number">
+
+                        Train No. 12002
+
+                    </div>
+
+
+                    <div class="route">
+
+                        Bhopal → New Delhi
+
+                    </div>
+
+
+                    <div class="time">
+
+                        06:00 AM → 02:00 PM
+                        | Duration: 8h
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="availability">
+
+                    <span class="probability">
+
+                        87% Booking Probability
+
+                    </span>
+
+
+                    <div class="seats">
+
+                        24 seats available
+
+                    </div>
+
+                </div>
+
+
+
+                <div>
+
+                    <div class="fare">
+
+                        ₹1,450
+
+                    </div>
+
+
+                    <button
+                        class="book-btn"
+                        onclick="bookTrain('Bhopal Shatabdi')"
+                    >
+
+                        Select Train
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- TRAIN 2 -->
+
+            <div class="train-card">
+
+
+                <div>
+
+                    <div class="train-name">
+
+                        Bhopal Express
+
+                    </div>
+
+
+                    <div class="train-number">
+
+                        Train No. 12156
+
+                    </div>
+
+
+                    <div class="route">
+
+                        Bhopal → Mumbai
+
+                    </div>
+
+
+                    <div class="time">
+
+                        08:30 PM → 08:00 AM
+                        | Duration: 11h 30m
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="availability">
+
+                    <span class="probability">
+
+                        72% Booking Probability
+
+                    </span>
+
+
+                    <div class="seats">
+
+                        18 seats available
+
+                    </div>
+
+                </div>
+
+
+
+                <div>
+
+                    <div class="fare">
+
+                        ₹1,200
+
+                    </div>
+
+
+                    <button
+                        class="book-btn"
+                        onclick="bookTrain('Bhopal Express')"
+                    >
+
+                        Select Train
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- TRAIN 3 -->
+
+            <div class="train-card">
+
+
+                <div>
+
+                    <div class="train-name">
+
+                        Telangana Express
+
+                    </div>
+
+
+                    <div class="train-number">
+
+                        Train No. 12724
+
+                    </div>
+
+
+                    <div class="route">
+
+                        New Delhi → Hyderabad
+
+                    </div>
+
+
+                    <div class="time">
+
+                        04:00 PM → 08:00 AM
+                        | Duration: 16h
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="availability">
+
+                    <span class="probability">
+
+                        91% Booking Probability
+
+                    </span>
+
+
+                    <div class="seats">
+
+                        31 seats available
+
+                    </div>
+
+                </div>
+
+
+
+                <div>
+
+                    <div class="fare">
+
+                        ₹1,550
+
+                    </div>
+
+
+                    <button
+                        class="book-btn"
+                        onclick="bookTrain('Telangana Express')"
+                    >
+
+                        Select Train
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==========================
+                 ALTERNATIVE ROUTE
+            =========================== -->
+
+            <div class="alternative">
+
+                <h3>
+                    Alternative Route Assistance
+                </h3>
+
+
+                <p>
+
+                    If your preferred train is unavailable,
+                    Tatkal Sathi can compare alternative
+                    trains based on availability, travel
+                    time, fare and station preferences.
+
+                </p>
+
+
+                <button
+                    class="alternative-btn"
+                    onclick="showAlternative()"
+                >
+
+                    Find Alternatives
+
+                </button>
+
+
+                <p
+                    id="alternativeMessage"
+                    style="display:none; margin-top:12px;"
+                >
+
+                    Best sample alternative:
+                    Telangana Express with
+                    91% booking probability.
+
+                </p>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==========================
+         JAVASCRIPT
+    =========================== -->
+
+    <script>
+
+
+        /* ==========================
+           QUOTA SELECTION
+        =========================== */
+
+        function selectQuota(button) {
+
+            const buttons =
+                document.querySelectorAll(".quota");
+
+
+            buttons.forEach(function(btn) {
+
+                btn.classList.remove("active");
+
+            });
+
+
+            button.classList.add("active");
+
+        }
+
+
+
+        /* ==========================
+           SEARCH TRAINS
+        =========================== */
+
+        function searchTrains() {
+
+
+            const from =
+                document.getElementById("from").value.trim();
+
+
+            const to =
+                document.getElementById("to").value.trim();
+
+
+            const date =
+                document.getElementById("date").value;
+
+
+            if (
+                from === "" ||
+                to === "" ||
+                date === ""
+            ) {
+
+                alert(
+                    "Please enter From Station, To Station and Journey Date."
+                );
+
+                return;
+
+            }
+
+
+            document
+                .getElementById("results")
+                .style.display = "block";
+
+
+            document
+                .getElementById("results")
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+
+        }
+
+
+
+        /* ==========================
+           SELECT TRAIN
+        =========================== */
+
+        function bookTrain(trainName) {
+
+            alert(
+                "Selected Train: " +
+                trainName +
+                "\n\nPassenger details page will be added next."
+            );
+
+        }
+
+
+
+        /* ==========================
+           ALTERNATIVE ROUTE
+        =========================== */
+
+        function showAlternative() {
+
+            document
+                .getElementById("alternativeMessage")
+                .style.display = "block";
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

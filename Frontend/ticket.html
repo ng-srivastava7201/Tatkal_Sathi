@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Ticket - Tatkal Sathi</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f4f7fb;
+            color: #172033;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            height: 70px;
+            background: #0b1f3a;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 7%;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .nav-title {
+            color: #dce7f5;
+            font-size: 14px;
+        }
+
+        /* CONTAINER */
+        .container {
+            width: 90%;
+            max-width: 1050px;
+            margin: 35px auto;
+        }
+
+        /* HEADER */
+        .page-header {
+            margin-bottom: 25px;
+        }
+
+        .page-header h1 {
+            color: #0b1f3a;
+            font-size: 30px;
+            margin-bottom: 7px;
+        }
+
+        .page-header p {
+            color: #6b778a;
+            font-size: 14px;
+        }
+
+        /* SUCCESS */
+        .success-banner {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-left: 5px solid #16a34a;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .success-banner h2 {
+            color: #15803d;
+            margin-bottom: 6px;
+            font-size: 21px;
+        }
+
+        .success-banner p {
+            color: #52705b;
+            font-size: 14px;
+        }
+
+        /* TICKET */
+        .ticket {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 7px 25px rgba(20, 40, 70, 0.1);
+            overflow: hidden;
+            margin-bottom: 25px;
+        }
+
+        .ticket-header {
+            background: #0b1f3a;
+            color: white;
+            padding: 23px 28px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .ticket-header h2 {
+            font-size: 21px;
+            margin-bottom: 5px;
+        }
+
+        .ticket-header p {
+            color: #cbd8e8;
+            font-size: 12px;
+        }
+
+        .pnr {
+            text-align: right;
+        }
+
+        .pnr span {
+            display: block;
+            color: #bdcbe0;
+            font-size: 11px;
+            margin-bottom: 4px;
+        }
+
+        .pnr strong {
+            font-size: 22px;
+            letter-spacing: 2px;
+        }
+
+        /* ROUTE */
+        .route-section {
+            padding: 30px;
+            border-bottom: 1px dashed #cbd5e1;
+        }
+
+        .route {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .station {
+            width: 30%;
+        }
+
+        .station:last-child {
+            text-align: right;
+        }
+
+        .station h3 {
+            font-size: 25px;
+            color: #0b1f3a;
+            margin-bottom: 5px;
+        }
+
+        .station p {
+            color: #738096;
+            font-size: 13px;
+        }
+
+        .train-route {
+            flex: 1;
+            text-align: center;
+            margin: 0 25px;
+        }
+
+        .train-route strong {
+            display: block;
+            color: #2563eb;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .line {
+            height: 2px;
+            background: #b9c6d7;
+            position: relative;
+        }
+
+        .line::before,
+        .line::after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #2563eb;
+            top: -4px;
+        }
+
+        .line::before {
+            left: 0;
+        }
+
+        .line::after {
+            right: 0;
+        }
+
+        /* DETAILS */
+        .details-section {
+            padding: 28px 30px;
+            border-bottom: 1px dashed #cbd5e1;
+        }
+
+        .section-title {
+            color: #0b1f3a;
+            font-size: 17px;
+            margin-bottom: 18px;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .detail-box {
+            background: #f7f9fc;
+            border-radius: 9px;
+            padding: 14px;
+        }
+
+        .detail-box span {
+            display: block;
+            color: #7a8596;
+            font-size: 11px;
+            margin-bottom: 6px;
+        }
+
+        .detail-box strong {
+            color: #172033;
+            font-size: 14px;
+        }
+
+        /* PASSENGER */
+        .passenger-section {
+            padding: 28px 30px;
+            border-bottom: 1px dashed #cbd5e1;
+        }
+
+        .passenger-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .passenger-table th {
+            background: #f3f6fa;
+            color: #596679;
+            font-size: 12px;
+            text-align: left;
+            padding: 12px;
+        }
+
+        .passenger-table td {
+            padding: 14px 12px;
+            border-bottom: 1px solid #edf0f4;
+            font-size: 13px;
+        }
+
+        .confirmed {
+            color: #15803d;
+            font-weight: bold;
+        }
+
+        /* FARE */
+        .fare-section {
+            padding: 28px 30px;
+        }
+
+        .fare-box {
+            max-width: 420px;
+            margin-left: auto;
+        }
+
+        .fare-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            font-size: 13px;
+            color: #687386;
+        }
+
+        .fare-total {
+            border-top: 1px solid #dce3ec;
+            margin-top: 8px;
+            padding-top: 14px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 18px;
+            font-weight: bold;
+            color: #0b1f3a;
+        }
+
+        /* DEMO */
+        .demo-note {
+            background: #fff8e8;
+            border: 1px solid #f0d38d;
+            color: #725519;
+            padding: 14px 16px;
+            border-radius: 9px;
+            font-size: 12px;
+            margin-bottom: 22px;
+        }
+
+        /* ACTIONS */
+        .actions {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 25px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            padding: 13px 22px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background: #0b1f3a;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #16345d;
+        }
+
+        .btn-secondary {
+            background: #e6edf6;
+            color: #0b1f3a;
+        }
+
+        /* PRINT */
+        @media print {
+
+            body {
+                background: white;
+            }
+
+            .navbar,
+            .page-header,
+            .demo-note,
+            .actions {
+                display: none;
+            }
+
+            .container {
+                width: 100%;
+                margin: 0;
+            }
+
+            .ticket {
+                box-shadow: none;
+                border: 1px solid #ccc;
+            }
+
+            .success-banner {
+                margin-top: 10px;
+            }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 750px) {
+
+            .navbar {
+                padding: 0 4%;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .ticket-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .pnr {
+                text-align: left;
+            }
+
+            .details-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .route {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .station {
+                width: 100%;
+                text-align: center !important;
+            }
+
+            .train-route {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .passenger-table {
+                font-size: 11px;
+            }
+
+            .passenger-table th,
+            .passenger-table td {
+                padding: 8px 5px;
+            }
+
+            .actions {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            Tatkal Sathi
+        </div>
+
+        <div class="nav-title">
+            Digital Ticket
+        </div>
+
+    </nav>
+
+
+    <main class="container">
+
+        <!-- HEADER -->
+        <div class="page-header">
+
+            <h1>Digital Ticket</h1>
+
+            <p>
+                Your simulated Tatkal booking confirmation and journey details.
+            </p>
+
+        </div>
+
+
+        <!-- SUCCESS -->
+        <div class="success-banner">
+
+            <h2>Booking Confirmed</h2>
+
+            <p>
+                Your Tatkal Sathi automation workflow has successfully completed
+                in demo mode.
+            </p>
+
+        </div>
+
+
+        <!-- DEMO NOTICE -->
+        <div class="demo-note">
+
+            <strong>Demo Ticket:</strong>
+            This ticket is generated for the Tatkal Sathi project exhibition.
+            It does not represent a real railway reservation or valid travel document.
+
+        </div>
+
+
+        <!-- TICKET -->
+        <div class="ticket">
+
+
+            <!-- TICKET HEADER -->
+            <div class="ticket-header">
+
+                <div>
+
+                    <h2>Tatkal Sathi — E-Ticket</h2>
+
+                    <p>
+                        Automated Booking Confirmation
+                    </p>
+
+                </div>
+
+
+                <div class="pnr">
+
+                    <span>PNR NUMBER</span>
+
+                    <strong>4527819630</strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- ROUTE -->
+            <div class="route-section">
+
+                <div class="route">
+
+
+                    <div class="station">
+
+                        <h3>Bhopal</h3>
+
+                        <p>
+                            BPL
+                        </p>
+
+                    </div>
+
+
+                    <div class="train-route">
+
+                        <strong>
+                            12155 — Shaan-e-Bhopal
+                        </strong>
+
+                        <div class="line"></div>
+
+                    </div>
+
+
+                    <div class="station">
+
+                        <h3>New Delhi</h3>
+
+                        <p>
+                            NDLS
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- JOURNEY DETAILS -->
+            <div class="details-section">
+
+                <h3 class="section-title">
+                    Journey Details
+                </h3>
+
+
+                <div class="details-grid">
+
+
+                    <div class="detail-box">
+
+                        <span>
+                            Journey Date
+                        </span>
+
+                        <strong>
+                            25 August 2026
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-box">
+
+                        <span>
+                            Departure
+                        </span>
+
+                        <strong>
+                            06:15 AM
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-box">
+
+                        <span>
+                            Arrival
+                        </span>
+
+                        <strong>
+                            03:45 PM
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-box">
+
+                        <span>
+                            Quota
+                        </span>
+
+                        <strong id="quotaValue">
+                            Tatkal
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-box">
+
+                        <span>
+                            Class
+                        </span>
+
+                        <strong id="classValue">
+                            3A
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-box">
+
+                        <span>
+                            Coach
+                        </span>
+
+                        <strong>
+                            B2
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-box">
+
+                        <span>
+                            Berth
+                        </span>
+
+                        <strong>
+                            34
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-box">
+
+                        <span>
+                            Booking Status
+                        </span>
+
+                        <strong style="color:#15803d;">
+                            Confirmed
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- PASSENGER -->
+            <div class="passenger-section">
+
+                <h3 class="section-title">
+                    Passenger Details
+                </h3>
+
+
+                <table class="passenger-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                No.
+                            </th>
+
+                            <th>
+                                Passenger Name
+                            </th>
+
+                            <th>
+                                Age
+                            </th>
+
+                            <th>
+                                Gender
+                            </th>
+
+                            <th>
+                                Seat / Berth
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                1
+                            </td>
+
+                            <td id="passengerName">
+                                Demo Passenger
+                            </td>
+
+                            <td id="passengerAge">
+                                22
+                            </td>
+
+                            <td id="passengerGender">
+                                Female
+                            </td>
+
+                            <td>
+                                B2 / 34
+                            </td>
+
+                            <td class="confirmed">
+                                Confirmed
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- FARE -->
+            <div class="fare-section">
+
+                <h3 class="section-title">
+                    Fare Details
+                </h3>
+
+
+                <div class="fare-box">
+
+                    <div class="fare-row">
+
+                        <span>
+                            Base Fare
+                        </span>
+
+                        <strong>
+                            ₹1,050
+                        </strong>
+
+                    </div>
+
+
+                    <div class="fare-row">
+
+                        <span>
+                            Tatkal Charges
+                        </span>
+
+                        <strong>
+                            ₹150
+                        </strong>
+
+                    </div>
+
+
+                    <div class="fare-row">
+
+                        <span>
+                            Convenience Fee
+                        </span>
+
+                        <strong>
+                            ₹20
+                        </strong>
+
+                    </div>
+
+
+                    <div class="fare-row">
+
+                        <span>
+                            Taxes / Other
+                        </span>
+
+                        <strong>
+                            ₹25
+                        </strong>
+
+                    </div>
+
+
+                    <div class="fare-total">
+
+                        <span>
+                            Total Paid
+                        </span>
+
+                        <strong>
+                            ₹1,245
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ACTION BUTTONS -->
+        <div class="actions">
+
+            <button
+                class="btn btn-primary"
+                onclick="window.print()">
+
+                Print Ticket
+
+            </button>
+
+
+            <button
+                class="btn btn-secondary"
+                onclick="window.location.href='status.html'">
+
+                Back to Status
+
+            </button>
+
+
+            <button
+                class="btn btn-secondary"
+                onclick="window.location.href='dashboard.html'">
+
+                Go to Dashboard
+
+            </button>
+
+        </div>
+
+
+    </main>
+
+
+    <script>
+
+        /* LOAD DATA FROM LOCAL STORAGE */
+
+        const passengerName =
+            localStorage.getItem("passengerName");
+
+        const passengerAge =
+            localStorage.getItem("passengerAge");
+
+        const passengerGender =
+            localStorage.getItem("passengerGender");
+
+        const selectedClass =
+            localStorage.getItem("travelClass");
+
+        const quota =
+            localStorage.getItem("quota");
+
+
+        /* PASSENGER NAME */
+
+        if (passengerName) {
+
+            document.getElementById("passengerName")
+                .textContent = passengerName;
+
+        }
+
+
+        /* AGE */
+
+        if (passengerAge) {
+
+            document.getElementById("passengerAge")
+                .textContent = passengerAge;
+
+        }
+
+
+        /* GENDER */
+
+        if (passengerGender) {
+
+            document.getElementById("passengerGender")
+                .textContent = passengerGender;
+
+        }
+
+
+        /* CLASS */
+
+        if (selectedClass) {
+
+            document.getElementById("classValue")
+                .textContent = selectedClass;
+
+        }
+
+
+        /* QUOTA */
+
+        if (quota) {
+
+            document.getElementById("quotaValue")
+                .textContent = quota;
+
+        }
+
+    </script>
+
+</body>
+</html>
