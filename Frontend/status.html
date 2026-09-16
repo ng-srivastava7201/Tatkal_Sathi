@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Status - Tatkal Sathi</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f4f7fb;
+            color: #172033;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            height: 70px;
+            background: #0b1f3a;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-title {
+            font-size: 15px;
+            color: #dbe7f5;
+        }
+
+        /* MAIN */
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: 35px auto;
+        }
+
+        /* HEADER */
+        .page-header {
+            margin-bottom: 25px;
+        }
+
+        .page-header h1 {
+            font-size: 30px;
+            color: #0b1f3a;
+            margin-bottom: 7px;
+        }
+
+        .page-header p {
+            color: #687386;
+            font-size: 15px;
+        }
+
+        /* STATUS HEADER */
+        .status-header {
+            background: white;
+            border-radius: 14px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(20, 40, 70, 0.08);
+            margin-bottom: 22px;
+            border-left: 5px solid #3b82f6;
+        }
+
+        .status-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .status-top h2 {
+            color: #0b1f3a;
+            margin-bottom: 7px;
+        }
+
+        .status-top p {
+            color: #687386;
+            font-size: 14px;
+        }
+
+        .status-badge {
+            padding: 10px 18px;
+            border-radius: 30px;
+            background: #e8f1ff;
+            color: #2563eb;
+            font-size: 14px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        /* STEPPER */
+        .stepper-card {
+            background: white;
+            padding: 28px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(20, 40, 70, 0.08);
+            margin-bottom: 22px;
+        }
+
+        .stepper {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .stepper::before {
+            content: "";
+            position: absolute;
+            top: 17px;
+            left: 5%;
+            right: 5%;
+            height: 3px;
+            background: #dbe4ef;
+            z-index: 0;
+        }
+
+        .step {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            width: 20%;
+        }
+
+        .circle {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #e1e7ef;
+            color: #657083;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            font-weight: bold;
+            border: 3px solid white;
+        }
+
+        .step.active .circle {
+            background: #2563eb;
+            color: white;
+        }
+
+        .step.completed .circle {
+            background: #16a34a;
+            color: white;
+        }
+
+        .step p {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #687386;
+        }
+
+        .step.active p,
+        .step.completed p {
+            color: #172033;
+            font-weight: bold;
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 22px;
+        }
+
+        /* CARD */
+        .card {
+            background: white;
+            border-radius: 14px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(20, 40, 70, 0.08);
+            margin-bottom: 22px;
+        }
+
+        .card h3 {
+            color: #0b1f3a;
+            margin-bottom: 18px;
+            font-size: 19px;
+        }
+
+        /* JOURNEY */
+        .journey-route {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #f6f9fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 18px;
+        }
+
+        .station h4 {
+            color: #0b1f3a;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .station p {
+            color: #718096;
+            font-size: 13px;
+        }
+
+        .route-line {
+            flex: 1;
+            height: 2px;
+            background: #b8c5d6;
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .route-line::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: -4px;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: #2563eb;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+
+        .info-box {
+            padding: 14px;
+            background: #f8fafc;
+            border-radius: 9px;
+        }
+
+        .info-box span {
+            display: block;
+            font-size: 12px;
+            color: #7a8494;
+            margin-bottom: 5px;
+        }
+
+        .info-box strong {
+            font-size: 14px;
+            color: #172033;
+        }
+
+        /* TIMELINE */
+        .timeline {
+            position: relative;
+            margin-top: 10px;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 12px;
+            top: 5px;
+            bottom: 5px;
+            width: 2px;
+            background: #d9e2ee;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 22px;
+            position: relative;
+        }
+
+        .timeline-dot {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #e2e8f0;
+            border: 3px solid white;
+            box-shadow: 0 0 0 1px #d2dbe7;
+            z-index: 1;
+            flex-shrink: 0;
+        }
+
+        .timeline-item.done .timeline-dot {
+            background: #16a34a;
+        }
+
+        .timeline-item.current .timeline-dot {
+            background: #2563eb;
+            animation: pulse 1.2s infinite;
+        }
+
+        .timeline-content h4 {
+            font-size: 14px;
+            margin-bottom: 4px;
+            color: #172033;
+        }
+
+        .timeline-content p {
+            font-size: 12px;
+            color: #7a8494;
+        }
+
+        .timeline-item.pending .timeline-content {
+            opacity: 0.45;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.35);
+            }
+
+            70% {
+                box-shadow: 0 0 0 8px rgba(37, 99, 235, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+            }
+        }
+
+        /* PRIORITY TRAINS */
+        .train-option {
+            border: 1px solid #e1e7ef;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 12px;
+        }
+
+        .train-option.active {
+            border-color: #2563eb;
+            background: #f5f9ff;
+        }
+
+        .train-name {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 7px;
+        }
+
+        .train-name strong {
+            color: #0b1f3a;
+            font-size: 14px;
+        }
+
+        .priority {
+            font-size: 11px;
+            background: #e8eef7;
+            padding: 4px 8px;
+            border-radius: 5px;
+            color: #526176;
+        }
+
+        .train-details {
+            font-size: 12px;
+            color: #788397;
+            line-height: 1.6;
+        }
+
+        /* SUCCESS */
+        .success-card {
+            display: none;
+            background: white;
+            border-radius: 14px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(20, 40, 70, 0.08);
+            border-top: 5px solid #16a34a;
+            margin-bottom: 22px;
+        }
+
+        .success-card.show {
+            display: block;
+        }
+
+        .success-title {
+            color: #15803d;
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .success-text {
+            color: #687386;
+            margin-bottom: 20px;
+        }
+
+        .pnr-box {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 20px;
+        }
+
+        .pnr-box span {
+            font-size: 12px;
+            color: #64748b;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .pnr-box strong {
+            font-size: 25px;
+            letter-spacing: 2px;
+            color: #166534;
+        }
+
+        .success-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .success-item {
+            background: #f8fafc;
+            padding: 13px;
+            border-radius: 8px;
+        }
+
+        .success-item span {
+            display: block;
+            font-size: 11px;
+            color: #7a8494;
+            margin-bottom: 5px;
+        }
+
+        .success-item strong {
+            font-size: 13px;
+        }
+
+        /* BUTTONS */
+        .buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background: #0b1f3a;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #16345d;
+        }
+
+        .btn-secondary {
+            background: #e8eef7;
+            color: #0b1f3a;
+        }
+
+        /* DEMO NOTICE */
+        .demo-note {
+            background: #fff8e8;
+            border: 1px solid #f3d48b;
+            color: #725519;
+            padding: 14px;
+            border-radius: 9px;
+            font-size: 12px;
+            margin-bottom: 22px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 800px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stepper p {
+                font-size: 10px;
+            }
+
+            .success-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .status-top {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .navbar {
+                padding: 0 4%;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .journey-route {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .route-line {
+                width: 80%;
+                flex: none;
+                margin: 5px 0;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .success-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stepper::before {
+                display: none;
+            }
+
+            .stepper {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .step {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                text-align: left;
+                gap: 10px;
+            }
+
+            .step .circle {
+                margin: 0;
+            }
+
+            .step p {
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">Tatkal Sathi</div>
+        <div class="nav-title">Booking Status</div>
+    </nav>
+
+    <main class="container">
+
+        <!-- PAGE HEADER -->
+        <div class="page-header">
+            <h1>Automation Booking Status</h1>
+            <p>Track the booking request and automatic fallback process.</p>
+        </div>
+
+        <!-- DEMO NOTICE -->
+        <div class="demo-note">
+            <strong>Demo Mode:</strong>
+            This is a simulated Tatkal booking workflow for project demonstration.
+            No real railway booking or payment is being performed.
+        </div>
+
+        <!-- STATUS HEADER -->
+        <div class="status-header">
+            <div class="status-top">
+
+                <div>
+                    <h2 id="statusTitle">Booking Request Created</h2>
+                    <p id="statusDescription">
+                        Tatkal Sathi is preparing your automated booking attempt.
+                    </p>
+                </div>
+
+                <div class="status-badge" id="statusBadge">
+                    Processing
+                </div>
+
+            </div>
+        </div>
+
+        <!-- STEPPER -->
+        <div class="stepper-card">
+
+            <div class="stepper">
+
+                <div class="step active" id="step1">
+                    <div class="circle">1</div>
+                    <p>Request</p>
+                </div>
+
+                <div class="step" id="step2">
+                    <div class="circle">2</div>
+                    <p>Availability</p>
+                </div>
+
+                <div class="step" id="step3">
+                    <div class="circle">3</div>
+                    <p>Fallback</p>
+                </div>
+
+                <div class="step" id="step4">
+                    <div class="circle">4</div>
+                    <p>Booking</p>
+                </div>
+
+                <div class="step" id="step5">
+                    <div class="circle">5</div>
+                    <p>Confirmed</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- SUCCESS CARD -->
+        <div class="success-card" id="successCard">
+
+            <h2 class="success-title">Booking Confirmed</h2>
+
+            <p class="success-text">
+                The automated booking workflow has successfully completed in demo mode.
+            </p>
+
+            <div class="pnr-box">
+                <span>Demo PNR Number</span>
+                <strong>4527819630</strong>
+            </div>
+
+            <div class="success-grid">
+
+                <div class="success-item">
+                    <span>Train</span>
+                    <strong>Bhopal Express</strong>
+                </div>
+
+                <div class="success-item">
+                    <span>Coach / Berth</span>
+                    <strong>B2 / 34</strong>
+                </div>
+
+                <div class="success-item">
+                    <span>Class</span>
+                    <strong id="successClass">3A</strong>
+                </div>
+
+                <div class="success-item">
+                    <span>Passenger</span>
+                    <strong id="successPassenger">Demo Passenger</strong>
+                </div>
+
+                <div class="success-item">
+                    <span>Journey</span>
+                    <strong>Bhopal → New Delhi</strong>
+                </div>
+
+                <div class="success-item">
+                    <span>Amount</span>
+                    <strong>₹1,245</strong>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+                <button class="btn btn-primary"
+                    onclick="window.location.href='ticket.html'">
+                    View Ticket
+                </button>
+
+                <button class="btn btn-secondary"
+                    onclick="window.location.href='dashboard.html'">
+                    Go to Dashboard
+                </button>
+            </div>
+
+        </div>
+
+        <!-- MAIN GRID -->
+        <div class="grid">
+
+            <!-- LEFT -->
+            <div>
+
+                <!-- JOURNEY CARD -->
+                <div class="card">
+
+                    <h3>Journey Details</h3>
+
+                    <div class="journey-route">
+
+                        <div class="station">
+                            <h4>Bhopal</h4>
+                            <p>Departure</p>
+                        </div>
+
+                        <div class="route-line"></div>
+
+                        <div class="station">
+                            <h4>New Delhi</h4>
+                            <p>Arrival</p>
+                        </div>
+
+                    </div>
+
+                    <div class="info-grid">
+
+                        <div class="info-box">
+                            <span>Journey Date</span>
+                            <strong>25 August 2026</strong>
+                        </div>
+
+                        <div class="info-box">
+                            <span>Quota</span>
+                            <strong id="quotaValue">Tatkal</strong>
+                        </div>
+
+                        <div class="info-box">
+                            <span>Selected Train</span>
+                            <strong>Bhopal Express</strong>
+                        </div>
+
+                        <div class="info-box">
+                            <span>Travel Class</span>
+                            <strong id="classValue">3A</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- AUTOMATION TIMELINE -->
+                <div class="card">
+
+                    <h3>Automation Activity</h3>
+
+                    <div class="timeline">
+
+                        <div class="timeline-item done" id="timeline1">
+                            <div class="timeline-dot"></div>
+
+                            <div class="timeline-content">
+                                <h4>Booking Request Created</h4>
+                                <p>Request received by Tatkal Sathi.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item pending" id="timeline2">
+                            <div class="timeline-dot"></div>
+
+                            <div class="timeline-content">
+                                <h4>Checking Tatkal Availability</h4>
+                                <p>System is checking the preferred train.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item pending" id="timeline3">
+                            <div class="timeline-dot"></div>
+
+                            <div class="timeline-content">
+                                <h4>Priority 1 Attempt</h4>
+                                <p>Bhopal Express availability check.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item pending" id="timeline4">
+                            <div class="timeline-dot"></div>
+
+                            <div class="timeline-content">
+                                <h4>Priority 1 Unavailable</h4>
+                                <p>No suitable seat available in demo scenario.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item pending" id="timeline5">
+                            <div class="timeline-dot"></div>
+
+                            <div class="timeline-content">
+                                <h4>Automatic Fallback Activated</h4>
+                                <p>System switches to the next preferred train.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item pending" id="timeline6">
+                            <div class="timeline-dot"></div>
+
+                            <div class="timeline-content">
+                                <h4>Priority 2 Available</h4>
+                                <p>Shaan-e-Bhopal has a suitable seat.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item pending" id="timeline7">
+                            <div class="timeline-dot"></div>
+
+                            <div class="timeline-content">
+                                <h4>Booking Attempt</h4>
+                                <p>Automated booking attempt initiated.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item pending" id="timeline8">
+                            <div class="timeline-dot"></div>
+
+                            <div class="timeline-content">
+                                <h4>Ticket Confirmed</h4>
+                                <p>Demo booking completed successfully.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+            <div>
+
+                <!-- PRIORITY TRAINS -->
+                <div class="card">
+
+                    <h3>Train Priority Queue</h3>
+
+                    <div class="train-option active" id="train1">
+
+                        <div class="train-name">
+                            <strong>Priority 1</strong>
+                            <span class="priority">Preferred</span>
+                        </div>
+
+                        <div class="train-details">
+                            12001 - Bhopal Express<br>
+                            08:00 AM – 05:30 PM<br>
+                            3A | ₹1,245
+                        </div>
+
+                    </div>
+
+                    <div class="train-option" id="train2">
+
+                        <div class="train-name">
+                            <strong>Priority 2</strong>
+                            <span class="priority">Alternative</span>
+                        </div>
+
+                        <div class="train-details">
+                            12155 - Shaan-e-Bhopal<br>
+                            06:15 AM – 03:45 PM<br>
+                            3A | ₹1,180
+                        </div>
+
+                    </div>
+
+                    <div class="train-option" id="train3">
+
+                        <div class="train-name">
+                            <strong>Priority 3</strong>
+                            <span class="priority">Backup</span>
+                        </div>
+
+                        <div class="train-details">
+                            12627 - Karnataka Express<br>
+                            10:30 AM – 08:15 PM<br>
+                            3A | ₹1,320
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- AUTOMATION SETTINGS -->
+                <div class="card">
+
+                    <h3>Automation Settings</h3>
+
+                    <div class="info-box" style="margin-bottom: 12px;">
+                        <span>Auto-Switch</span>
+                        <strong>Enabled</strong>
+                    </div>
+
+                    <div class="info-box" style="margin-bottom: 12px;">
+                        <span>Automatic Booking</span>
+                        <strong>Enabled</strong>
+                    </div>
+
+                    <div class="info-box" style="margin-bottom: 12px;">
+                        <span>Status Notifications</span>
+                        <strong>Enabled</strong>
+                    </div>
+
+                    <div class="info-box">
+                        <span>Booking Priority</span>
+                        <strong>Preferred Train</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script>
+
+        /* LOAD PASSENGER DATA */
+        const passengerName =
+            localStorage.getItem("passengerName") || "Demo Passenger";
+
+        const selectedClass =
+            localStorage.getItem("travelClass") || "3A";
+
+        const quota =
+            localStorage.getItem("quota") || "Tatkal";
+
+        document.getElementById("successPassenger").textContent =
+            passengerName;
+
+        document.getElementById("successClass").textContent =
+            selectedClass;
+
+        document.getElementById("classValue").textContent =
+            selectedClass;
+
+        document.getElementById("quotaValue").textContent =
+            quota;
+
+
+        /* STATUS ELEMENTS */
+
+        const statusTitle =
+            document.getElementById("statusTitle");
+
+        const statusDescription =
+            document.getElementById("statusDescription");
+
+        const statusBadge =
+            document.getElementById("statusBadge");
+
+        const successCard =
+            document.getElementById("successCard");
+
+
+        /* STEP FUNCTION */
+
+        function activateStep(stepNumber) {
+
+            for (let i = 1; i <= 5; i++) {
+
+                const step =
+                    document.getElementById("step" + i);
+
+                if (i < stepNumber) {
+
+                    step.classList.remove("active");
+                    step.classList.add("completed");
+
+                } else if (i === stepNumber) {
+
+                    step.classList.add("active");
+                    step.classList.remove("completed");
+
+                } else {
+
+                    step.classList.remove("active");
+                    step.classList.remove("completed");
+
+                }
+            }
+        }
+
+
+        /* TIMELINE FUNCTION */
+
+        function updateTimeline(number) {
+
+            for (let i = 1; i <= 8; i++) {
+
+                const item =
+                    document.getElementById("timeline" + i);
+
+                if (i < number) {
+
+                    item.classList.remove("pending");
+                    item.classList.remove("current");
+                    item.classList.add("done");
+
+                } else if (i === number) {
+
+                    item.classList.remove("pending");
+                    item.classList.remove("done");
+                    item.classList.add("current");
+
+                } else {
+
+                    item.classList.remove("done");
+                    item.classList.remove("current");
+                    item.classList.add("pending");
+
+                }
+            }
+        }
+
+
+        /* TRAIN QUEUE */
+
+        function activateTrain(number) {
+
+            for (let i = 1; i <= 3; i++) {
+
+                document
+                    .getElementById("train" + i)
+                    .classList.remove("active");
+            }
+
+            document
+                .getElementById("train" + number)
+                .classList.add("active");
+        }
+
+
+        /* AUTOMATED DEMO SEQUENCE */
+
+        setTimeout(function() {
+
+            statusTitle.textContent =
+                "Checking Tatkal Availability";
+
+            statusDescription.textContent =
+                "Tatkal Sathi is checking the availability of the preferred train.";
+
+            statusBadge.textContent =
+                "Checking Availability";
+
+            activateStep(2);
+            updateTimeline(2);
+
+        }, 1800);
+
+
+        setTimeout(function() {
+
+            statusTitle.textContent =
+                "Trying Priority 1";
+
+            statusDescription.textContent =
+                "Checking Bhopal Express according to your first preference.";
+
+            statusBadge.textContent =
+                "Priority 1";
+
+            updateTimeline(3);
+            activateTrain(1);
+
+        }, 3600);
+
+
+        setTimeout(function() {
+
+            statusTitle.textContent =
+                "Priority 1 Unavailable";
+
+            statusDescription.textContent =
+                "The preferred train does not have a suitable seat in this demo scenario.";
+
+            statusBadge.textContent =
+                "Unavailable";
+
+            updateTimeline(4);
+
+        }, 5400);
+
+
+        setTimeout(function() {
+
+            statusTitle.textContent =
+                "Automatic Fallback Activated";
+
+            statusDescription.textContent =
+                "Tatkal Sathi is automatically switching to your next preferred train.";
+
+            statusBadge.textContent =
+                "Fallback Activated";
+
+            activateStep(3);
+            updateTimeline(5);
+            activateTrain(2);
+
+        }, 7200);
+
+
+        setTimeout(function() {
+
+            statusTitle.textContent =
+                "Priority 2 Available";
+
+            statusDescription.textContent =
+                "A suitable seat is available on Shaan-e-Bhopal.";
+
+            statusBadge.textContent =
+                "Seat Available";
+
+            updateTimeline(6);
+            activateTrain(2);
+
+        }, 9000);
+
+
+        setTimeout(function() {
+
+            statusTitle.textContent =
+                "Booking Attempt in Progress";
+
+            statusDescription.textContent =
+                "The automated booking attempt is being processed.";
+
+            statusBadge.textContent =
+                "Booking";
+
+            activateStep(4);
+            updateTimeline(7);
+
+        }, 10800);
+
+
+        setTimeout(function() {
+
+            statusTitle.textContent =
+                "Ticket Confirmed";
+
+            statusDescription.textContent =
+                "Your automated booking workflow has completed successfully.";
+
+            statusBadge.textContent =
+                "Confirmed";
+
+            statusBadge.style.background =
+                "#dcfce7";
+
+            statusBadge.style.color =
+                "#15803d";
+
+            activateStep(5);
+            updateTimeline(8);
+
+            successCard.classList.add("show");
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }, 12600);
+
+
+    </script>
+
+</body>
+</html>

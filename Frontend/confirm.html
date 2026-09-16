@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Review & Confirm - Tatkal Sathi</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f4f7fb;
+            color: #172033;
+        }
+
+        /* NAVBAR */
+
+        .navbar {
+            height: 70px;
+            background: #102a43;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 7%;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-right {
+            font-size: 14px;
+            color: #d9e6f2;
+        }
+
+        /* MAIN */
+
+        .container {
+            width: 90%;
+            max-width: 1050px;
+            margin: 35px auto;
+        }
+
+        /* PROGRESS */
+
+        .progress-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin-bottom: 35px;
+        }
+
+        .circle {
+            width: 36px;
+            height: 36px;
+
+            border-radius: 50%;
+
+            background: #d9e2ec;
+            color: #52606d;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-weight: bold;
+        }
+
+        .circle.active {
+            background: #1976d2;
+            color: white;
+        }
+
+        .line {
+            width: 80px;
+            height: 3px;
+            background: #d9e2ec;
+        }
+
+        .line.active {
+            background: #1976d2;
+        }
+
+        /* TITLE */
+
+        .page-title {
+            margin-bottom: 25px;
+        }
+
+        .page-title h1 {
+            color: #102a43;
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .page-title p {
+            color: #627d98;
+            font-size: 15px;
+        }
+
+        /* CARD */
+
+        .card {
+            background: white;
+
+            border: 1px solid #d9e2ec;
+            border-radius: 12px;
+
+            padding: 25px;
+
+            margin-bottom: 20px;
+
+            box-shadow: 0 4px 12px rgba(16, 42, 67, 0.06);
+        }
+
+        .card-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-bottom: 20px;
+        }
+
+        .card-title h2 {
+            color: #102a43;
+            font-size: 20px;
+        }
+
+        .edit-btn {
+            background: none;
+            border: none;
+
+            color: #1976d2;
+
+            font-size: 13px;
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .edit-btn:hover {
+            text-decoration: underline;
+        }
+
+        /* DETAILS */
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 18px;
+        }
+
+        .detail {
+            padding: 12px;
+
+            background: #f8fafc;
+
+            border-radius: 7px;
+        }
+
+        .label {
+            color: #829ab1;
+            font-size: 11px;
+
+            margin-bottom: 5px;
+        }
+
+        .value {
+            color: #243b53;
+            font-size: 14px;
+            font-weight: bold;
+
+            word-break: break-word;
+        }
+
+        /* JOURNEY */
+
+        .journey-box {
+            background: #f5f9ff;
+
+            border: 1px solid #d5e5f5;
+
+            border-radius: 9px;
+
+            padding: 20px;
+        }
+
+        .journey {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .station {
+            text-align: center;
+        }
+
+        .station-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #102a43;
+        }
+
+        .station-label {
+            font-size: 12px;
+            color: #829ab1;
+            margin-top: 5px;
+        }
+
+        .arrow {
+            font-size: 22px;
+            color: #1976d2;
+        }
+
+        /* AUTOMATION */
+
+        .automation-box {
+            background: #f8fafc;
+
+            border-radius: 8px;
+
+            padding: 18px;
+        }
+
+        .automation-row {
+            display: flex;
+            justify-content: space-between;
+
+            padding: 10px 0;
+
+            border-bottom: 1px solid #e6edf3;
+        }
+
+        .automation-row:last-child {
+            border-bottom: none;
+        }
+
+        .automation-label {
+            color: #627d98;
+            font-size: 14px;
+        }
+
+        .automation-value {
+            color: #243b53;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .enabled {
+            color: #218739;
+        }
+
+        .disabled {
+            color: #c53030;
+        }
+
+        /* FARE */
+
+        .fare-section {
+            margin-top: 5px;
+        }
+
+        .fare-row {
+            display: flex;
+            justify-content: space-between;
+
+            padding: 10px 0;
+
+            font-size: 14px;
+        }
+
+        .fare-label {
+            color: #627d98;
+        }
+
+        .fare-value {
+            color: #243b53;
+        }
+
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+
+            border-top: 1px solid #d9e2ec;
+
+            padding-top: 15px;
+            margin-top: 8px;
+
+            font-size: 18px;
+            font-weight: bold;
+
+            color: #102a43;
+        }
+
+        /* TERMS */
+
+        .terms {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+
+            margin-top: 25px;
+
+            font-size: 13px;
+            color: #627d98;
+        }
+
+        .terms input {
+            margin-top: 3px;
+        }
+
+        .terms a {
+            color: #1976d2;
+            text-decoration: none;
+        }
+
+        /* ERROR */
+
+        .error-message {
+            display: none;
+
+            background: #fff1f0;
+            border: 1px solid #feb2b2;
+
+            color: #c53030;
+
+            padding: 12px;
+
+            border-radius: 7px;
+
+            margin-top: 15px;
+
+            font-size: 14px;
+        }
+
+        /* BUTTONS */
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+
+            margin-top: 25px;
+        }
+
+        .btn {
+            padding: 13px 25px;
+
+            border-radius: 7px;
+            border: none;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .btn-back {
+            background: #edf2f7;
+            color: #243b53;
+        }
+
+        .btn-back:hover {
+            background: #d9e2ec;
+        }
+
+        .btn-payment {
+            background: #1976d2;
+            color: white;
+        }
+
+        .btn-payment:hover {
+            background: #1565b8;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 700px) {
+
+            .container {
+                width: 94%;
+            }
+
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .journey {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .arrow {
+                transform: rotate(90deg);
+            }
+
+            .line {
+                width: 35px;
+            }
+
+            .button-container {
+                gap: 10px;
+            }
+
+            .btn {
+                width: 50%;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+
+        <div class="logo">
+            Tatkal Sathi
+        </div>
+
+        <div class="nav-right">
+            Secure Booking Assistant
+        </div>
+
+    </div>
+
+
+
+    <div class="container">
+
+
+        <!-- PROGRESS -->
+
+        <div class="progress-container">
+
+            <div class="circle active">
+                1
+            </div>
+
+            <div class="line active"></div>
+
+            <div class="circle active">
+                2
+            </div>
+
+            <div class="line active"></div>
+
+            <div class="circle active">
+                3
+            </div>
+
+            <div class="line active"></div>
+
+            <div class="circle active">
+                4
+            </div>
+
+        </div>
+
+
+
+        <!-- TITLE -->
+
+        <div class="page-title">
+
+            <h1>
+                Review & Confirm
+            </h1>
+
+            <p>
+                Check your journey, passenger and booking preferences
+                before proceeding to payment.
+            </p>
+
+        </div>
+
+
+
+        <!-- JOURNEY DETAILS -->
+
+        <div class="card">
+
+            <div class="card-title">
+
+                <h2>
+                    Journey Details
+                </h2>
+
+                <button
+                    class="edit-btn"
+                    onclick="goToBooking()"
+                >
+                    Edit
+                </button>
+
+            </div>
+
+
+            <div class="journey-box">
+
+                <div class="journey">
+
+
+                    <div class="station">
+
+                        <div class="station-name">
+                            BPL
+                        </div>
+
+                        <div class="station-label">
+                            Bhopal
+                        </div>
+
+                    </div>
+
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+
+                    <div class="station">
+
+                        <div class="station-name">
+                            NDLS
+                        </div>
+
+                        <div class="station-label">
+                            New Delhi
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <br>
+
+
+            <div class="details-grid">
+
+                <div class="detail">
+
+                    <div class="label">
+                        JOURNEY DATE
+                    </div>
+
+                    <div class="value">
+                        25 August 2026
+                    </div>
+
+                </div>
+
+
+                <div class="detail">
+
+                    <div class="label">
+                        QUOTA
+                    </div>
+
+                    <div
+                        class="value"
+                        id="quota"
+                    >
+                        Tatkal
+                    </div>
+
+                </div>
+
+
+                <div class="detail">
+
+                    <div class="label">
+                        TRAIN
+                    </div>
+
+                    <div
+                        class="value"
+                        id="train"
+                    >
+                        Bhopal Express
+                    </div>
+
+                </div>
+
+
+                <div class="detail">
+
+                    <div class="label">
+                        TRAVEL CLASS
+                    </div>
+
+                    <div
+                        class="value"
+                        id="travelClass"
+                    >
+                        3A
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PASSENGER DETAILS -->
+
+        <div class="card">
+
+            <div class="card-title">
+
+                <h2>
+                    Passenger Details
+                </h2>
+
+                <button
+                    class="edit-btn"
+                    onclick="goToPassenger()"
+                >
+                    Edit
+                </button>
+
+            </div>
+
+
+            <div class="details-grid">
+
+
+                <div class="detail">
+
+                    <div class="label">
+                        FULL NAME
+                    </div>
+
+                    <div
+                        class="value"
+                        id="passengerName"
+                    >
+                        Demo Passenger
+                    </div>
+
+                </div>
+
+
+                <div class="detail">
+
+                    <div class="label">
+                        AGE
+                    </div>
+
+                    <div
+                        class="value"
+                        id="passengerAge"
+                    >
+                        21
+                    </div>
+
+                </div>
+
+
+                <div class="detail">
+
+                    <div class="label">
+                        GENDER
+                    </div>
+
+                    <div
+                        class="value"
+                        id="passengerGender"
+                    >
+                        Female
+                    </div>
+
+                </div>
+
+
+                <div class="detail">
+
+                    <div class="label">
+                        MOBILE NUMBER
+                    </div>
+
+                    <div
+                        class="value"
+                        id="passengerMobile"
+                    >
+                        9876543210
+                    </div>
+
+                </div>
+
+
+                <div class="detail">
+
+                    <div class="label">
+                        EMAIL
+                    </div>
+
+                    <div
+                        class="value"
+                        id="passengerEmail"
+                    >
+                        Not provided
+                    </div>
+
+                </div>
+
+
+                <div class="detail">
+
+                    <div class="label">
+                        BERTH PREFERENCE
+                    </div>
+
+                    <div
+                        class="value"
+                        id="berth"
+                    >
+                        No Preference
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- BOOKING PREFERENCES -->
+
+        <div class="card">
+
+            <div class="card-title">
+
+                <h2>
+                    Tatkal Sathi Preferences
+                </h2>
+
+                <button
+                    class="edit-btn"
+                    onclick="goToPreferences()"
+                >
+                    Edit
+                </button>
+
+            </div>
+
+
+            <div class="automation-box">
+
+
+                <div class="automation-row">
+
+                    <span class="automation-label">
+                        Booking Priority
+                    </span>
+
+                    <span
+                        class="automation-value"
+                        id="priority"
+                    >
+                        Preferred Train
+                    </span>
+
+                </div>
+
+
+                <div class="automation-row">
+
+                    <span class="automation-label">
+                        Maximum Fare
+                    </span>
+
+                    <span
+                        class="automation-value"
+                        id="maxFare"
+                    >
+                        ₹1,500
+                    </span>
+
+                </div>
+
+
+                <div class="automation-row">
+
+                    <span class="automation-label">
+                        Auto-Switch to Alternative Train
+                    </span>
+
+                    <span
+                        class="automation-value enabled"
+                        id="autoSwitch"
+                    >
+                        Enabled
+                    </span>
+
+                </div>
+
+
+                <div class="automation-row">
+
+                    <span class="automation-label">
+                        Automatic Booking Attempt
+                    </span>
+
+                    <span
+                        class="automation-value enabled"
+                        id="autoBooking"
+                    >
+                        Enabled
+                    </span>
+
+                </div>
+
+
+                <div class="automation-row">
+
+                    <span class="automation-label">
+                        Status Notifications
+                    </span>
+
+                    <span
+                        class="automation-value enabled"
+                        id="notifications"
+                    >
+                        Enabled
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FARE -->
+
+        <div class="card">
+
+            <div class="card-title">
+
+                <h2>
+                    Fare Summary
+                </h2>
+
+            </div>
+
+
+            <div class="fare-section">
+
+
+                <div class="fare-row">
+
+                    <span class="fare-label">
+                        Base Fare
+                    </span>
+
+                    <span class="fare-value">
+                        ₹1,050
+                    </span>
+
+                </div>
+
+
+                <div class="fare-row">
+
+                    <span class="fare-label">
+                        Tatkal Charges
+                    </span>
+
+                    <span class="fare-value">
+                        ₹150
+                    </span>
+
+                </div>
+
+
+                <div class="fare-row">
+
+                    <span class="fare-label">
+                        Convenience Fee
+                    </span>
+
+                    <span class="fare-value">
+                        ₹20
+                    </span>
+
+                </div>
+
+
+                <div class="fare-row">
+
+                    <span class="fare-label">
+                        Taxes & Other Charges
+                    </span>
+
+                    <span class="fare-value">
+                        ₹25
+                    </span>
+
+                </div>
+
+
+                <div class="total-row">
+
+                    <span>
+                        Total Amount
+                    </span>
+
+                    <span>
+                        ₹1,245
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- TERMS -->
+
+        <div class="card">
+
+            <div class="terms">
+
+                <input
+                    type="checkbox"
+                    id="terms"
+                >
+
+                <label for="terms">
+
+                    I have checked the journey and passenger details
+                    and agree to proceed with the booking.
+
+                </label>
+
+            </div>
+
+
+            <div
+                class="error-message"
+                id="errorMessage"
+            >
+                Please confirm the details before proceeding.
+            </div>
+
+
+            <!-- BUTTONS -->
+
+            <div class="button-container">
+
+
+                <button
+                    class="btn btn-back"
+                    onclick="goBack()"
+                >
+                    Back
+                </button>
+
+
+                <button
+                    class="btn btn-payment"
+                    onclick="proceedToPayment()"
+                >
+                    Proceed to Payment
+                </button>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <script>
+
+
+        /* LOAD DATA FROM LOCAL STORAGE */
+
+        window.onload = function() {
+
+            const name =
+                localStorage.getItem("passengerName");
+
+            const age =
+                localStorage.getItem("passengerAge");
+
+            const gender =
+                localStorage.getItem("passengerGender");
+
+            const mobile =
+                localStorage.getItem("passengerMobile");
+
+            const email =
+                localStorage.getItem("passengerEmail");
+
+            const berth =
+                localStorage.getItem("berthPreference");
+
+            const train =
+                localStorage.getItem("selectedTrain");
+
+            const travelClass =
+                localStorage.getItem("travelClass");
+
+            const quota =
+                localStorage.getItem("quota");
+
+            const maxFare =
+                localStorage.getItem("maxFare");
+
+            const priority =
+                localStorage.getItem("bookingPriority");
+
+            const autoSwitch =
+                localStorage.getItem("autoSwitch");
+
+            const autoBooking =
+                localStorage.getItem("autoBooking");
+
+            const notifications =
+                localStorage.getItem("notifications");
+
+
+            /* PASSENGER */
+
+            if (name) {
+
+                document.getElementById(
+                    "passengerName"
+                ).textContent = name;
+
+            }
+
+            if (age) {
+
+                document.getElementById(
+                    "passengerAge"
+                ).textContent = age;
+
+            }
+
+            if (gender) {
+
+                document.getElementById(
+                    "passengerGender"
+                ).textContent = gender;
+
+            }
+
+            if (mobile) {
+
+                document.getElementById(
+                    "passengerMobile"
+                ).textContent = mobile;
+
+            }
+
+            if (email && email !== "") {
+
+                document.getElementById(
+                    "passengerEmail"
+                ).textContent = email;
+
+            }
+
+            if (berth) {
+
+                document.getElementById(
+                    "berth"
+                ).textContent = berth;
+
+            }
+
+
+            /* BOOKING */
+
+            if (train) {
+
+                document.getElementById(
+                    "train"
+                ).textContent = train;
+
+            }
+
+            if (travelClass) {
+
+                document.getElementById(
+                    "travelClass"
+                ).textContent = travelClass;
+
+            }
+
+            if (quota) {
+
+                document.getElementById(
+                    "quota"
+                ).textContent = quota;
+
+            }
+
+            if (maxFare) {
+
+                document.getElementById(
+                    "maxFare"
+                ).textContent =
+                    "₹" +
+                    Number(maxFare).toLocaleString("en-IN");
+
+            }
+
+            if (priority) {
+
+                document.getElementById(
+                    "priority"
+                ).textContent = priority;
+
+            }
+
+
+            /* AUTOMATION SETTINGS */
+
+            updateStatus(
+                "autoSwitch",
+                autoSwitch
+            );
+
+            updateStatus(
+                "autoBooking",
+                autoBooking
+            );
+
+            updateStatus(
+                "notifications",
+                notifications
+            );
+
+        };
+
+
+        /* UPDATE ENABLED / DISABLED */
+
+        function updateStatus(id, value) {
+
+            const element =
+                document.getElementById(id);
+
+            if (value === "false") {
+
+                element.textContent = "Disabled";
+
+                element.classList.remove("enabled");
+
+                element.classList.add("disabled");
+
+            } else {
+
+                element.textContent = "Enabled";
+
+                element.classList.remove("disabled");
+
+                element.classList.add("enabled");
+
+            }
+
+        }
+
+
+        /* NAVIGATION */
+
+        function goBack() {
+
+            window.location.href =
+                "preferences.html";
+
+        }
+
+
+        function goToBooking() {
+
+            window.location.href =
+                "booking.html";
+
+        }
+
+
+        function goToPassenger() {
+
+            window.location.href =
+                "passenger.html";
+
+        }
+
+
+        function goToPreferences() {
+
+            window.location.href =
+                "preferences.html";
+
+        }
+
+
+        /* PAYMENT */
+
+        function proceedToPayment() {
+
+            const terms =
+                document.getElementById("terms");
+
+            const error =
+                document.getElementById("errorMessage");
+
+
+            if (!terms.checked) {
+
+                error.style.display = "block";
+
+                error.textContent =
+                    "Please confirm the details before proceeding to payment.";
+
+                return;
+
+            }
+
+
+            error.style.display = "none";
+
+
+            /*
+                Save confirmation status.
+            */
+
+            localStorage.setItem(
+                "bookingConfirmed",
+                "true"
+            );
+
+
+            /*
+                Move to payment page.
+            */
+
+            window.location.href =
+                "payment.html";
+
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - Tatkal Sathi</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f4f7fb;
+            color: #172033;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        .navbar {
+            height: 70px;
+            background: #0b1f3a;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 7%;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-link {
+            color: #dce7f5;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .nav-link:hover {
+            color: white;
+        }
+
+        .profile {
+            background: #17365d;
+            padding: 9px 14px;
+            border-radius: 7px;
+            font-size: 13px;
+        }
+
+
+        /* ================= MAIN ================= */
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 35px auto;
+        }
+
+
+        /* ================= HEADER ================= */
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-bottom: 28px;
+        }
+
+        .header h1 {
+            font-size: 30px;
+            color: #0b1f3a;
+            margin-bottom: 6px;
+        }
+
+        .header p {
+            color: #6c7789;
+            font-size: 14px;
+        }
+
+
+        /* ================= BUTTON ================= */
+
+        .btn {
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+
+            cursor: pointer;
+
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background: #0b1f3a;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #16345d;
+        }
+
+        .btn-secondary {
+            background: #e5edf7;
+            color: #0b1f3a;
+        }
+
+
+        /* ================= STAT CARDS ================= */
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 18px;
+
+            margin-bottom: 25px;
+        }
+
+        .stat-card {
+            background: white;
+
+            padding: 22px;
+
+            border-radius: 12px;
+
+            box-shadow: 0 5px 20px rgba(20, 40, 70, 0.08);
+        }
+
+        .stat-card span {
+            display: block;
+
+            color: #7a8597;
+
+            font-size: 12px;
+
+            margin-bottom: 9px;
+        }
+
+        .stat-card strong {
+            font-size: 25px;
+
+            color: #0b1f3a;
+        }
+
+        .stat-card p {
+            color: #758195;
+
+            font-size: 11px;
+
+            margin-top: 6px;
+        }
+
+
+        /* ================= GRID ================= */
+
+        .main-grid {
+            display: grid;
+
+            grid-template-columns: 1.5fr 0.8fr;
+
+            gap: 22px;
+        }
+
+
+        /* ================= CARD ================= */
+
+        .card {
+            background: white;
+
+            border-radius: 13px;
+
+            padding: 25px;
+
+            box-shadow: 0 5px 20px rgba(20, 40, 70, 0.08);
+
+            margin-bottom: 22px;
+        }
+
+        .card-header {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin-bottom: 20px;
+        }
+
+        .card-header h2 {
+            color: #0b1f3a;
+
+            font-size: 19px;
+        }
+
+        .view-link {
+            color: #2563eb;
+
+            font-size: 12px;
+
+            cursor: pointer;
+
+            text-decoration: none;
+        }
+
+
+        /* ================= BOOKING CARD ================= */
+
+        .booking-card {
+            border: 1px solid #dce5ef;
+
+            border-radius: 11px;
+
+            overflow: hidden;
+        }
+
+        .booking-top {
+            background: #0b1f3a;
+
+            color: white;
+
+            padding: 18px 20px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+        .booking-top h3 {
+            font-size: 17px;
+
+            margin-bottom: 5px;
+        }
+
+        .booking-top p {
+            font-size: 12px;
+
+            color: #c9d7e8;
+        }
+
+        .confirmed-badge {
+            background: #dcfce7;
+
+            color: #15803d;
+
+            padding: 7px 12px;
+
+            border-radius: 20px;
+
+            font-size: 11px;
+
+            font-weight: bold;
+        }
+
+
+        /* ================= JOURNEY ================= */
+
+        .journey {
+            padding: 23px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+        .station {
+            width: 25%;
+        }
+
+        .station:last-child {
+            text-align: right;
+        }
+
+        .station h3 {
+            font-size: 22px;
+
+            color: #0b1f3a;
+
+            margin-bottom: 5px;
+        }
+
+        .station p {
+            color: #778397;
+
+            font-size: 12px;
+        }
+
+        .route {
+            flex: 1;
+
+            margin: 0 25px;
+
+            text-align: center;
+        }
+
+        .route strong {
+            display: block;
+
+            color: #2563eb;
+
+            font-size: 12px;
+
+            margin-bottom: 9px;
+        }
+
+        .route-line {
+            height: 2px;
+
+            background: #c4cfdd;
+
+            position: relative;
+        }
+
+        .route-line::before,
+        .route-line::after {
+            content: "";
+
+            position: absolute;
+
+            width: 9px;
+            height: 9px;
+
+            border-radius: 50%;
+
+            background: #2563eb;
+
+            top: -3px;
+        }
+
+        .route-line::before {
+            left: 0;
+        }
+
+        .route-line::after {
+            right: 0;
+        }
+
+
+        /* ================= INFO GRID ================= */
+
+        .info-grid {
+            padding: 0 23px 23px;
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 10px;
+        }
+
+        .info-box {
+            background: #f7f9fc;
+
+            border-radius: 8px;
+
+            padding: 12px;
+        }
+
+        .info-box span {
+            display: block;
+
+            font-size: 10px;
+
+            color: #7c8797;
+
+            margin-bottom: 5px;
+        }
+
+        .info-box strong {
+            font-size: 12px;
+
+            color: #172033;
+        }
+
+
+        /* ================= BOOKING ACTIONS ================= */
+
+        .booking-actions {
+            border-top: 1px solid #e6ebf1;
+
+            padding: 15px 20px;
+
+            display: flex;
+
+            justify-content: flex-end;
+
+            gap: 10px;
+        }
+
+        .small-btn {
+            padding: 9px 14px;
+
+            border-radius: 7px;
+
+            border: none;
+
+            font-size: 12px;
+
+            cursor: pointer;
+
+            font-weight: bold;
+        }
+
+
+        /* ================= AUTOMATION ================= */
+
+        .automation-box {
+            background: #f6f9fd;
+
+            border-radius: 10px;
+
+            padding: 18px;
+
+            margin-bottom: 18px;
+        }
+
+        .automation-status {
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            margin-bottom: 12px;
+        }
+
+        .status-dot {
+            width: 10px;
+
+            height: 10px;
+
+            background: #16a34a;
+
+            border-radius: 50%;
+        }
+
+        .automation-status strong {
+            color: #15803d;
+
+            font-size: 14px;
+        }
+
+        .automation-box p {
+            font-size: 12px;
+
+            line-height: 1.6;
+
+            color: #6e798a;
+        }
+
+
+        /* ================= SETTINGS ================= */
+
+        .setting {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 13px 0;
+
+            border-bottom: 1px solid #edf0f4;
+        }
+
+        .setting:last-child {
+            border-bottom: none;
+        }
+
+        .setting-info strong {
+            display: block;
+
+            font-size: 13px;
+
+            margin-bottom: 4px;
+        }
+
+        .setting-info span {
+            font-size: 11px;
+
+            color: #7a8494;
+        }
+
+        .toggle {
+            width: 39px;
+
+            height: 21px;
+
+            background: #2563eb;
+
+            border-radius: 20px;
+
+            position: relative;
+        }
+
+        .toggle::after {
+            content: "";
+
+            width: 17px;
+
+            height: 17px;
+
+            background: white;
+
+            border-radius: 50%;
+
+            position: absolute;
+
+            right: 2px;
+
+            top: 2px;
+        }
+
+
+        /* ================= PREFERRED TRAINS ================= */
+
+        .train {
+            border: 1px solid #e1e7ef;
+
+            border-radius: 9px;
+
+            padding: 14px;
+
+            margin-bottom: 10px;
+        }
+
+        .train:last-child {
+            margin-bottom: 0;
+        }
+
+        .train-top {
+            display: flex;
+
+            justify-content: space-between;
+
+            margin-bottom: 5px;
+        }
+
+        .train-top strong {
+            color: #0b1f3a;
+
+            font-size: 13px;
+        }
+
+        .priority {
+            font-size: 10px;
+
+            color: #2563eb;
+
+            background: #eaf2ff;
+
+            padding: 4px 7px;
+
+            border-radius: 5px;
+        }
+
+        .train p {
+            color: #788397;
+
+            font-size: 11px;
+
+            line-height: 1.5;
+        }
+
+
+        /* ================= NOTIFICATION ================= */
+
+        .notification {
+            display: flex;
+
+            gap: 12px;
+
+            padding: 13px 0;
+
+            border-bottom: 1px solid #edf0f4;
+        }
+
+        .notification:last-child {
+            border-bottom: none;
+        }
+
+        .notification-dot {
+            width: 8px;
+
+            height: 8px;
+
+            border-radius: 50%;
+
+            background: #2563eb;
+
+            margin-top: 5px;
+
+            flex-shrink: 0;
+        }
+
+        .notification strong {
+            display: block;
+
+            font-size: 12px;
+
+            margin-bottom: 4px;
+        }
+
+        .notification p {
+            font-size: 11px;
+
+            color: #788397;
+
+            line-height: 1.4;
+        }
+
+
+        /* ================= HISTORY ================= */
+
+        .history {
+            width: 100%;
+
+            border-collapse: collapse;
+        }
+
+        .history th {
+            text-align: left;
+
+            background: #f5f7fa;
+
+            color: #697588;
+
+            font-size: 11px;
+
+            padding: 12px;
+        }
+
+        .history td {
+            padding: 13px 12px;
+
+            border-bottom: 1px solid #edf0f4;
+
+            font-size: 12px;
+        }
+
+        .history-status {
+            color: #15803d;
+
+            font-weight: bold;
+        }
+
+
+        /* ================= DEMO NOTICE ================= */
+
+        .demo-note {
+            background: #fff8e8;
+
+            border: 1px solid #f0d38d;
+
+            color: #725519;
+
+            padding: 13px 15px;
+
+            border-radius: 8px;
+
+            font-size: 12px;
+
+            margin-bottom: 22px;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            text-align: center;
+
+            color: #7a8596;
+
+            font-size: 11px;
+
+            padding: 20px 0 35px;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .navbar {
+                padding: 0 4%;
+            }
+
+            .nav-link {
+                display: none;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .header {
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 15px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .journey {
+                flex-direction: column;
+
+                gap: 18px;
+            }
+
+            .station {
+                width: 100%;
+
+                text-align: center !important;
+            }
+
+            .route {
+                width: 80%;
+
+                flex: none;
+            }
+
+            .info-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .booking-top {
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 10px;
+            }
+
+        }
+
+
+        @media (max-width: 450px) {
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .booking-actions {
+                flex-direction: column;
+            }
+
+            .small-btn {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Tatkal Sathi
+        </div>
+
+        <div class="nav-right">
+
+            <a href="booking.html" class="nav-link">
+                New Booking
+            </a>
+
+            <a href="status.html" class="nav-link">
+                Booking Status
+            </a>
+
+            <div class="profile" id="profileName">
+                Demo User
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="container">
+
+
+        <!-- HEADER -->
+
+        <div class="header">
+
+            <div>
+
+                <h1>Dashboard</h1>
+
+                <p>
+                    Manage your automated Tatkal booking requests and tickets.
+                </p>
+
+            </div>
+
+
+            <button
+                class="btn btn-primary"
+                onclick="window.location.href='booking.html'">
+
+                + New Booking
+
+            </button>
+
+        </div>
+
+
+        <!-- DEMO NOTICE -->
+
+        <div class="demo-note">
+
+            <strong>Demo Mode:</strong>
+
+            The information displayed on this dashboard is sample project data.
+            No real railway reservation or live booking is being performed.
+
+        </div>
+
+
+        <!-- ================= STATISTICS ================= -->
+
+        <div class="stats">
+
+
+            <div class="stat-card">
+
+                <span>
+                    ACTIVE BOOKINGS
+                </span>
+
+                <strong>
+                    1
+                </strong>
+
+                <p>
+                    Currently active
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>
+                    CONFIRMED TICKETS
+                </span>
+
+                <strong>
+                    4
+                </strong>
+
+                <p>
+                    Total confirmed
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>
+                    AUTOMATION ATTEMPTS
+                </span>
+
+                <strong>
+                    12
+                </strong>
+
+                <p>
+                    Booking attempts
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>
+                    ALTERNATIVE SWITCHES
+                </span>
+
+                <strong>
+                    3
+                </strong>
+
+                <p>
+                    Automatic fallbacks
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ================= MAIN GRID ================= -->
+
+        <div class="main-grid">
+
+
+            <!-- ================= LEFT COLUMN ================= -->
+
+            <div>
+
+
+                <!-- ACTIVE BOOKING -->
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <h2>
+                            Active Booking
+                        </h2>
+
+                        <a
+                            href="status.html"
+                            class="view-link">
+
+                            View Status
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="booking-card">
+
+
+                        <!-- BOOKING TOP -->
+
+                        <div class="booking-top">
+
+                            <div>
+
+                                <h3>
+                                    12155 — Shaan-e-Bhopal
+                                </h3>
+
+                                <p>
+                                    Bhopal → New Delhi
+                                </p>
+
+                            </div>
+
+                            <div class="confirmed-badge">
+                                Confirmed
+                            </div>
+
+                        </div>
+
+
+                        <!-- JOURNEY -->
+
+                        <div class="journey">
+
+
+                            <div class="station">
+
+                                <h3>
+                                    BPL
+                                </h3>
+
+                                <p>
+                                    Bhopal
+                                </p>
+
+                                <p>
+                                    06:15 AM
+                                </p>
+
+                            </div>
+
+
+                            <div class="route">
+
+                                <strong>
+                                    9h 30m
+                                </strong>
+
+                                <div class="route-line"></div>
+
+                            </div>
+
+
+                            <div class="station">
+
+                                <h3>
+                                    NDLS
+                                </h3>
+
+                                <p>
+                                    New Delhi
+                                </p>
+
+                                <p>
+                                    03:45 PM
+                                </p>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- INFO -->
+
+                        <div class="info-grid">
+
+
+                            <div class="info-box">
+
+                                <span>
+                                    DATE
+                                </span>
+
+                                <strong>
+                                    25 Aug 2026
+                                </strong>
+
+                            </div>
+
+
+                            <div class="info-box">
+
+                                <span>
+                                    CLASS
+                                </span>
+
+                                <strong id="classValue">
+                                    3A
+                                </strong>
+
+                            </div>
+
+
+                            <div class="info-box">
+
+                                <span>
+                                    COACH / BERTH
+                                </span>
+
+                                <strong>
+                                    B2 / 34
+                                </strong>
+
+                            </div>
+
+
+                            <div class="info-box">
+
+                                <span>
+                                    PNR
+                                </span>
+
+                                <strong>
+                                    4527819630
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- ACTIONS -->
+
+                        <div class="booking-actions">
+
+                            <button
+                                class="small-btn btn-secondary"
+                                onclick="window.location.href='status.html'">
+
+                                Track Booking
+
+                            </button>
+
+
+                            <button
+                                class="small-btn btn-primary"
+                                onclick="window.location.href='ticket.html'">
+
+                                View Ticket
+
+                            </button>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BOOKING HISTORY -->
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <h2>
+                            Booking History
+                        </h2>
+
+                    </div>
+
+
+                    <table class="history">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    TRAIN
+                                </th>
+
+                                <th>
+                                    ROUTE
+                                </th>
+
+                                <th>
+                                    DATE
+                                </th>
+
+                                <th>
+                                    STATUS
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+                                    12001 Bhopal Express
+                                </td>
+
+                                <td>
+                                    BPL → NDLS
+                                </td>
+
+                                <td>
+                                    10 Aug 2026
+                                </td>
+
+                                <td class="history-status">
+                                    Confirmed
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    12627 Karnataka Express
+                                </td>
+
+                                <td>
+                                    BPL → NDLS
+                                </td>
+
+                                <td>
+                                    02 Aug 2026
+                                </td>
+
+                                <td class="history-status">
+                                    Confirmed
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    12155 Shaan-e-Bhopal
+                                </td>
+
+                                <td>
+                                    BPL → NDLS
+                                </td>
+
+                                <td>
+                                    25 Jul 2026
+                                </td>
+
+                                <td class="history-status">
+                                    Confirmed
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- ================= RIGHT COLUMN ================= -->
+
+            <div>
+
+
+                <!-- AUTOMATION STATUS -->
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <h2>
+                            Automation
+                        </h2>
+
+                    </div>
+
+
+                    <div class="automation-box">
+
+                        <div class="automation-status">
+
+                            <div class="status-dot"></div>
+
+                            <strong>
+                                Automation Enabled
+                            </strong>
+
+                        </div>
+
+                        <p>
+                            Tatkal Sathi can check preferred trains and
+                            automatically move to alternative options when
+                            the selected train is unavailable.
+                        </p>
+
+                    </div>
+
+
+                    <div class="setting">
+
+                        <div class="setting-info">
+
+                            <strong>
+                                Auto-Switch
+                            </strong>
+
+                            <span>
+                                Alternative train
+                            </span>
+
+                        </div>
+
+                        <div class="toggle"></div>
+
+                    </div>
+
+
+                    <div class="setting">
+
+                        <div class="setting-info">
+
+                            <strong>
+                                Auto Booking
+                            </strong>
+
+                            <span>
+                                Automatic attempt
+                            </span>
+
+                        </div>
+
+                        <div class="toggle"></div>
+
+                    </div>
+
+
+                    <div class="setting">
+
+                        <div class="setting-info">
+
+                            <strong>
+                                Notifications
+                            </strong>
+
+                            <span>
+                                Booking updates
+                            </span>
+
+                        </div>
+
+                        <div class="toggle"></div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PREFERRED TRAINS -->
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <h2>
+                            Preferred Trains
+                        </h2>
+
+                        <a
+                            href="preferences.html"
+                            class="view-link">
+
+                            Edit
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="train">
+
+                        <div class="train-top">
+
+                            <strong>
+                                12001 Bhopal Express
+                            </strong>
+
+                            <span class="priority">
+                                Priority 1
+                            </span>
+
+                        </div>
+
+                        <p>
+                            08:00 AM – 05:30 PM<br>
+                            3A | ₹1,245
+                        </p>
+
+                    </div>
+
+
+                    <div class="train">
+
+                        <div class="train-top">
+
+                            <strong>
+                                12155 Shaan-e-Bhopal
+                            </strong>
+
+                            <span class="priority">
+                                Priority 2
+                            </span>
+
+                        </div>
+
+                        <p>
+                            06:15 AM – 03:45 PM<br>
+                            3A | ₹1,180
+                        </p>
+
+                    </div>
+
+
+                    <div class="train">
+
+                        <div class="train-top">
+
+                            <strong>
+                                12627 Karnataka Express
+                            </strong>
+
+                            <span class="priority">
+                                Priority 3
+                            </span>
+
+                        </div>
+
+                        <p>
+                            10:30 AM – 08:15 PM<br>
+                            3A | ₹1,320
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- NOTIFICATIONS -->
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <h2>
+                            Notifications
+                        </h2>
+
+                    </div>
+
+
+                    <div class="notification">
+
+                        <div class="notification-dot"></div>
+
+                        <div>
+
+                            <strong>
+                                Booking Confirmed
+                            </strong>
+
+                            <p>
+                                Your demo ticket for Shaan-e-Bhopal
+                                has been confirmed.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="notification">
+
+                        <div class="notification-dot"></div>
+
+                        <div>
+
+                            <strong>
+                                Automatic Fallback
+                            </strong>
+
+                            <p>
+                                System switched from Priority 1
+                                to Priority 2.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="notification">
+
+                        <div class="notification-dot"></div>
+
+                        <div>
+
+                            <strong>
+                                Payment Successful
+                            </strong>
+
+                            <p>
+                                Demo payment was successfully processed.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        Tatkal Sathi — Automated Tatkal Booking & Ticket Tracking
+
+    </footer>
+
+
+    <script>
+
+        /* ================= LOAD USER DATA ================= */
+
+        const passengerName =
+            localStorage.getItem("passengerName");
+
+        const selectedClass =
+            localStorage.getItem("travelClass");
+
+
+        /* USER NAME */
+
+        if (passengerName) {
+
+            document.getElementById("profileName")
+                .textContent = passengerName;
+
+        }
+
+
+        /* TRAVEL CLASS */
+
+        if (selectedClass) {
+
+            document.getElementById("classValue")
+                .textContent = selectedClass;
+
+        }
+
+
+        /* ================= DEMO BOOKING CHECK ================= */
+
+        const paymentStatus =
+            localStorage.getItem("paymentStatus");
+
+        const bookingConfirmed =
+            localStorage.getItem("bookingConfirmed");
+
+
+        /*
+            The dashboard uses sample data by default.
+
+            If the user has completed the demo flow,
+            the localStorage values remain available.
+        */
+
+        if (paymentStatus === "success") {
+
+            console.log(
+                "Demo payment completed successfully."
+            );
+
+        }
+
+        if (bookingConfirmed === "true") {
+
+            console.log(
+                "Demo booking confirmation completed."
+            );
+
+        }
+
+    </script>
+
+
+</body>
+</html>
