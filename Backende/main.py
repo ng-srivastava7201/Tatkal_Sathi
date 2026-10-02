@@ -3,7 +3,10 @@ from pydantic import BaseModel
 from mock_irctc import search_trains, book_ticket
 # uvicorn main:app --reload
 
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(__file__), "..", "aiml"))
 
+from ai_interface import predict_seat_probability, rank_alternative_routes, pick_best_fallback
 app = FastAPI()
 
 
@@ -30,14 +33,38 @@ def home():
 def hello():
     return {"message": "Hello, welcome to the Tatkal Train booking backend!"}
 
+class PredictRequest(BaseModel):
+    route: str
+    class_name: str
+    quota: str
+    date: str
+    seats_requested: int = 1
 
-@app.get("/api/predict")
-def predict():
-    return {
-        "route": "Mumbai-Delhi",
-        "success_probability": 0.23,
-        "predicted_seats_available": 3
-    }
+class FallbackRequest(PredictRequest):
+    preferences: dict = {}
+
+
+@app.post("/api/predict")
+def predict(request: PredictRequest):
+    return predict_seat_probability(
+        request.route, request.class_name, request.quota,
+        request.date, request.seats_requested,
+    )
+
+@app.post("/api/alternatives")
+def alternatives(request: PredictRequest):
+    return rank_alternative_routes(
+        request.route, request.class_name, request.quota,
+        request.date, request.seats_requested,
+    )
+
+@app.post("/api/fallback")
+def fallback(request: FallbackRequest):
+    return pick_best_fallback(
+        request.route, request.class_name, request.quota,
+        request.date, request.seats_requested,
+        preferences=request.preferences,
+    )
 
 
 @app.post("/mock-irctc/search")
