@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from mock_irctc import search_trains, book_ticket
+# cd Backende
 # uvicorn main:app --reload
 
 import sys, os
