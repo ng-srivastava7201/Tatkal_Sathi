@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,6 @@
     <title>Dashboard - Tatkal Sathi</title>
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -20,11 +20,12 @@
             color: #172033;
         }
 
-        /* ================= NAVBAR ================= */
+        /* NAVBAR */
 
         .navbar {
             height: 70px;
-            background: #0b1f3a;
+
+            background: #102a43;
             color: white;
 
             display: flex;
@@ -35,704 +36,518 @@
         }
 
         .logo {
-            font-size: 23px;
+            font-size: 24px;
             font-weight: bold;
-            letter-spacing: 0.5px;
         }
 
         .nav-right {
             display: flex;
             align-items: center;
-            gap: 25px;
+            gap: 18px;
         }
 
-        .nav-link {
-            color: #dce7f5;
-            text-decoration: none;
+        .welcome {
             font-size: 14px;
+            color: #d9e6f2;
         }
 
-        .nav-link:hover {
+        .home-btn {
+            border: none;
+            background: #1976d2;
             color: white;
+
+            padding: 9px 15px;
+
+            border-radius: 6px;
+
+            font-size: 12px;
+            font-weight: bold;
+
+            cursor: pointer;
         }
 
-        .profile {
-            background: #17365d;
-            padding: 9px 14px;
-            border-radius: 7px;
-            font-size: 13px;
+        .home-btn:hover {
+            background: #1565b8;
         }
 
-
-        /* ================= MAIN ================= */
+        /* MAIN */
 
         .container {
             width: 90%;
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 35px auto;
         }
 
+        /* HEADER */
 
-        /* ================= HEADER ================= */
-
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            margin-bottom: 28px;
+        .page-header {
+            margin-bottom: 25px;
         }
 
-        .header h1 {
-            font-size: 30px;
-            color: #0b1f3a;
-            margin-bottom: 6px;
+        .page-header h1 {
+            color: #102a43;
+            font-size: 28px;
+            margin-bottom: 7px;
         }
 
-        .header p {
-            color: #6c7789;
+        .page-header p {
+            color: #627d98;
             font-size: 14px;
         }
 
-
-        /* ================= BUTTON ================= */
-
-        .btn {
-            border: none;
-            padding: 12px 20px;
-            border-radius: 8px;
-
-            cursor: pointer;
-
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        .btn-primary {
-            background: #0b1f3a;
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: #16345d;
-        }
-
-        .btn-secondary {
-            background: #e5edf7;
-            color: #0b1f3a;
-        }
-
-
-        /* ================= STAT CARDS ================= */
+        /* STAT CARDS */
 
         .stats {
             display: grid;
+
             grid-template-columns: repeat(4, 1fr);
 
-            gap: 18px;
+            gap: 15px;
 
-            margin-bottom: 25px;
+            margin-bottom: 22px;
         }
 
         .stat-card {
             background: white;
 
-            padding: 22px;
+            border: 1px solid #d9e2ec;
 
-            border-radius: 12px;
+            border-radius: 10px;
 
-            box-shadow: 0 5px 20px rgba(20, 40, 70, 0.08);
+            padding: 20px;
+
+            box-shadow: 0 4px 12px rgba(16, 42, 67, 0.05);
         }
 
-        .stat-card span {
-            display: block;
-
-            color: #7a8597;
-
-            font-size: 12px;
-
-            margin-bottom: 9px;
-        }
-
-        .stat-card strong {
-            font-size: 25px;
-
-            color: #0b1f3a;
-        }
-
-        .stat-card p {
-            color: #758195;
+        .stat-label {
+            color: #829ab1;
 
             font-size: 11px;
 
-            margin-top: 6px;
+            margin-bottom: 8px;
         }
 
+        .stat-value {
+            color: #102a43;
 
-        /* ================= GRID ================= */
+            font-size: 22px;
 
-        .main-grid {
+            font-weight: bold;
+        }
+
+        .stat-subtext {
+            color: #627d98;
+
+            font-size: 11px;
+
+            margin-top: 5px;
+        }
+
+        /* LAYOUT */
+
+        .dashboard-grid {
             display: grid;
 
-            grid-template-columns: 1.5fr 0.8fr;
+            grid-template-columns: 1.5fr 1fr;
 
-            gap: 22px;
+            gap: 20px;
         }
 
-
-        /* ================= CARD ================= */
+        /* CARD */
 
         .card {
             background: white;
 
-            border-radius: 13px;
+            border: 1px solid #d9e2ec;
 
-            padding: 25px;
+            border-radius: 12px;
 
-            box-shadow: 0 5px 20px rgba(20, 40, 70, 0.08);
+            padding: 23px;
 
-            margin-bottom: 22px;
+            margin-bottom: 20px;
+
+            box-shadow: 0 4px 12px rgba(16, 42, 67, 0.05);
         }
 
-        .card-header {
+        .card-title {
             display: flex;
 
-            justify-content: space-between;
-
             align-items: center;
+            justify-content: space-between;
 
             margin-bottom: 20px;
         }
 
-        .card-header h2 {
-            color: #0b1f3a;
+        .card-title h2 {
+            color: #102a43;
 
             font-size: 19px;
         }
 
-        .view-link {
-            color: #2563eb;
-
-            font-size: 12px;
-
-            cursor: pointer;
-
-            text-decoration: none;
-        }
-
-
-        /* ================= BOOKING CARD ================= */
-
-        .booking-card {
-            border: 1px solid #dce5ef;
-
-            border-radius: 11px;
-
-            overflow: hidden;
-        }
-
-        .booking-top {
-            background: #0b1f3a;
-
-            color: white;
-
-            padding: 18px 20px;
-
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: center;
-        }
-
-        .booking-top h3 {
-            font-size: 17px;
-
-            margin-bottom: 5px;
-        }
-
-        .booking-top p {
-            font-size: 12px;
-
-            color: #c9d7e8;
-        }
-
-        .confirmed-badge {
-            background: #dcfce7;
-
-            color: #15803d;
-
-            padding: 7px 12px;
-
-            border-radius: 20px;
-
-            font-size: 11px;
-
-            font-weight: bold;
-        }
-
-
-        /* ================= JOURNEY ================= */
-
-        .journey {
-            padding: 23px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-        }
-
-        .station {
-            width: 25%;
-        }
-
-        .station:last-child {
-            text-align: right;
-        }
-
-        .station h3 {
-            font-size: 22px;
-
-            color: #0b1f3a;
-
-            margin-bottom: 5px;
-        }
-
-        .station p {
-            color: #778397;
-
-            font-size: 12px;
-        }
-
-        .route {
-            flex: 1;
-
-            margin: 0 25px;
-
-            text-align: center;
-        }
-
-        .route strong {
-            display: block;
-
-            color: #2563eb;
-
-            font-size: 12px;
-
-            margin-bottom: 9px;
-        }
-
-        .route-line {
-            height: 2px;
-
-            background: #c4cfdd;
-
-            position: relative;
-        }
-
-        .route-line::before,
-        .route-line::after {
-            content: "";
-
-            position: absolute;
-
-            width: 9px;
-            height: 9px;
-
-            border-radius: 50%;
-
-            background: #2563eb;
-
-            top: -3px;
-        }
-
-        .route-line::before {
-            left: 0;
-        }
-
-        .route-line::after {
-            right: 0;
-        }
-
-
-        /* ================= INFO GRID ================= */
-
-        .info-grid {
-            padding: 0 23px 23px;
-
-            display: grid;
-
-            grid-template-columns: repeat(4, 1fr);
-
-            gap: 10px;
-        }
-
-        .info-box {
-            background: #f7f9fc;
-
-            border-radius: 8px;
-
-            padding: 12px;
-        }
-
-        .info-box span {
-            display: block;
-
-            font-size: 10px;
-
-            color: #7c8797;
-
-            margin-bottom: 5px;
-        }
-
-        .info-box strong {
-            font-size: 12px;
-
-            color: #172033;
-        }
-
-
-        /* ================= BOOKING ACTIONS ================= */
-
-        .booking-actions {
-            border-top: 1px solid #e6ebf1;
-
-            padding: 15px 20px;
-
-            display: flex;
-
-            justify-content: flex-end;
-
-            gap: 10px;
-        }
-
-        .small-btn {
-            padding: 9px 14px;
-
-            border-radius: 7px;
-
+        .small-link {
             border: none;
 
-            font-size: 12px;
+            background: none;
 
-            cursor: pointer;
+            color: #1976d2;
+
+            font-size: 12px;
 
             font-weight: bold;
+
+            cursor: pointer;
         }
 
-
-        /* ================= AUTOMATION ================= */
-
-        .automation-box {
-            background: #f6f9fd;
-
-            border-radius: 10px;
-
-            padding: 18px;
-
-            margin-bottom: 18px;
+        .small-link:hover {
+            text-decoration: underline;
         }
 
-        .automation-status {
+        /* CURRENT BOOKING */
+
+        .booking-status {
             display: flex;
 
             align-items: center;
-
-            gap: 10px;
-
-            margin-bottom: 12px;
-        }
-
-        .status-dot {
-            width: 10px;
-
-            height: 10px;
-
-            background: #16a34a;
-
-            border-radius: 50%;
-        }
-
-        .automation-status strong {
-            color: #15803d;
-
-            font-size: 14px;
-        }
-
-        .automation-box p {
-            font-size: 12px;
-
-            line-height: 1.6;
-
-            color: #6e798a;
-        }
-
-
-        /* ================= SETTINGS ================= */
-
-        .setting {
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: center;
-
-            padding: 13px 0;
-
-            border-bottom: 1px solid #edf0f4;
-        }
-
-        .setting:last-child {
-            border-bottom: none;
-        }
-
-        .setting-info strong {
-            display: block;
-
-            font-size: 13px;
-
-            margin-bottom: 4px;
-        }
-
-        .setting-info span {
-            font-size: 11px;
-
-            color: #7a8494;
-        }
-
-        .toggle {
-            width: 39px;
-
-            height: 21px;
-
-            background: #2563eb;
-
-            border-radius: 20px;
-
-            position: relative;
-        }
-
-        .toggle::after {
-            content: "";
-
-            width: 17px;
-
-            height: 17px;
-
-            background: white;
-
-            border-radius: 50%;
-
-            position: absolute;
-
-            right: 2px;
-
-            top: 2px;
-        }
-
-
-        /* ================= PREFERRED TRAINS ================= */
-
-        .train {
-            border: 1px solid #e1e7ef;
-
-            border-radius: 9px;
-
-            padding: 14px;
-
-            margin-bottom: 10px;
-        }
-
-        .train:last-child {
-            margin-bottom: 0;
-        }
-
-        .train-top {
-            display: flex;
-
-            justify-content: space-between;
-
-            margin-bottom: 5px;
-        }
-
-        .train-top strong {
-            color: #0b1f3a;
-
-            font-size: 13px;
-        }
-
-        .priority {
-            font-size: 10px;
-
-            color: #2563eb;
-
-            background: #eaf2ff;
-
-            padding: 4px 7px;
-
-            border-radius: 5px;
-        }
-
-        .train p {
-            color: #788397;
-
-            font-size: 11px;
-
-            line-height: 1.5;
-        }
-
-
-        /* ================= NOTIFICATION ================= */
-
-        .notification {
-            display: flex;
 
             gap: 12px;
 
-            padding: 13px 0;
+            margin-bottom: 20px;
 
-            border-bottom: 1px solid #edf0f4;
+            padding: 14px;
+
+            background: #f0fff4;
+
+            border: 1px solid #c6f6d5;
+
+            border-radius: 8px;
         }
 
-        .notification:last-child {
-            border-bottom: none;
-        }
-
-        .notification-dot {
-            width: 8px;
-
-            height: 8px;
+        .status-dot {
+            width: 12px;
+            height: 12px;
 
             border-radius: 50%;
 
-            background: #2563eb;
-
-            margin-top: 5px;
+            background: #218739;
 
             flex-shrink: 0;
         }
 
-        .notification strong {
-            display: block;
+        .booking-status h3 {
+            color: #276749;
 
-            font-size: 12px;
+            font-size: 14px;
 
             margin-bottom: 4px;
         }
 
-        .notification p {
-            font-size: 11px;
-
-            color: #788397;
-
-            line-height: 1.4;
-        }
-
-
-        /* ================= HISTORY ================= */
-
-        .history {
-            width: 100%;
-
-            border-collapse: collapse;
-        }
-
-        .history th {
-            text-align: left;
-
-            background: #f5f7fa;
-
-            color: #697588;
+        .booking-status p {
+            color: #627d98;
 
             font-size: 11px;
-
-            padding: 12px;
         }
 
-        .history td {
-            padding: 13px 12px;
+        /* JOURNEY */
 
-            border-bottom: 1px solid #edf0f4;
+        .journey {
+            display: grid;
 
-            font-size: 12px;
+            grid-template-columns: 1fr auto 1fr;
+
+            align-items: center;
+
+            gap: 15px;
+
+            padding: 18px;
+
+            background: #f5f9ff;
+
+            border: 1px solid #d5e5f5;
+
+            border-radius: 8px;
         }
 
-        .history-status {
-            color: #15803d;
+        .station {
+            text-align: center;
+        }
+
+        .station-name {
+            color: #102a43;
+
+            font-size: 20px;
 
             font-weight: bold;
+
+            word-break: break-word;
         }
 
+        .station-label {
+            color: #829ab1;
 
-        /* ================= DEMO NOTICE ================= */
+            font-size: 10px;
 
-        .demo-note {
-            background: #fff8e8;
+            margin-top: 5px;
+        }
 
-            border: 1px solid #f0d38d;
+        .journey-arrow {
+            color: #1976d2;
 
-            color: #725519;
+            font-size: 22px;
+        }
 
-            padding: 13px 15px;
+        /* BOOKING DETAILS */
+
+        .details-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 10px;
+
+            margin-top: 18px;
+        }
+
+        .detail {
+            background: #f8fafc;
+
+            padding: 12px;
+
+            border-radius: 7px;
+        }
+
+        .label {
+            color: #829ab1;
+
+            font-size: 10px;
+
+            margin-bottom: 5px;
+        }
+
+        .value {
+            color: #243b53;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            word-break: break-word;
+        }
+
+        /* ACTION BUTTONS */
+
+        .action-buttons {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 10px;
+
+            margin-top: 18px;
+        }
+
+        .action-btn {
+            padding: 12px;
+
+            border: none;
+
+            border-radius: 7px;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .primary {
+            background: #1976d2;
+
+            color: white;
+        }
+
+        .primary:hover {
+            background: #1565b8;
+        }
+
+        .secondary {
+            background: #edf2f7;
+
+            color: #243b53;
+        }
+
+        .secondary:hover {
+            background: #d9e2ec;
+        }
+
+        /* AUTOMATION */
+
+        .automation-row {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 13px 0;
+
+            border-bottom: 1px solid #edf2f7;
+
+            gap: 15px;
+        }
+
+        .automation-row:last-child {
+            border-bottom: none;
+        }
+
+        .automation-label {
+            color: #627d98;
+
+            font-size: 13px;
+        }
+
+        .automation-value {
+            font-size: 12px;
+
+            font-weight: bold;
+
+            padding: 5px 9px;
+
+            border-radius: 15px;
+        }
+
+        .enabled {
+            background: #e6ffed;
+
+            color: #218739;
+        }
+
+        .disabled {
+            background: #f1f5f8;
+
+            color: #627d98;
+        }
+
+        /* PASSENGER */
+
+        .passenger-box {
+            background: #f8fafc;
 
             border-radius: 8px;
 
-            font-size: 12px;
-
-            margin-bottom: 22px;
+            padding: 16px;
         }
 
+        .passenger-name {
+            color: #102a43;
 
-        /* ================= FOOTER ================= */
+            font-size: 17px;
 
-        footer {
+            font-weight: bold;
+
+            margin-bottom: 5px;
+        }
+
+        .passenger-info {
+            color: #627d98;
+
+            font-size: 12px;
+
+            line-height: 1.6;
+        }
+
+        /* QUICK ACTION */
+
+        .quick-actions {
+            display: grid;
+
+            gap: 10px;
+        }
+
+        .quick-btn {
+            width: 100%;
+
+            padding: 13px;
+
+            background: #f8fafc;
+
+            border: 1px solid #d9e2ec;
+
+            border-radius: 7px;
+
+            color: #243b53;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            text-align: left;
+        }
+
+        .quick-btn:hover {
+            border-color: #1976d2;
+
+            background: #f5f9ff;
+        }
+
+        /* EMPTY */
+
+        .empty-message {
+            display: none;
+
             text-align: center;
 
-            color: #7a8596;
+            padding: 35px 15px;
+
+            color: #627d98;
+
+            font-size: 14px;
+        }
+
+        .empty-message h3 {
+            color: #243b53;
+
+            margin-bottom: 8px;
+        }
+
+        /* FOOTER */
+
+        .footer {
+            text-align: center;
+
+            color: #829ab1;
 
             font-size: 11px;
 
-            padding: 20px 0 35px;
+            margin: 25px 0 35px;
         }
 
+        /* RESPONSIVE */
 
-        /* ================= RESPONSIVE ================= */
-
-        @media (max-width: 900px) {
+        @media (max-width: 850px) {
 
             .stats {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .main-grid {
+            .dashboard-grid {
                 grid-template-columns: 1fr;
             }
-
         }
 
-
-        @media (max-width: 650px) {
-
-            .navbar {
-                padding: 0 4%;
-            }
-
-            .nav-link {
-                display: none;
-            }
+        @media (max-width: 600px) {
 
             .container {
                 width: 94%;
             }
 
-            .header {
-                flex-direction: column;
+            .navbar {
+                padding: 0 4%;
+            }
 
-                align-items: flex-start;
-
-                gap: 15px;
+            .welcome {
+                display: none;
             }
 
             .stats {
@@ -740,64 +555,32 @@
             }
 
             .journey {
-                flex-direction: column;
-
-                gap: 18px;
-            }
-
-            .station {
-                width: 100%;
-
-                text-align: center !important;
-            }
-
-            .route {
-                width: 80%;
-
-                flex: none;
-            }
-
-            .info-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .booking-top {
-                flex-direction: column;
-
-                align-items: flex-start;
-
-                gap: 10px;
-            }
-
-        }
-
-
-        @media (max-width: 450px) {
-
-            .info-grid {
                 grid-template-columns: 1fr;
             }
 
-            .booking-actions {
-                flex-direction: column;
+            .journey-arrow {
+                transform: rotate(90deg);
+
+                text-align: center;
             }
 
-            .small-btn {
-                width: 100%;
+            .details-grid {
+                grid-template-columns: 1fr;
             }
 
+            .action-buttons {
+                grid-template-columns: 1fr;
+            }
         }
-
     </style>
 </head>
 
 
 <body>
 
+    <!-- NAVBAR -->
 
-    <!-- ================= NAVBAR ================= -->
-
-    <nav class="navbar">
+    <div class="navbar">
 
         <div class="logo">
             Tatkal Sathi
@@ -805,669 +588,169 @@
 
         <div class="nav-right">
 
-            <a href="booking.html" class="nav-link">
-                New Booking
-            </a>
-
-            <a href="status.html" class="nav-link">
-                Booking Status
-            </a>
-
-            <div class="profile" id="profileName">
-                Demo User
+            <div
+                class="welcome"
+                id="welcomeText"
+            >
+                Welcome
             </div>
-
-        </div>
-
-    </nav>
-
-
-    <!-- ================= MAIN ================= -->
-
-    <main class="container">
-
-
-        <!-- HEADER -->
-
-        <div class="header">
-
-            <div>
-
-                <h1>Dashboard</h1>
-
-                <p>
-                    Manage your automated Tatkal booking requests and tickets.
-                </p>
-
-            </div>
-
 
             <button
-                class="btn btn-primary"
-                onclick="window.location.href='booking.html'">
-
-                + New Booking
-
+                class="home-btn"
+                onclick="goToBooking()"
+            >
+                New Booking
             </button>
 
         </div>
 
+    </div>
 
-        <!-- DEMO NOTICE -->
 
-        <div class="demo-note">
+    <div class="container">
 
-            <strong>Demo Mode:</strong>
+        <!-- HEADER -->
 
-            The information displayed on this dashboard is sample project data.
-            No real railway reservation or live booking is being performed.
+        <div class="page-header">
+
+            <h1>
+                Dashboard
+            </h1>
+
+            <p>
+                Track your Tatkal booking and manage your booking details.
+            </p>
 
         </div>
 
 
-        <!-- ================= STATISTICS ================= -->
+        <!-- STATISTICS -->
 
         <div class="stats">
 
-
             <div class="stat-card">
 
-                <span>
-                    ACTIVE BOOKINGS
-                </span>
+                <div class="stat-label">
+                    BOOKING STATUS
+                </div>
 
-                <strong>
-                    1
-                </strong>
+                <div
+                    class="stat-value"
+                    id="bookingStatusStat"
+                >
+                    -
+                </div>
 
-                <p>
-                    Currently active
-                </p>
+                <div class="stat-subtext">
+                    Current booking
+                </div>
 
             </div>
 
 
             <div class="stat-card">
 
-                <span>
-                    CONFIRMED TICKETS
-                </span>
+                <div class="stat-label">
+                    PNR NUMBER
+                </div>
 
-                <strong>
-                    4
-                </strong>
+                <div
+                    class="stat-value"
+                    id="pnrStat"
+                >
+                    -
+                </div>
 
-                <p>
-                    Total confirmed
-                </p>
-
-            </div>
-
-
-            <div class="stat-card">
-
-                <span>
-                    AUTOMATION ATTEMPTS
-                </span>
-
-                <strong>
-                    12
-                </strong>
-
-                <p>
-                    Booking attempts
-                </p>
+                <div class="stat-subtext">
+                    Booking reference
+                </div>
 
             </div>
 
 
             <div class="stat-card">
 
-                <span>
-                    ALTERNATIVE SWITCHES
-                </span>
+                <div class="stat-label">
+                    TRAVEL CLASS
+                </div>
 
-                <strong>
-                    3
-                </strong>
+                <div
+                    class="stat-value"
+                    id="classStat"
+                >
+                    -
+                </div>
 
-                <p>
-                    Automatic fallbacks
-                </p>
+                <div class="stat-subtext">
+                    Selected class
+                </div>
 
             </div>
 
+
+            <div class="stat-card">
+
+                <div class="stat-label">
+                    PAYMENT
+                </div>
+
+                <div
+                    class="stat-value"
+                    id="paymentStat"
+                >
+                    -
+                </div>
+
+                <div class="stat-subtext">
+                    Payment status
+                </div>
+
+            </div>
 
         </div>
 
 
-        <!-- ================= MAIN GRID ================= -->
+        <div class="dashboard-grid">
 
-        <div class="main-grid">
-
-
-            <!-- ================= LEFT COLUMN ================= -->
+            <!-- LEFT COLUMN -->
 
             <div>
 
-
-                <!-- ACTIVE BOOKING -->
+                <!-- CURRENT BOOKING -->
 
                 <div class="card">
 
-                    <div class="card-header">
+                    <div class="card-title">
 
                         <h2>
-                            Active Booking
+                            Current Booking
                         </h2>
 
-                        <a
-                            href="status.html"
-                            class="view-link">
-
-                            View Status
-
-                        </a>
+                        <button
+                            class="small-link"
+                            onclick="goToTicket()"
+                        >
+                            View Ticket
+                        </button>
 
                     </div>
 
 
-                    <div class="booking-card">
-
-
-                        <!-- BOOKING TOP -->
-
-                        <div class="booking-top">
-
-                            <div>
-
-                                <h3>
-                                    12155 — Shaan-e-Bhopal
-                                </h3>
-
-                                <p>
-                                    Bhopal → New Delhi
-                                </p>
-
-                            </div>
-
-                            <div class="confirmed-badge">
-                                Confirmed
-                            </div>
-
-                        </div>
-
-
-                        <!-- JOURNEY -->
-
-                        <div class="journey">
-
-
-                            <div class="station">
-
-                                <h3>
-                                    BPL
-                                </h3>
-
-                                <p>
-                                    Bhopal
-                                </p>
-
-                                <p>
-                                    06:15 AM
-                                </p>
-
-                            </div>
-
-
-                            <div class="route">
-
-                                <strong>
-                                    9h 30m
-                                </strong>
-
-                                <div class="route-line"></div>
-
-                            </div>
-
-
-                            <div class="station">
-
-                                <h3>
-                                    NDLS
-                                </h3>
-
-                                <p>
-                                    New Delhi
-                                </p>
-
-                                <p>
-                                    03:45 PM
-                                </p>
-
-                            </div>
-
-
-                        </div>
-
-
-                        <!-- INFO -->
-
-                        <div class="info-grid">
-
-
-                            <div class="info-box">
-
-                                <span>
-                                    DATE
-                                </span>
-
-                                <strong>
-                                    25 Aug 2026
-                                </strong>
-
-                            </div>
-
-
-                            <div class="info-box">
-
-                                <span>
-                                    CLASS
-                                </span>
-
-                                <strong id="classValue">
-                                    3A
-                                </strong>
-
-                            </div>
-
-
-                            <div class="info-box">
-
-                                <span>
-                                    COACH / BERTH
-                                </span>
-
-                                <strong>
-                                    B2 / 34
-                                </strong>
-
-                            </div>
-
-
-                            <div class="info-box">
-
-                                <span>
-                                    PNR
-                                </span>
-
-                                <strong>
-                                    4527819630
-                                </strong>
-
-                            </div>
-
-
-                        </div>
-
-
-                        <!-- ACTIONS -->
-
-                        <div class="booking-actions">
-
-                            <button
-                                class="small-btn btn-secondary"
-                                onclick="window.location.href='status.html'">
-
-                                Track Booking
-
-                            </button>
-
-
-                            <button
-                                class="small-btn btn-primary"
-                                onclick="window.location.href='ticket.html'">
-
-                                View Ticket
-
-                            </button>
-
-                        </div>
-
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- BOOKING HISTORY -->
-
-                <div class="card">
-
-                    <div class="card-header">
-
-                        <h2>
-                            Booking History
-                        </h2>
-
-                    </div>
-
-
-                    <table class="history">
-
-                        <thead>
-
-                            <tr>
-
-                                <th>
-                                    TRAIN
-                                </th>
-
-                                <th>
-                                    ROUTE
-                                </th>
-
-                                <th>
-                                    DATE
-                                </th>
-
-                                <th>
-                                    STATUS
-                                </th>
-
-                            </tr>
-
-                        </thead>
-
-
-                        <tbody>
-
-                            <tr>
-
-                                <td>
-                                    12001 Bhopal Express
-                                </td>
-
-                                <td>
-                                    BPL → NDLS
-                                </td>
-
-                                <td>
-                                    10 Aug 2026
-                                </td>
-
-                                <td class="history-status">
-                                    Confirmed
-                                </td>
-
-                            </tr>
-
-
-                            <tr>
-
-                                <td>
-                                    12627 Karnataka Express
-                                </td>
-
-                                <td>
-                                    BPL → NDLS
-                                </td>
-
-                                <td>
-                                    02 Aug 2026
-                                </td>
-
-                                <td class="history-status">
-                                    Confirmed
-                                </td>
-
-                            </tr>
-
-
-                            <tr>
-
-                                <td>
-                                    12155 Shaan-e-Bhopal
-                                </td>
-
-                                <td>
-                                    BPL → NDLS
-                                </td>
-
-                                <td>
-                                    25 Jul 2026
-                                </td>
-
-                                <td class="history-status">
-                                    Confirmed
-                                </td>
-
-                            </tr>
-
-                        </tbody>
-
-                    </table>
-
-                </div>
-
-
-            </div>
-
-
-            <!-- ================= RIGHT COLUMN ================= -->
-
-            <div>
-
-
-                <!-- AUTOMATION STATUS -->
-
-                <div class="card">
-
-                    <div class="card-header">
-
-                        <h2>
-                            Automation
-                        </h2>
-
-                    </div>
-
-
-                    <div class="automation-box">
-
-                        <div class="automation-status">
-
-                            <div class="status-dot"></div>
-
-                            <strong>
-                                Automation Enabled
-                            </strong>
-
-                        </div>
-
-                        <p>
-                            Tatkal Sathi can check preferred trains and
-                            automatically move to alternative options when
-                            the selected train is unavailable.
-                        </p>
-
-                    </div>
-
-
-                    <div class="setting">
-
-                        <div class="setting-info">
-
-                            <strong>
-                                Auto-Switch
-                            </strong>
-
-                            <span>
-                                Alternative train
-                            </span>
-
-                        </div>
-
-                        <div class="toggle"></div>
-
-                    </div>
-
-
-                    <div class="setting">
-
-                        <div class="setting-info">
-
-                            <strong>
-                                Auto Booking
-                            </strong>
-
-                            <span>
-                                Automatic attempt
-                            </span>
-
-                        </div>
-
-                        <div class="toggle"></div>
-
-                    </div>
-
-
-                    <div class="setting">
-
-                        <div class="setting-info">
-
-                            <strong>
-                                Notifications
-                            </strong>
-
-                            <span>
-                                Booking updates
-                            </span>
-
-                        </div>
-
-                        <div class="toggle"></div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- PREFERRED TRAINS -->
-
-                <div class="card">
-
-                    <div class="card-header">
-
-                        <h2>
-                            Preferred Trains
-                        </h2>
-
-                        <a
-                            href="preferences.html"
-                            class="view-link">
-
-                            Edit
-
-                        </a>
-
-                    </div>
-
-
-                    <div class="train">
-
-                        <div class="train-top">
-
-                            <strong>
-                                12001 Bhopal Express
-                            </strong>
-
-                            <span class="priority">
-                                Priority 1
-                            </span>
-
-                        </div>
-
-                        <p>
-                            08:00 AM – 05:30 PM<br>
-                            3A | ₹1,245
-                        </p>
-
-                    </div>
-
-
-                    <div class="train">
-
-                        <div class="train-top">
-
-                            <strong>
-                                12155 Shaan-e-Bhopal
-                            </strong>
-
-                            <span class="priority">
-                                Priority 2
-                            </span>
-
-                        </div>
-
-                        <p>
-                            06:15 AM – 03:45 PM<br>
-                            3A | ₹1,180
-                        </p>
-
-                    </div>
-
-
-                    <div class="train">
-
-                        <div class="train-top">
-
-                            <strong>
-                                12627 Karnataka Express
-                            </strong>
-
-                            <span class="priority">
-                                Priority 3
-                            </span>
-
-                        </div>
-
-                        <p>
-                            10:30 AM – 08:15 PM<br>
-                            3A | ₹1,320
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- NOTIFICATIONS -->
-
-                <div class="card">
-
-                    <div class="card-header">
-
-                        <h2>
-                            Notifications
-                        </h2>
-
-                    </div>
-
-
-                    <div class="notification">
-
-                        <div class="notification-dot"></div>
+                    <div
+                        class="booking-status"
+                        id="bookingStatusBox"
+                    >
+
+                        <div class="status-dot"></div>
 
                         <div>
 
-                            <strong>
+                            <h3 id="bookingStatusTitle">
                                 Booking Confirmed
-                            </strong>
+                            </h3>
 
-                            <p>
-                                Your demo ticket for Shaan-e-Bhopal
-                                has been confirmed.
+                            <p id="bookingStatusText">
+                                Your booking has been completed successfully.
                             </p>
 
                         </div>
@@ -1475,39 +758,399 @@
                     </div>
 
 
-                    <div class="notification">
+                    <!-- JOURNEY -->
 
-                        <div class="notification-dot"></div>
+                    <div class="journey">
 
-                        <div>
+                        <div class="station">
 
-                            <strong>
-                                Automatic Fallback
-                            </strong>
+                            <div
+                                class="station-name"
+                                id="fromStation"
+                            >
+                                -
+                            </div>
 
-                            <p>
-                                System switched from Priority 1
-                                to Priority 2.
-                            </p>
+                            <div class="station-label">
+                                FROM
+                            </div>
+
+                        </div>
+
+
+                        <div class="journey-arrow">
+                            →
+                        </div>
+
+
+                        <div class="station">
+
+                            <div
+                                class="station-name"
+                                id="toStation"
+                            >
+                                -
+                            </div>
+
+                            <div class="station-label">
+                                TO
+                            </div>
 
                         </div>
 
                     </div>
 
 
-                    <div class="notification">
+                    <!-- DETAILS -->
 
-                        <div class="notification-dot"></div>
+                    <div class="details-grid">
 
-                        <div>
+                        <div class="detail">
 
-                            <strong>
-                                Payment Successful
-                            </strong>
+                            <div class="label">
+                                JOURNEY DATE
+                            </div>
 
-                            <p>
-                                Demo payment was successfully processed.
-                            </p>
+                            <div
+                                class="value"
+                                id="journeyDate"
+                            >
+                                -
+                            </div>
+
+                        </div>
+
+
+                        <div class="detail">
+
+                            <div class="label">
+                                TRAIN
+                            </div>
+
+                            <div
+                                class="value"
+                                id="train"
+                            >
+                                -
+                            </div>
+
+                        </div>
+
+
+                        <div class="detail">
+
+                            <div class="label">
+                                QUOTA
+                            </div>
+
+                            <div
+                                class="value"
+                                id="quota"
+                            >
+                                -
+                            </div>
+
+                        </div>
+
+
+                        <div class="detail">
+
+                            <div class="label">
+                                BOOKING ID
+                            </div>
+
+                            <div
+                                class="value"
+                                id="bookingId"
+                            >
+                                -
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BUTTONS -->
+
+                    <div class="action-buttons">
+
+                        <button
+                            class="action-btn primary"
+                            onclick="goToTicket()"
+                        >
+                            View Digital Ticket
+                        </button>
+
+
+                        <button
+                            class="action-btn secondary"
+                            onclick="printTicket()"
+                        >
+                            Print Ticket
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PASSENGER -->
+
+                <div class="card">
+
+                    <div class="card-title">
+
+                        <h2>
+                            Passenger
+                        </h2>
+
+                        <button
+                            class="small-link"
+                            onclick="goToPassenger()"
+                        >
+                            Edit
+                        </button>
+
+                    </div>
+
+
+                    <div class="passenger-box">
+
+                        <div
+                            class="passenger-name"
+                            id="passengerName"
+                        >
+                            -
+                        </div>
+
+                        <div
+                            class="passenger-info"
+                            id="passengerInfo"
+                        >
+                            -
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT COLUMN -->
+
+            <div>
+
+                <!-- AUTOMATION -->
+
+                <div class="card">
+
+                    <div class="card-title">
+
+                        <h2>
+                            Automation Settings
+                        </h2>
+
+                        <button
+                            class="small-link"
+                            onclick="goToPreferences()"
+                        >
+                            Edit
+                        </button>
+
+                    </div>
+
+
+                    <div class="automation-row">
+
+                        <span class="automation-label">
+                            Automatic Train Switching
+                        </span>
+
+                        <span
+                            class="automation-value"
+                            id="autoSwitch"
+                        >
+                            -
+                        </span>
+
+                    </div>
+
+
+                    <div class="automation-row">
+
+                        <span class="automation-label">
+                            Automatic Booking
+                        </span>
+
+                        <span
+                            class="automation-value"
+                            id="autoBooking"
+                        >
+                            -
+                        </span>
+
+                    </div>
+
+
+                    <div class="automation-row">
+
+                        <span class="automation-label">
+                            Notifications
+                        </span>
+
+                        <span
+                            class="automation-value"
+                            id="notifications"
+                        >
+                            -
+                        </span>
+
+                    </div>
+
+
+                    <div class="automation-row">
+
+                        <span class="automation-label">
+                            Booking Priority
+                        </span>
+
+                        <span
+                            class="automation-value disabled"
+                            id="priority"
+                        >
+                            -
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QUICK ACTIONS -->
+
+                <div class="card">
+
+                    <div class="card-title">
+
+                        <h2>
+                            Quick Actions
+                        </h2>
+
+                    </div>
+
+
+                    <div class="quick-actions">
+
+                        <button
+                            class="quick-btn"
+                            onclick="goToBooking()"
+                        >
+                            New Tatkal Booking
+                        </button>
+
+
+                        <button
+                            class="quick-btn"
+                            onclick="goToTicket()"
+                        >
+                            View Digital Ticket
+                        </button>
+
+
+                        <button
+                            class="quick-btn"
+                            onclick="goToPreferences()"
+                        >
+                            Booking Preferences
+                        </button>
+
+
+                        <button
+                            class="quick-btn"
+                            onclick="clearBooking()"
+                        >
+                            Start New Booking
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PAYMENT -->
+
+                <div class="card">
+
+                    <div class="card-title">
+
+                        <h2>
+                            Payment
+                        </h2>
+
+                    </div>
+
+
+                    <div class="details-grid">
+
+                        <div class="detail">
+
+                            <div class="label">
+                                METHOD
+                            </div>
+
+                            <div
+                                class="value"
+                                id="paymentMethod"
+                            >
+                                -
+                            </div>
+
+                        </div>
+
+
+                        <div class="detail">
+
+                            <div class="label">
+                                STATUS
+                            </div>
+
+                            <div
+                                class="value"
+                                id="paymentStatus"
+                            >
+                                -
+                            </div>
+
+                        </div>
+
+
+                        <div class="detail">
+
+                            <div class="label">
+                                FARE LIMIT
+                            </div>
+
+                            <div
+                                class="value"
+                                id="fare"
+                            >
+                                -
+                            </div>
+
+                        </div>
+
+
+                        <div class="detail">
+
+                            <div class="label">
+                                BOOKING TYPE
+                            </div>
+
+                            <div class="value">
+                                Tatkal
+                            </div>
 
                         </div>
 
@@ -1515,90 +1158,614 @@
 
                 </div>
 
-
             </div>
-
 
         </div>
 
 
-    </main>
+        <!-- EMPTY MESSAGE -->
+
+        <div
+            class="empty-message"
+            id="emptyMessage"
+        >
+
+            <h3>
+                No Active Booking
+            </h3>
+
+            <p>
+                Start a new Tatkal booking to see your booking details here.
+            </p>
+
+        </div>
 
 
-    <!-- FOOTER -->
+        <div class="footer">
 
-    <footer>
+            Tatkal Sathi — Automated Tatkal Booking Assistant
 
-        Tatkal Sathi — Automated Tatkal Booking & Ticket Tracking
+        </div>
 
-    </footer>
+    </div>
 
 
     <script>
 
-        /* ================= LOAD USER DATA ================= */
+        /* =========================================
+           FORMAT DATE
+        ========================================= */
 
-        const passengerName =
-            localStorage.getItem("passengerName");
+        function formatDate(dateValue) {
 
-        const selectedClass =
-            localStorage.getItem("travelClass");
+            if (!dateValue) {
+                return "-";
+            }
 
+            const date =
+                new Date(dateValue + "T00:00:00");
 
-        /* USER NAME */
+            if (isNaN(date.getTime())) {
+                return dateValue;
+            }
 
-        if (passengerName) {
-
-            document.getElementById("profileName")
-                .textContent = passengerName;
-
-        }
-
-
-        /* TRAVEL CLASS */
-
-        if (selectedClass) {
-
-            document.getElementById("classValue")
-                .textContent = selectedClass;
-
-        }
-
-
-        /* ================= DEMO BOOKING CHECK ================= */
-
-        const paymentStatus =
-            localStorage.getItem("paymentStatus");
-
-        const bookingConfirmed =
-            localStorage.getItem("bookingConfirmed");
-
-
-        /*
-            The dashboard uses sample data by default.
-
-            If the user has completed the demo flow,
-            the localStorage values remain available.
-        */
-
-        if (paymentStatus === "success") {
-
-            console.log(
-                "Demo payment completed successfully."
+            return date.toLocaleDateString(
+                "en-IN",
+                {
+                    day: "2-digit",
+                    month: "short",
+                    year: "numeric"
+                }
             );
 
         }
 
-        if (bookingConfirmed === "true") {
 
-            console.log(
-                "Demo booking confirmation completed."
+        /* =========================================
+           PAYMENT METHOD
+        ========================================= */
+
+        function formatPaymentMethod(method) {
+
+            if (!method) {
+                return "-";
+            }
+
+            if (method === "upi") {
+                return "UPI";
+            }
+
+            if (method === "card") {
+                return "Card";
+            }
+
+            if (method === "netbanking") {
+                return "Net Banking";
+            }
+
+            return method;
+
+        }
+
+
+        /* =========================================
+           AUTOMATION STATUS
+        ========================================= */
+
+        function setAutomationStatus(
+            id,
+            value
+        ) {
+
+            const element =
+                document.getElementById(id);
+
+            if (!element) {
+                return;
+            }
+
+
+            const enabled =
+                value === "true";
+
+
+            element.textContent =
+                enabled
+                    ? "Enabled"
+                    : "Disabled";
+
+
+            element.classList.remove(
+                "enabled",
+                "disabled"
+            );
+
+
+            element.classList.add(
+                enabled
+                    ? "enabled"
+                    : "disabled"
             );
 
         }
+
+
+        /* =========================================
+           LOAD DASHBOARD
+        ========================================= */
+
+        function loadDashboard() {
+
+            const passengerName =
+                localStorage.getItem(
+                    "passengerName"
+                );
+
+            const passengerAge =
+                localStorage.getItem(
+                    "passengerAge"
+                );
+
+            const passengerGender =
+                localStorage.getItem(
+                    "passengerGender"
+                );
+
+            const passengerMobile =
+                localStorage.getItem(
+                    "passengerMobile"
+                );
+
+            const from =
+                localStorage.getItem(
+                    "fromStation"
+                );
+
+            const to =
+                localStorage.getItem(
+                    "toStation"
+                );
+
+            const journeyDate =
+                localStorage.getItem(
+                    "journeyDate"
+                );
+
+            const selectedTrain =
+                localStorage.getItem(
+                    "selectedTrain"
+                );
+
+            const travelClass =
+                localStorage.getItem(
+                    "travelClass"
+                );
+
+            const quota =
+                localStorage.getItem(
+                    "quota"
+                );
+
+            const pnr =
+                localStorage.getItem(
+                    "pnrNumber"
+                );
+
+            const bookingId =
+                localStorage.getItem(
+                    "bookingId"
+                );
+
+            const bookingConfirmed =
+                localStorage.getItem(
+                    "bookingConfirmed"
+                );
+
+            const paymentStatus =
+                localStorage.getItem(
+                    "paymentStatus"
+                );
+
+            const paymentMethod =
+                localStorage.getItem(
+                    "paymentMethod"
+                );
+
+            const maxFare =
+                localStorage.getItem(
+                    "maxFare"
+                );
+
+            const priority =
+                localStorage.getItem(
+                    "bookingPriority"
+                );
+
+            const autoSwitch =
+                localStorage.getItem(
+                    "autoSwitch"
+                );
+
+            const autoBooking =
+                localStorage.getItem(
+                    "autoBooking"
+                );
+
+            const notifications =
+                localStorage.getItem(
+                    "notifications"
+                );
+
+
+            /* =====================================
+               WELCOME
+            ===================================== */
+
+            document.getElementById(
+                "welcomeText"
+            ).textContent =
+                passengerName
+                    ? "Welcome, " + passengerName
+                    : "Welcome";
+
+
+            /* =====================================
+               BOOKING STATUS
+            ===================================== */
+
+            const isConfirmed =
+                bookingConfirmed === "true";
+
+
+            document.getElementById(
+                "bookingStatusStat"
+            ).textContent =
+                isConfirmed
+                    ? "Confirmed"
+                    : "Pending";
+
+
+            document.getElementById(
+                "bookingStatusTitle"
+            ).textContent =
+                isConfirmed
+                    ? "Booking Confirmed"
+                    : "Booking Pending";
+
+
+            document.getElementById(
+                "bookingStatusText"
+            ).textContent =
+                isConfirmed
+                    ? "Your Tatkal booking has been completed successfully."
+                    : "Your booking has not been confirmed yet.";
+
+
+            /* =====================================
+               STATS
+            ===================================== */
+
+            document.getElementById(
+                "pnrStat"
+            ).textContent =
+                pnr || "-";
+
+
+            document.getElementById(
+                "classStat"
+            ).textContent =
+                travelClass || "-";
+
+
+            document.getElementById(
+                "paymentStat"
+            ).textContent =
+                paymentStatus === "success"
+                    ? "Paid"
+                    : "Pending";
+
+
+            /* =====================================
+               JOURNEY
+            ===================================== */
+
+            document.getElementById(
+                "fromStation"
+            ).textContent =
+                from || "-";
+
+
+            document.getElementById(
+                "toStation"
+            ).textContent =
+                to || "-";
+
+
+            document.getElementById(
+                "journeyDate"
+            ).textContent =
+                formatDate(
+                    journeyDate
+                );
+
+
+            document.getElementById(
+                "train"
+            ).textContent =
+                selectedTrain || "-";
+
+
+            document.getElementById(
+                "quota"
+            ).textContent =
+                quota || "-";
+
+
+            document.getElementById(
+                "bookingId"
+            ).textContent =
+                bookingId || "-";
+
+
+            /* =====================================
+               PASSENGER
+            ===================================== */
+
+            document.getElementById(
+                "passengerName"
+            ).textContent =
+                passengerName || "-";
+
+
+            let passengerDetails = "";
+
+
+            if (passengerAge) {
+
+                passengerDetails +=
+                    "Age: " +
+                    passengerAge;
+
+            }
+
+
+            if (passengerGender) {
+
+                passengerDetails +=
+                    " • Gender: " +
+                    passengerGender;
+
+            }
+
+
+            if (passengerMobile) {
+
+                passengerDetails +=
+                    " • Mobile: " +
+                    passengerMobile;
+
+            }
+
+
+            document.getElementById(
+                "passengerInfo"
+            ).textContent =
+                passengerDetails || "-";
+
+
+            /* =====================================
+               AUTOMATION
+            ===================================== */
+
+            setAutomationStatus(
+                "autoSwitch",
+                autoSwitch
+            );
+
+
+            setAutomationStatus(
+                "autoBooking",
+                autoBooking
+            );
+
+
+            setAutomationStatus(
+                "notifications",
+                notifications
+            );
+
+
+            /* =====================================
+               PRIORITY
+            ===================================== */
+
+            const priorityElement =
+                document.getElementById(
+                    "priority"
+                );
+
+
+            priorityElement.textContent =
+                priority || "Not Set";
+
+
+            /* =====================================
+               PAYMENT
+            ===================================== */
+
+            document.getElementById(
+                "paymentMethod"
+            ).textContent =
+                formatPaymentMethod(
+                    paymentMethod
+                );
+
+
+            document.getElementById(
+                "paymentStatus"
+            ).textContent =
+                paymentStatus === "success"
+                    ? "Successful"
+                    : paymentStatus || "Pending";
+
+
+            if (maxFare) {
+
+                document.getElementById(
+                    "fare"
+                ).textContent =
+                    "₹" +
+                    Number(maxFare)
+                        .toLocaleString("en-IN");
+
+            } else {
+
+                document.getElementById(
+                    "fare"
+                ).textContent =
+                    "-";
+
+            }
+
+        }
+
+
+        /* =========================================
+           NAVIGATION
+        ========================================= */
+
+        function goToBooking() {
+
+            window.location.href =
+                "booking.html";
+
+        }
+
+
+        function goToTicket() {
+
+            window.location.href =
+                "ticket.html";
+
+        }
+
+
+        function goToPassenger() {
+
+            window.location.href =
+                "passenger.html";
+
+        }
+
+
+        function goToPreferences() {
+
+            window.location.href =
+                "preferences.html";
+
+        }
+
+
+        /* =========================================
+           PRINT TICKET
+        ========================================= */
+
+        function printTicket() {
+
+            window.open(
+                "ticket.html",
+                "_blank"
+            );
+
+        }
+
+
+        /* =========================================
+           START NEW BOOKING
+        ========================================= */
+
+        function clearBooking() {
+
+            const confirmed =
+                confirm(
+                    "Start a new booking? Your current demo booking data will be cleared."
+                );
+
+
+            if (!confirmed) {
+                return;
+            }
+
+
+            const keysToRemove = [
+
+                "selectedTrain",
+
+                "fromStation",
+                "toStation",
+                "journeyDate",
+
+                "travelClass",
+                "quota",
+
+                "passengerName",
+                "passengerAge",
+                "passengerGender",
+                "passengerMobile",
+                "passengerEmail",
+
+                "berthPreference",
+
+                "maxFare",
+                "bookingPriority",
+
+                "autoSwitch",
+                "autoBooking",
+                "notifications",
+
+                "paymentMethod",
+                "paymentStatus",
+
+                "bookingConfirmed",
+
+                "pnrNumber",
+                "bookingId"
+
+            ];
+
+
+            keysToRemove.forEach(
+                function(key) {
+
+                    localStorage.removeItem(
+                        key
+                    );
+
+                }
+            );
+
+
+            window.location.href =
+                "booking.html";
+
+        }
+
+
+        /* =========================================
+           INITIALIZE
+        ========================================= */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function() {
+
+                loadDashboard();
+
+            }
+        );
 
     </script>
 
-
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +19,6 @@
             color: #172033;
         }
 
-        /* NAVBAR */
         .navbar {
             height: 70px;
             background: #102a43;
@@ -39,7 +39,6 @@
             color: #d9e6f2;
         }
 
-        /* MAIN */
         .container {
             width: 90%;
             max-width: 1100px;
@@ -47,6 +46,7 @@
         }
 
         /* PROGRESS */
+
         .progress-container {
             display: flex;
             justify-content: center;
@@ -82,6 +82,7 @@
         }
 
         /* TITLE */
+
         .page-title {
             margin-bottom: 25px;
         }
@@ -95,9 +96,11 @@
         .page-title p {
             color: #627d98;
             font-size: 15px;
+            line-height: 1.5;
         }
 
         /* CARD */
+
         .card {
             background: white;
             border-radius: 12px;
@@ -117,9 +120,11 @@
             color: #627d98;
             font-size: 14px;
             margin-bottom: 22px;
+            line-height: 1.5;
         }
 
         /* TRAIN LIST */
+
         .train-option {
             border: 1px solid #d9e2ec;
             border-radius: 9px;
@@ -144,6 +149,7 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 12px;
+            gap: 10px;
         }
 
         .train-name {
@@ -159,6 +165,7 @@
             border-radius: 15px;
             font-size: 12px;
             font-weight: bold;
+            white-space: nowrap;
         }
 
         .train-details {
@@ -179,7 +186,50 @@
             font-weight: bold;
         }
 
+        /* SELECTED BOOKING INFO */
+
+        .booking-info {
+            background: #f5f9ff;
+            border: 1px solid #d5e5f5;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 22px;
+        }
+
+        .booking-info-title {
+            color: #102a43;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .booking-info-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .booking-info-item {
+            background: white;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        .booking-info-label {
+            color: #829ab1;
+            font-size: 10px;
+            margin-bottom: 4px;
+        }
+
+        .booking-info-value {
+            color: #243b53;
+            font-size: 13px;
+            font-weight: bold;
+            word-break: break-word;
+        }
+
         /* FORM */
+
         .form-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -209,14 +259,18 @@
             border-radius: 7px;
             font-size: 14px;
             outline: none;
+            background: white;
+            color: #243b53;
         }
 
         select:focus,
         input:focus {
             border-color: #1976d2;
+            box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.08);
         }
 
         /* TOGGLE */
+
         .toggle-row {
             display: flex;
             justify-content: space-between;
@@ -236,12 +290,14 @@
         .toggle-text p {
             color: #829ab1;
             font-size: 12px;
+            line-height: 1.4;
         }
 
         .switch {
             position: relative;
             width: 48px;
             height: 26px;
+            flex-shrink: 0;
         }
 
         .switch input {
@@ -280,6 +336,7 @@
         }
 
         /* FARE */
+
         .fare-box {
             background: #f5f9ff;
             border: 1px solid #d5e5f5;
@@ -308,7 +365,21 @@
             color: #243b53;
         }
 
+        /* ERROR */
+
+        .error-message {
+            display: none;
+            background: #fff1f0;
+            border: 1px solid #feb2b2;
+            color: #c53030;
+            padding: 12px;
+            border-radius: 7px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
         /* BUTTONS */
+
         .button-container {
             display: flex;
             justify-content: space-between;
@@ -342,20 +413,18 @@
             background: #1565b8;
         }
 
-        /* ERROR */
-        .error-message {
-            display: none;
-            background: #fff1f0;
-            border: 1px solid #feb2b2;
-            color: #c53030;
-            padding: 12px;
-            border-radius: 7px;
-            margin-bottom: 20px;
-            font-size: 14px;
+        @media (max-width: 800px) {
+
+            .booking-info-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
-        /* RESPONSIVE */
         @media (max-width: 700px) {
+
+            .navbar {
+                padding: 0 5%;
+            }
 
             .container {
                 width: 94%;
@@ -377,12 +446,21 @@
                 gap: 20px;
             }
 
+            .booking-info-grid {
+                grid-template-columns: 1fr;
+            }
+
             .button-container {
                 gap: 10px;
             }
 
             .btn {
                 width: 50%;
+            }
+
+            .train-top {
+                align-items: flex-start;
+                flex-direction: column;
             }
         }
     </style>
@@ -391,15 +469,24 @@
 <body>
 
     <!-- NAVBAR -->
+
     <div class="navbar">
-        <div class="logo">Tatkal Sathi</div>
-        <div class="nav-right">Secure Booking Assistant</div>
+
+        <div class="logo">
+            Tatkal Sathi
+        </div>
+
+        <div class="nav-right">
+            Secure Booking Assistant
+        </div>
+
     </div>
 
 
     <div class="container">
 
         <!-- PROGRESS -->
+
         <div class="progress-container">
 
             <div class="circle active">1</div>
@@ -420,9 +507,12 @@
 
 
         <!-- TITLE -->
+
         <div class="page-title">
 
-            <h1>Booking Preferences</h1>
+            <h1>
+                Booking Preferences
+            </h1>
 
             <p>
                 Set your preferences so Tatkal Sathi can automatically
@@ -432,19 +522,103 @@
         </div>
 
 
+        <!-- CURRENT BOOKING -->
+
+        <div class="booking-info">
+
+            <div class="booking-info-title">
+                Your Current Booking
+            </div>
+
+            <div class="booking-info-grid">
+
+                <div class="booking-info-item">
+
+                    <div class="booking-info-label">
+                        TRAIN
+                    </div>
+
+                    <div
+                        class="booking-info-value"
+                        id="currentTrain"
+                    >
+                        -
+                    </div>
+
+                </div>
+
+
+                <div class="booking-info-item">
+
+                    <div class="booking-info-label">
+                        FROM
+                    </div>
+
+                    <div
+                        class="booking-info-value"
+                        id="currentFrom"
+                    >
+                        -
+                    </div>
+
+                </div>
+
+
+                <div class="booking-info-item">
+
+                    <div class="booking-info-label">
+                        TO
+                    </div>
+
+                    <div
+                        class="booking-info-value"
+                        id="currentTo"
+                    >
+                        -
+                    </div>
+
+                </div>
+
+
+                <div class="booking-info-item">
+
+                    <div class="booking-info-label">
+                        DATE
+                    </div>
+
+                    <div
+                        class="booking-info-value"
+                        id="currentDate"
+                    >
+                        -
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
         <!-- TRAIN PRIORITY -->
+
         <div class="card">
 
-            <h2>Preferred Trains</h2>
+            <h2>
+                Preferred Trains
+            </h2>
 
             <p class="card-description">
-                Select the trains you want the system to try in order of preference.
+                Select the train you want the system to prioritize.
+                The other trains can be used as alternatives if required.
             </p>
 
 
             <!-- TRAIN 1 -->
+
             <div
                 class="train-option selected"
+                id="trainOption1"
                 onclick="selectTrain(this, 1)"
             >
 
@@ -463,23 +637,51 @@
                 <div class="train-details">
 
                     <div>
-                        <div class="detail-label">DEPARTURE</div>
-                        <div class="detail-value">08:00 AM</div>
+
+                        <div class="detail-label">
+                            DEPARTURE
+                        </div>
+
+                        <div class="detail-value">
+                            08:00 AM
+                        </div>
+
                     </div>
 
                     <div>
-                        <div class="detail-label">ARRIVAL</div>
-                        <div class="detail-value">05:30 PM</div>
+
+                        <div class="detail-label">
+                            ARRIVAL
+                        </div>
+
+                        <div class="detail-value">
+                            05:30 PM
+                        </div>
+
                     </div>
 
                     <div>
-                        <div class="detail-label">CLASS</div>
-                        <div class="detail-value">3A</div>
+
+                        <div class="detail-label">
+                            CLASS
+                        </div>
+
+                        <div class="detail-value">
+                            3A
+                        </div>
+
                     </div>
 
                     <div>
-                        <div class="detail-label">FARE</div>
-                        <div class="detail-value">₹1,245</div>
+
+                        <div class="detail-label">
+                            FARE
+                        </div>
+
+                        <div class="detail-value">
+                            ₹1,245
+                        </div>
+
                     </div>
 
                 </div>
@@ -488,8 +690,10 @@
 
 
             <!-- TRAIN 2 -->
+
             <div
                 class="train-option"
+                id="trainOption2"
                 onclick="selectTrain(this, 2)"
             >
 
@@ -508,23 +712,51 @@
                 <div class="train-details">
 
                     <div>
-                        <div class="detail-label">DEPARTURE</div>
-                        <div class="detail-value">06:15 AM</div>
+
+                        <div class="detail-label">
+                            DEPARTURE
+                        </div>
+
+                        <div class="detail-value">
+                            06:15 AM
+                        </div>
+
                     </div>
 
                     <div>
-                        <div class="detail-label">ARRIVAL</div>
-                        <div class="detail-value">03:45 PM</div>
+
+                        <div class="detail-label">
+                            ARRIVAL
+                        </div>
+
+                        <div class="detail-value">
+                            03:45 PM
+                        </div>
+
                     </div>
 
                     <div>
-                        <div class="detail-label">CLASS</div>
-                        <div class="detail-value">3A</div>
+
+                        <div class="detail-label">
+                            CLASS
+                        </div>
+
+                        <div class="detail-value">
+                            3A
+                        </div>
+
                     </div>
 
                     <div>
-                        <div class="detail-label">FARE</div>
-                        <div class="detail-value">₹1,180</div>
+
+                        <div class="detail-label">
+                            FARE
+                        </div>
+
+                        <div class="detail-value">
+                            ₹1,180
+                        </div>
+
                     </div>
 
                 </div>
@@ -533,8 +765,10 @@
 
 
             <!-- TRAIN 3 -->
+
             <div
                 class="train-option"
+                id="trainOption3"
                 onclick="selectTrain(this, 3)"
             >
 
@@ -553,23 +787,51 @@
                 <div class="train-details">
 
                     <div>
-                        <div class="detail-label">DEPARTURE</div>
-                        <div class="detail-value">10:30 AM</div>
+
+                        <div class="detail-label">
+                            DEPARTURE
+                        </div>
+
+                        <div class="detail-value">
+                            10:30 AM
+                        </div>
+
                     </div>
 
                     <div>
-                        <div class="detail-label">ARRIVAL</div>
-                        <div class="detail-value">08:15 PM</div>
+
+                        <div class="detail-label">
+                            ARRIVAL
+                        </div>
+
+                        <div class="detail-value">
+                            08:15 PM
+                        </div>
+
                     </div>
 
                     <div>
-                        <div class="detail-label">CLASS</div>
-                        <div class="detail-value">3A</div>
+
+                        <div class="detail-label">
+                            CLASS
+                        </div>
+
+                        <div class="detail-value">
+                            3A
+                        </div>
+
                     </div>
 
                     <div>
-                        <div class="detail-label">FARE</div>
-                        <div class="detail-value">₹1,320</div>
+
+                        <div class="detail-label">
+                            FARE
+                        </div>
+
+                        <div class="detail-value">
+                            ₹1,320
+                        </div>
+
                     </div>
 
                 </div>
@@ -579,19 +841,31 @@
         </div>
 
 
-        <!-- PREFERENCE SETTINGS -->
+        <!-- BOOKING SETTINGS -->
+
         <div class="card">
 
-            <h2>Booking Settings</h2>
+            <h2>
+                Booking Settings
+            </h2>
 
             <p class="card-description">
                 Configure how Tatkal Sathi should handle your booking.
             </p>
 
 
+            <div
+                id="errorMessage"
+                class="error-message"
+            >
+                Please correct the highlighted information.
+            </div>
+
+
             <div class="form-grid">
 
                 <!-- QUOTA -->
+
                 <div class="form-group">
 
                     <label for="quota">
@@ -600,7 +874,7 @@
 
                     <select id="quota">
 
-                        <option value="Tatkal" selected>
+                        <option value="Tatkal">
                             Tatkal
                         </option>
 
@@ -614,6 +888,7 @@
 
 
                 <!-- CLASS -->
+
                 <div class="form-group">
 
                     <label for="travelClass">
@@ -622,7 +897,7 @@
 
                     <select id="travelClass">
 
-                        <option value="3A" selected>
+                        <option value="3A">
                             AC 3 Tier (3A)
                         </option>
 
@@ -644,6 +919,7 @@
 
 
                 <!-- MAX FARE -->
+
                 <div class="form-group">
 
                     <label for="maxFare">
@@ -653,15 +929,17 @@
                     <input
                         type="number"
                         id="maxFare"
-                        value="1500"
                         min="500"
+                        step="50"
                         placeholder="Enter maximum fare"
+                        value="1500"
                     >
 
                 </div>
 
 
-                <!-- BOOKING PRIORITY -->
+                <!-- PRIORITY -->
+
                 <div class="form-group">
 
                     <label for="priority">
@@ -670,15 +948,19 @@
 
                     <select id="priority">
 
-                        <option value="Fastest">
-                            Fastest Available
+                        <option value="Availability">
+                            Availability
                         </option>
 
                         <option value="Lowest Fare">
                             Lowest Fare
                         </option>
 
-                        <option value="Preferred Train" selected>
+                        <option value="Shortest Travel Time">
+                            Shortest Travel Time
+                        </option>
+
+                        <option value="Preferred Train">
                             Preferred Train
                         </option>
 
@@ -688,29 +970,88 @@
 
             </div>
 
+
+            <!-- FARE SUMMARY -->
+
+            <div class="fare-box">
+
+                <div class="fare-row">
+
+                    <span class="fare-label">
+                        Maximum Fare
+                    </span>
+
+                    <span
+                        class="fare-value"
+                        id="summaryFare"
+                    >
+                        ₹1,500
+                    </span>
+
+                </div>
+
+                <div class="fare-row">
+
+                    <span class="fare-label">
+                        Selected Class
+                    </span>
+
+                    <span
+                        class="fare-value"
+                        id="summaryClass"
+                    >
+                        3A
+                    </span>
+
+                </div>
+
+                <div class="fare-row">
+
+                    <span class="fare-label">
+                        Fallback
+                    </span>
+
+                    <span
+                        class="fare-value"
+                        id="summaryFallback"
+                    >
+                        Enabled
+                    </span>
+
+                </div>
+
+            </div>
+
         </div>
 
 
-        <!-- AUTOMATION -->
+        <!-- AUTOMATION SETTINGS -->
+
         <div class="card">
 
-            <h2>Automatic Fallback</h2>
+            <h2>
+                Automation Settings
+            </h2>
 
             <p class="card-description">
-                Tatkal Sathi can automatically move to your next preferred
-                train when the first option is unavailable.
+                Choose how the system should respond if the booking attempt
+                faces low availability or a transaction failure.
             </p>
 
 
             <!-- AUTO SWITCH -->
+
             <div class="toggle-row">
 
                 <div class="toggle-text">
 
-                    <h3>Auto-Switch to Alternative Train</h3>
+                    <h3>
+                        Automatic Train Switching
+                    </h3>
 
                     <p>
-                        Try Priority 2 and Priority 3 trains automatically.
+                        Automatically try the next preferred train
+                        when the selected train is unavailable.
                     </p>
 
                 </div>
@@ -730,15 +1071,19 @@
             </div>
 
 
-            <!-- AUTO BOOK -->
+            <!-- AUTO BOOKING -->
+
             <div class="toggle-row">
 
                 <div class="toggle-text">
 
-                    <h3>Automatic Booking Attempt</h3>
+                    <h3>
+                        Automatic Booking
+                    </h3>
 
                     <p>
-                        Automatically attempt booking when Tatkal opens.
+                        Allow Tatkal Sathi to continue the booking
+                        process automatically.
                     </p>
 
                 </div>
@@ -758,15 +1103,19 @@
             </div>
 
 
-            <!-- NOTIFICATION -->
+            <!-- NOTIFICATIONS -->
+
             <div class="toggle-row">
 
                 <div class="toggle-text">
 
-                    <h3>Booking Status Notifications</h3>
+                    <h3>
+                        Booking Notifications
+                    </h3>
 
                     <p>
-                        Receive updates about booking attempts and results.
+                        Show booking progress and status updates
+                        throughout the process.
                     </p>
 
                 </div>
@@ -788,87 +1137,21 @@
         </div>
 
 
-        <!-- ESTIMATED FARE -->
-        <div class="card">
-
-            <h2>Booking Summary</h2>
-
-            <div class="fare-box">
-
-                <div class="fare-row">
-
-                    <span class="fare-label">
-                        Selected Train
-                    </span>
-
-                    <span class="fare-value" id="selectedTrain">
-                        Bhopal Express
-                    </span>
-
-                </div>
-
-
-                <div class="fare-row">
-
-                    <span class="fare-label">
-                        Travel Class
-                    </span>
-
-                    <span class="fare-value" id="summaryClass">
-                        3A
-                    </span>
-
-                </div>
-
-
-                <div class="fare-row">
-
-                    <span class="fare-label">
-                        Maximum Fare
-                    </span>
-
-                    <span class="fare-value" id="summaryFare">
-                        ₹1,500
-                    </span>
-
-                </div>
-
-
-                <div class="fare-row">
-
-                    <span class="fare-label">
-                        Auto-Fallback
-                    </span>
-
-                    <span class="fare-value" id="summaryFallback">
-                        Enabled
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- ERROR -->
-        <div id="errorMessage" class="error-message">
-            Please enter a valid maximum fare.
-        </div>
-
-
         <!-- BUTTONS -->
+
         <div class="button-container">
 
             <button
+                type="button"
                 class="btn btn-back"
                 onclick="goBack()"
             >
-                Back
+                Back to Passenger
             </button>
 
 
             <button
+                type="button"
                 class="btn btn-next"
                 onclick="continueToConfirm()"
             >
@@ -882,124 +1165,342 @@
 
     <script>
 
-        let selectedTrainNumber = 1;
+        /* =========================================
+           CURRENT SELECTED TRAIN
+        ========================================= */
+
+        let selectedTrainNumber = 0;
+
+        let selectedTrainName =
+            localStorage.getItem("selectedTrain") || "";
 
 
-        /* SELECT TRAIN */
+        /* =========================================
+           TRAIN DATA
+        ========================================= */
+
+        const trainNames = {
+
+            1: "12001 - Bhopal Express",
+
+            2: "12155 - Shaan-e-Bhopal",
+
+            3: "12627 - Karnataka Express"
+
+        };
+
+
+        /* =========================================
+           SELECT TRAIN
+        ========================================= */
 
         function selectTrain(element, trainNumber) {
 
-            const trains =
-                document.querySelectorAll(".train-option");
+            document
+                .querySelectorAll(".train-option")
+                .forEach(function(train) {
 
-            trains.forEach(function(train) {
+                    train.classList.remove("selected");
 
-                train.classList.remove("selected");
-
-            });
+                });
 
 
             element.classList.add("selected");
 
+
             selectedTrainNumber = trainNumber;
 
-
-            const trainNames = {
-
-                1: "Bhopal Express",
-
-                2: "Shaan-e-Bhopal",
-
-                3: "Karnataka Express"
-
-            };
-
-
-            document.getElementById("selectedTrain").textContent =
+            selectedTrainName =
                 trainNames[trainNumber];
 
         }
 
 
-        /* UPDATE CLASS */
+        /* =========================================
+           LOAD CURRENT BOOKING
+        ========================================= */
 
-        document.getElementById("travelClass")
-            .addEventListener("change", function() {
+        function loadCurrentBooking() {
 
-                document.getElementById("summaryClass").textContent =
-                    this.value;
+            const train =
+                localStorage.getItem("selectedTrain");
 
-            });
+            const from =
+                localStorage.getItem("fromStation");
+
+            const to =
+                localStorage.getItem("toStation");
+
+            const date =
+                localStorage.getItem("journeyDate");
 
 
-        /* UPDATE FARE */
+            if (train) {
 
-        document.getElementById("maxFare")
-            .addEventListener("input", function() {
+                document.getElementById("currentTrain")
+                    .textContent = train;
 
-                let fare = this.value;
+            }
 
-                if (fare === "") {
 
-                    document.getElementById("summaryFare").textContent =
-                        "₹0";
+            if (from) {
+
+                document.getElementById("currentFrom")
+                    .textContent = from;
+
+            }
+
+
+            if (to) {
+
+                document.getElementById("currentTo")
+                    .textContent = to;
+
+            }
+
+
+            if (date) {
+
+                const dateObject =
+                    new Date(date + "T00:00:00");
+
+                if (!isNaN(dateObject.getTime())) {
+
+                    document.getElementById("currentDate")
+                        .textContent =
+                        dateObject.toLocaleDateString(
+                            "en-IN",
+                            {
+                                day: "2-digit",
+                                month: "short",
+                                year: "numeric"
+                            }
+                        );
 
                 } else {
 
-                    document.getElementById("summaryFare").textContent =
-                        "₹" + Number(fare).toLocaleString("en-IN");
+                    document.getElementById("currentDate")
+                        .textContent = date;
 
                 }
 
-            });
-
-
-        /* UPDATE FALLBACK */
-
-        document.getElementById("autoSwitch")
-            .addEventListener("change", function() {
-
-                if (this.checked) {
-
-                    document.getElementById("summaryFallback")
-                        .textContent = "Enabled";
-
-                } else {
-
-                    document.getElementById("summaryFallback")
-                        .textContent = "Disabled";
-
-                }
-
-            });
-
-
-        /* BACK */
-
-        function goBack() {
-
-            window.location.href = "passenger.html";
+            }
 
         }
 
 
-        /* CONTINUE */
+        /* =========================================
+           LOAD SAVED PREFERENCES
+        ========================================= */
+
+        function loadSavedPreferences() {
+
+            const savedClass =
+                localStorage.getItem("travelClass");
+
+            const savedQuota =
+                localStorage.getItem("quota");
+
+            const savedFare =
+                localStorage.getItem("maxFare");
+
+            const savedPriority =
+                localStorage.getItem("bookingPriority");
+
+            const savedAutoSwitch =
+                localStorage.getItem("autoSwitch");
+
+            const savedAutoBooking =
+                localStorage.getItem("autoBooking");
+
+            const savedNotifications =
+                localStorage.getItem("notifications");
+
+
+            if (savedClass) {
+
+                document.getElementById("travelClass")
+                    .value = savedClass;
+
+            }
+
+
+            if (savedQuota) {
+
+                document.getElementById("quota")
+                    .value = savedQuota;
+
+            }
+
+
+            if (savedFare) {
+
+                document.getElementById("maxFare")
+                    .value = savedFare;
+
+            }
+
+
+            if (savedPriority) {
+
+                document.getElementById("priority")
+                    .value = savedPriority;
+
+            }
+
+
+            if (savedAutoSwitch !== null) {
+
+                document.getElementById("autoSwitch")
+                    .checked = savedAutoSwitch === "true";
+
+            }
+
+
+            if (savedAutoBooking !== null) {
+
+                document.getElementById("autoBooking")
+                    .checked = savedAutoBooking === "true";
+
+            }
+
+
+            if (savedNotifications !== null) {
+
+                document.getElementById("notifications")
+                    .checked = savedNotifications === "true";
+
+            }
+
+
+            updateSummary();
+
+        }
+
+
+        /* =========================================
+           UPDATE SUMMARY
+        ========================================= */
+
+        function updateSummary() {
+
+            const fare =
+                document.getElementById("maxFare").value;
+
+            const travelClass =
+                document.getElementById("travelClass").value;
+
+            const autoSwitch =
+                document.getElementById("autoSwitch").checked;
+
+
+            if (fare === "") {
+
+                document.getElementById("summaryFare")
+                    .textContent = "₹0";
+
+            } else {
+
+                document.getElementById("summaryFare")
+                    .textContent =
+                    "₹" +
+                    Number(fare).toLocaleString("en-IN");
+
+            }
+
+
+            document.getElementById("summaryClass")
+                .textContent = travelClass;
+
+
+            document.getElementById("summaryFallback")
+                .textContent =
+                autoSwitch
+                    ? "Enabled"
+                    : "Disabled";
+
+        }
+
+
+        /* =========================================
+           CLASS CHANGE
+        ========================================= */
+
+        document
+            .getElementById("travelClass")
+            .addEventListener(
+                "change",
+                updateSummary
+            );
+
+
+        /* =========================================
+           FARE CHANGE
+        ========================================= */
+
+        document
+            .getElementById("maxFare")
+            .addEventListener(
+                "input",
+                updateSummary
+            );
+
+
+        /* =========================================
+           AUTO SWITCH CHANGE
+        ========================================= */
+
+        document
+            .getElementById("autoSwitch")
+            .addEventListener(
+                "change",
+                updateSummary
+            );
+
+
+        /* =========================================
+           BACK
+        ========================================= */
+
+        function goBack() {
+
+            window.location.href =
+                "passenger.html";
+
+        }
+
+
+        /* =========================================
+           CONTINUE
+        ========================================= */
 
         function continueToConfirm() {
 
             const maxFare =
-                document.getElementById("maxFare").value;
+                document.getElementById("maxFare")
+                    .value
+                    .trim();
+
 
             const error =
                 document.getElementById("errorMessage");
 
 
-            if (maxFare === "" || Number(maxFare) < 500) {
+            /* FARE VALIDATION */
+
+            if (
+                maxFare === "" ||
+                Number(maxFare) < 500
+            ) {
 
                 error.style.display = "block";
 
                 error.textContent =
                     "Please enter a maximum fare of at least ₹500.";
+
+                document
+                    .getElementById("maxFare")
+                    .focus();
 
                 return;
 
@@ -1009,42 +1510,63 @@
             error.style.display = "none";
 
 
-            /* SAVE SAMPLE PREFERENCES */
+            /* =====================================
+               SAVE PREFERENCES
+            ===================================== */
 
-            localStorage.setItem(
-                "selectedTrain",
-                document.getElementById("selectedTrain").textContent
-            );
+            /*
+             * If the user selected a train on this page,
+             * save that train.
+             *
+             * Otherwise keep the train selected on
+             * booking.html.
+             */
+
+            if (selectedTrainNumber !== 0) {
+
+                localStorage.setItem(
+                    "selectedTrain",
+                    selectedTrainName
+                );
+
+            }
+
 
             localStorage.setItem(
                 "travelClass",
                 document.getElementById("travelClass").value
             );
 
+
             localStorage.setItem(
                 "quota",
                 document.getElementById("quota").value
             );
+
 
             localStorage.setItem(
                 "maxFare",
                 maxFare
             );
 
+
             localStorage.setItem(
                 "bookingPriority",
                 document.getElementById("priority").value
             );
+
 
             localStorage.setItem(
                 "autoSwitch",
                 document.getElementById("autoSwitch").checked
             );
 
+
             localStorage.setItem(
                 "autoBooking",
                 document.getElementById("autoBooking").checked
             );
+
 
             localStorage.setItem(
                 "notifications",
@@ -1052,13 +1574,33 @@
             );
 
 
-            /* GO TO REVIEW PAGE */
+            /* =====================================
+               GO TO CONFIRM PAGE
+            ===================================== */
 
-            window.location.href = "confirm.html";
+            window.location.href =
+                "confirm.html";
 
         }
+
+
+        /* =========================================
+           PAGE INITIALIZATION
+        ========================================= */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function() {
+
+                loadCurrentBooking();
+
+                loadSavedPreferences();
+
+            }
+        );
 
     </script>
 
 </body>
+
 </html>

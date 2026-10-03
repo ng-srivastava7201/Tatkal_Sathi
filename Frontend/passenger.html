@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +20,7 @@
         }
 
         /* NAVBAR */
+
         .navbar {
             height: 70px;
             background: #102a43;
@@ -40,6 +42,7 @@
         }
 
         /* MAIN */
+
         .container {
             width: 90%;
             max-width: 1100px;
@@ -47,6 +50,7 @@
         }
 
         /* PROGRESS */
+
         .progress-container {
             display: flex;
             justify-content: center;
@@ -87,6 +91,7 @@
         }
 
         /* PAGE TITLE */
+
         .page-title {
             margin-bottom: 25px;
         }
@@ -103,6 +108,7 @@
         }
 
         /* SELECTED TRAIN */
+
         .train-summary {
             background: white;
             border-radius: 12px;
@@ -141,6 +147,7 @@
         }
 
         /* FORM CARD */
+
         .form-card {
             background: white;
             border-radius: 12px;
@@ -206,6 +213,7 @@
         }
 
         /* PASSENGER HEADER */
+
         .passenger-header {
             display: flex;
             justify-content: space-between;
@@ -223,6 +231,7 @@
         }
 
         /* BUTTONS */
+
         .button-container {
             display: flex;
             justify-content: space-between;
@@ -257,6 +266,7 @@
         }
 
         /* ERROR */
+
         .error-message {
             display: none;
             background: #fff1f0;
@@ -269,6 +279,7 @@
         }
 
         /* RESPONSIVE */
+
         @media (max-width: 700px) {
 
             .navbar {
@@ -313,15 +324,24 @@
 <body>
 
     <!-- NAVBAR -->
+
     <div class="navbar">
-        <div class="logo">Tatkal Sathi</div>
-        <div class="nav-right">Secure Booking Assistant</div>
+
+        <div class="logo">
+            Tatkal Sathi
+        </div>
+
+        <div class="nav-right">
+            Secure Booking Assistant
+        </div>
+
     </div>
 
 
     <div class="container">
 
         <!-- PROGRESS BAR -->
+
         <div class="progress-container">
 
             <div class="step">
@@ -350,42 +370,123 @@
 
 
         <!-- TITLE -->
+
         <div class="page-title">
-            <h1>Passenger Details</h1>
-            <p>Enter the passenger information required for your ticket.</p>
+
+            <h1>
+                Passenger Details
+            </h1>
+
+            <p>
+                Enter the passenger information required for your ticket.
+            </p>
+
         </div>
 
 
         <!-- SELECTED TRAIN -->
+
         <div class="train-summary">
 
-            <h3>Selected Train</h3>
+            <h3>
+                Selected Train
+            </h3>
 
             <div class="train-info">
 
                 <div class="info-item">
-                    <div class="info-label">TRAIN</div>
-                    <div class="info-value">12001 - Bhopal Express</div>
+
+                    <div class="info-label">
+                        TRAIN
+                    </div>
+
+                    <div
+                        class="info-value"
+                        id="trainValue"
+                    >
+                        Bhopal Shatabdi
+                    </div>
+
                 </div>
 
-                <div class="info-item">
-                    <div class="info-label">FROM</div>
-                    <div class="info-value">Bhopal</div>
-                </div>
 
                 <div class="info-item">
-                    <div class="info-label">TO</div>
-                    <div class="info-value">New Delhi</div>
+
+                    <div class="info-label">
+                        FROM
+                    </div>
+
+                    <div
+                        class="info-value"
+                        id="fromValue"
+                    >
+                        Bhopal
+                    </div>
+
                 </div>
 
-                <div class="info-item">
-                    <div class="info-label">DATE</div>
-                    <div class="info-value">25 Aug 2026</div>
-                </div>
 
                 <div class="info-item">
-                    <div class="info-label">CLASS</div>
-                    <div class="info-value">3A - AC 3 Tier</div>
+
+                    <div class="info-label">
+                        TO
+                    </div>
+
+                    <div
+                        class="info-value"
+                        id="toValue"
+                    >
+                        New Delhi
+                    </div>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <div class="info-label">
+                        DATE
+                    </div>
+
+                    <div
+                        class="info-value"
+                        id="dateValue"
+                    >
+                        -
+                    </div>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <div class="info-label">
+                        CLASS
+                    </div>
+
+                    <div
+                        class="info-value"
+                        id="classValue"
+                    >
+                        3A
+                    </div>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <div class="info-label">
+                        QUOTA
+                    </div>
+
+                    <div
+                        class="info-value"
+                        id="quotaValue"
+                    >
+                        Tatkal
+                    </div>
+
                 </div>
 
             </div>
@@ -394,15 +495,26 @@
 
 
         <!-- FORM -->
+
         <div class="form-card">
 
             <div class="passenger-header">
-                <h2>Passenger 1</h2>
-                <div class="passenger-number">Primary Passenger</div>
+
+                <h2>
+                    Passenger 1
+                </h2>
+
+                <div class="passenger-number">
+                    Primary Passenger
+                </div>
+
             </div>
 
 
-            <div id="errorMessage" class="error-message">
+            <div
+                id="errorMessage"
+                class="error-message"
+            >
                 Please fill all required fields correctly.
             </div>
 
@@ -412,29 +524,47 @@
                 <div class="form-grid">
 
                     <!-- NAME -->
+
                     <div class="form-group full">
+
                         <label for="name">
-                            Full Name <span class="required">*</span>
+
+                            Full Name
+
+                            <span class="required">
+                                *
+                            </span>
+
                         </label>
 
                         <input
                             type="text"
                             id="name"
                             placeholder="Enter passenger full name"
+                            maxlength="100"
+                            autocomplete="name"
                             required
                         >
 
                         <div class="hint">
                             Enter the name as it should appear on the ticket.
                         </div>
+
                     </div>
 
 
                     <!-- AGE -->
+
                     <div class="form-group">
 
                         <label for="age">
-                            Age <span class="required">*</span>
+
+                            Age
+
+                            <span class="required">
+                                *
+                            </span>
+
                         </label>
 
                         <input
@@ -450,18 +580,39 @@
 
 
                     <!-- GENDER -->
+
                     <div class="form-group">
 
                         <label for="gender">
-                            Gender <span class="required">*</span>
+
+                            Gender
+
+                            <span class="required">
+                                *
+                            </span>
+
                         </label>
 
-                        <select id="gender" required>
+                        <select
+                            id="gender"
+                            required
+                        >
 
-                            <option value="">Select Gender</option>
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                            <option value="Other">Other</option>
+                            <option value="">
+                                Select Gender
+                            </option>
+
+                            <option value="Male">
+                                Male
+                            </option>
+
+                            <option value="Female">
+                                Female
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
 
                         </select>
 
@@ -469,10 +620,17 @@
 
 
                     <!-- MOBILE -->
+
                     <div class="form-group">
 
                         <label for="mobile">
-                            Mobile Number <span class="required">*</span>
+
+                            Mobile Number
+
+                            <span class="required">
+                                *
+                            </span>
+
                         </label>
 
                         <input
@@ -480,6 +638,8 @@
                             id="mobile"
                             placeholder="10-digit mobile number"
                             maxlength="10"
+                            inputmode="numeric"
+                            autocomplete="tel"
                             required
                         >
 
@@ -487,6 +647,7 @@
 
 
                     <!-- EMAIL -->
+
                     <div class="form-group">
 
                         <label for="email">
@@ -497,50 +658,14 @@
                             type="email"
                             id="email"
                             placeholder="example@email.com"
-                        >
-
-                    </div>
-
-
-                    <!-- ID TYPE -->
-                    <div class="form-group">
-
-                        <label for="idType">
-                            ID Proof Type
-                        </label>
-
-                        <select id="idType">
-
-                            <option value="">Select ID Type</option>
-                            <option value="Aadhaar">Aadhaar Card</option>
-                            <option value="PAN">PAN Card</option>
-                            <option value="Passport">Passport</option>
-                            <option value="Driving Licence">
-                                Driving Licence
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-                    <!-- ID NUMBER -->
-                    <div class="form-group">
-
-                        <label for="idNumber">
-                            ID Proof Number
-                        </label>
-
-                        <input
-                            type="text"
-                            id="idNumber"
-                            placeholder="Enter ID number"
+                            autocomplete="email"
                         >
 
                     </div>
 
 
                     <!-- BERTH -->
+
                     <div class="form-group full">
 
                         <label for="berth">
@@ -581,6 +706,7 @@
 
 
                 <!-- BUTTONS -->
+
                 <div class="button-container">
 
                     <button
@@ -610,106 +736,487 @@
 
     <script>
 
-        const form = document.getElementById("passengerForm");
-        const errorMessage = document.getElementById("errorMessage");
+        /* =========================================
+           LOAD BOOKING INFORMATION
+        ========================================= */
 
-        form.addEventListener("submit", function(event) {
+        function loadBookingDetails() {
 
-            event.preventDefault();
+            const selectedTrain =
+                localStorage.getItem("selectedTrain");
 
-            const name = document.getElementById("name").value.trim();
-            const age = document.getElementById("age").value;
-            const gender = document.getElementById("gender").value;
-            const mobile = document.getElementById("mobile").value.trim();
+            const from =
+                localStorage.getItem("fromStation");
 
-            // Basic validation
-            if (
-                name === "" ||
-                age === "" ||
-                gender === "" ||
-                mobile === ""
-            ) {
+            const to =
+                localStorage.getItem("toStation");
 
-                errorMessage.style.display = "block";
-                errorMessage.textContent =
-                    "Please fill all required fields.";
+            const date =
+                localStorage.getItem("journeyDate");
 
-                return;
+            const travelClass =
+                localStorage.getItem("travelClass");
+
+            const quota =
+                localStorage.getItem("quota");
+
+
+            if (selectedTrain) {
+
+                document.getElementById("trainValue")
+                    .textContent = selectedTrain;
+
             }
 
 
-            // Validate age
-            if (age < 1 || age > 120) {
+            if (from) {
 
-                errorMessage.style.display = "block";
-                errorMessage.textContent =
-                    "Please enter a valid age.";
+                document.getElementById("fromValue")
+                    .textContent = from;
 
-                return;
             }
 
 
-            // Validate mobile
-            if (!/^[0-9]{10}$/.test(mobile)) {
+            if (to) {
 
-                errorMessage.style.display = "block";
-                errorMessage.textContent =
-                    "Please enter a valid 10-digit mobile number.";
+                document.getElementById("toValue")
+                    .textContent = to;
 
-                return;
             }
 
 
-            // Hide error
-            errorMessage.style.display = "none";
+            if (date) {
+
+                const dateObject =
+                    new Date(date + "T00:00:00");
+
+                if (!isNaN(dateObject.getTime())) {
+
+                    document.getElementById("dateValue")
+                        .textContent =
+                        dateObject.toLocaleDateString(
+                            "en-IN",
+                            {
+                                day: "2-digit",
+                                month: "short",
+                                year: "numeric"
+                            }
+                        );
+
+                } else {
+
+                    document.getElementById("dateValue")
+                        .textContent = date;
+
+                }
+
+            }
 
 
-            // Save sample passenger data
-            localStorage.setItem(
-                "passengerName",
-                name
+            if (travelClass) {
+
+                document.getElementById("classValue")
+                    .textContent = travelClass;
+
+            }
+
+
+            if (quota) {
+
+                document.getElementById("quotaValue")
+                    .textContent = quota;
+
+            }
+
+        }
+
+
+        /* =========================================
+           LOAD PREVIOUSLY ENTERED PASSENGER DATA
+        ========================================= */
+
+        function loadPassengerData() {
+
+            const savedName =
+                localStorage.getItem("passengerName");
+
+            const savedAge =
+                localStorage.getItem("passengerAge");
+
+            const savedGender =
+                localStorage.getItem("passengerGender");
+
+            const savedMobile =
+                localStorage.getItem("passengerMobile");
+
+            const savedEmail =
+                localStorage.getItem("passengerEmail");
+
+            const savedBerth =
+                localStorage.getItem("berthPreference");
+
+
+            if (savedName) {
+
+                document.getElementById("name")
+                    .value = savedName;
+
+            }
+
+
+            if (savedAge) {
+
+                document.getElementById("age")
+                    .value = savedAge;
+
+            }
+
+
+            if (savedGender) {
+
+                document.getElementById("gender")
+                    .value = savedGender;
+
+            }
+
+
+            if (savedMobile) {
+
+                document.getElementById("mobile")
+                    .value = savedMobile;
+
+            }
+
+
+            if (savedEmail) {
+
+                document.getElementById("email")
+                    .value = savedEmail;
+
+            }
+
+
+            if (savedBerth) {
+
+                document.getElementById("berth")
+                    .value = savedBerth;
+
+            }
+
+        }
+
+
+        /* =========================================
+           SHOW ERROR
+        ========================================= */
+
+        function showError(message) {
+
+            const errorMessage =
+                document.getElementById("errorMessage");
+
+            errorMessage.textContent = message;
+
+            errorMessage.style.display = "block";
+
+            errorMessage.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+        }
+
+
+        /* =========================================
+           HIDE ERROR
+        ========================================= */
+
+        function hideError() {
+
+            document.getElementById("errorMessage")
+                .style.display = "none";
+
+        }
+
+
+        /* =========================================
+           FORM SUBMISSION
+        ========================================= */
+
+        document
+            .getElementById("passengerForm")
+            .addEventListener(
+                "submit",
+                function(event) {
+
+                    event.preventDefault();
+
+                    hideError();
+
+
+                    const name =
+                        document
+                            .getElementById("name")
+                            .value
+                            .trim();
+
+
+                    const age =
+                        document
+                            .getElementById("age")
+                            .value
+                            .trim();
+
+
+                    const gender =
+                        document
+                            .getElementById("gender")
+                            .value;
+
+
+                    const mobile =
+                        document
+                            .getElementById("mobile")
+                            .value
+                            .trim();
+
+
+                    const email =
+                        document
+                            .getElementById("email")
+                            .value
+                            .trim();
+
+
+                    const berth =
+                        document
+                            .getElementById("berth")
+                            .value;
+
+
+                    /* NAME VALIDATION */
+
+                    if (name === "") {
+
+                        showError(
+                            "Please enter the passenger's full name."
+                        );
+
+                        document
+                            .getElementById("name")
+                            .focus();
+
+                        return;
+
+                    }
+
+
+                    if (name.length < 2) {
+
+                        showError(
+                            "Please enter a valid passenger name."
+                        );
+
+                        document
+                            .getElementById("name")
+                            .focus();
+
+                        return;
+
+                    }
+
+
+                    /* AGE VALIDATION */
+
+                    if (age === "") {
+
+                        showError(
+                            "Please enter the passenger's age."
+                        );
+
+                        document
+                            .getElementById("age")
+                            .focus();
+
+                        return;
+
+                    }
+
+
+                    const numericAge =
+                        Number(age);
+
+
+                    if (
+                        !Number.isInteger(numericAge) ||
+                        numericAge < 1 ||
+                        numericAge > 120
+                    ) {
+
+                        showError(
+                            "Please enter a valid age between 1 and 120."
+                        );
+
+                        document
+                            .getElementById("age")
+                            .focus();
+
+                        return;
+
+                    }
+
+
+                    /* GENDER VALIDATION */
+
+                    if (gender === "") {
+
+                        showError(
+                            "Please select the passenger's gender."
+                        );
+
+                        document
+                            .getElementById("gender")
+                            .focus();
+
+                        return;
+
+                    }
+
+
+                    /* MOBILE VALIDATION */
+
+                    if (!/^[0-9]{10}$/.test(mobile)) {
+
+                        showError(
+                            "Please enter a valid 10-digit mobile number."
+                        );
+
+                        document
+                            .getElementById("mobile")
+                            .focus();
+
+                        return;
+
+                    }
+
+
+                    /* EMAIL VALIDATION */
+
+                    if (
+                        email !== "" &&
+                        !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+                    ) {
+
+                        showError(
+                            "Please enter a valid email address."
+                        );
+
+                        document
+                            .getElementById("email")
+                            .focus();
+
+                        return;
+
+                    }
+
+
+                    /* =====================================
+                       SAVE PASSENGER INFORMATION
+                    ===================================== */
+
+                    localStorage.setItem(
+                        "passengerName",
+                        name
+                    );
+
+
+                    localStorage.setItem(
+                        "passengerAge",
+                        String(numericAge)
+                    );
+
+
+                    localStorage.setItem(
+                        "passengerGender",
+                        gender
+                    );
+
+
+                    localStorage.setItem(
+                        "passengerMobile",
+                        mobile
+                    );
+
+
+                    localStorage.setItem(
+                        "passengerEmail",
+                        email
+                    );
+
+
+                    localStorage.setItem(
+                        "berthPreference",
+                        berth
+                    );
+
+
+                    /* =====================================
+                       RESET OLD BOOKING STATUS
+                    ===================================== */
+
+                    localStorage.removeItem(
+                        "paymentMethod"
+                    );
+
+                    localStorage.removeItem(
+                        "paymentStatus"
+                    );
+
+                    localStorage.removeItem(
+                        "bookingConfirmed"
+                    );
+
+
+                    /* =====================================
+                       GO TO NEXT PAGE
+                    ===================================== */
+
+                    window.location.href =
+                        "preferences.html";
+
+                }
             );
 
-            localStorage.setItem(
-                "passengerAge",
-                age
-            );
 
-            localStorage.setItem(
-                "passengerGender",
-                gender
-            );
-
-            localStorage.setItem(
-                "passengerMobile",
-                mobile
-            );
-
-
-            localStorage.setItem(
-                "passengerEmail",
-                document.getElementById("email").value
-            );
-
-            localStorage.setItem(
-                "berthPreference",
-                document.getElementById("berth").value
-            );
-
-
-            // Go to next page
-            window.location.href = "preferences.html";
-
-        });
-
+        /* =========================================
+           BACK TO BOOKING
+        ========================================= */
 
         function goBack() {
 
-            window.location.href = "booking.html";
+            window.location.href =
+                "booking.html";
 
         }
+
+
+        /* =========================================
+           INITIALIZE PAGE
+        ========================================= */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function() {
+
+                loadBookingDetails();
+
+                loadPassengerData();
+
+            }
+        );
 
     </script>
 
 </body>
+
 </html>

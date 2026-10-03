@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -689,7 +689,7 @@
 
 
         <!-- ==========================
-             RIGHT SIDE
+             RIGHT LOGIN SECTION
         =========================== -->
 
         <div class="right-section">
@@ -806,7 +806,7 @@
 
 
 
-                <!-- LOGIN -->
+                <!-- LOGIN BUTTON -->
 
                 <button
                     type="submit"
@@ -886,7 +886,9 @@
     <script>
 
 
-        /* SHOW / HIDE PASSWORD */
+        /* ==============================
+           SHOW / HIDE PASSWORD
+        ============================== */
 
         function togglePassword() {
 
@@ -917,7 +919,9 @@
 
 
 
-        /* LOGIN */
+        /* ==============================
+           LOGIN
+        ============================== */
 
         document
             .getElementById("loginForm")
@@ -942,8 +946,7 @@
 
 
                     const message =
-                        document
-                        .getElementById("message");
+                        document.getElementById("message");
 
 
                     /*
@@ -995,7 +998,9 @@
 
 
 
-        /* FORGOT PASSWORD */
+        /* ==============================
+           FORGOT PASSWORD
+        ============================== */
 
         function forgotPassword(event) {
 
@@ -1017,7 +1022,9 @@
 
 
 
-        /* CREATE ACCOUNT */
+        /* ==============================
+           CREATE ACCOUNT
+        ============================== */
 
         function createAccount(event) {
 
@@ -1039,26 +1046,6 @@
 
     </script>
 
-    
-
-<head>
-    <title>Tatkal Sathi</title>
-</head>
-
-
-    <h1>Tatkal Sathi</h1>
-
-    <button onclick="testBackend()">Test Backend</button>
-
-    <script>
-        async function testBackend() {
-            const response = await fetch("http://127.0.0.1:8000/hello");
-
-            const data = await response.json();
-
-            console.log(data);
-        }
-    </script>
 
 </body>
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,6 @@
     <title>Payment - Tatkal Sathi</title>
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -19,8 +19,6 @@
             background: #f4f7fb;
             color: #172033;
         }
-
-        /* NAVBAR */
 
         .navbar {
             height: 70px;
@@ -44,8 +42,6 @@
             color: #d9e6f2;
         }
 
-        /* MAIN */
-
         .container {
             width: 90%;
             max-width: 1050px;
@@ -58,14 +54,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-
             margin-bottom: 35px;
         }
 
         .circle {
             width: 36px;
             height: 36px;
-
             border-radius: 50%;
 
             background: #d9e2ec;
@@ -108,6 +102,7 @@
         .page-title p {
             color: #627d98;
             font-size: 15px;
+            line-height: 1.5;
         }
 
         /* LAYOUT */
@@ -149,11 +144,9 @@
             border-radius: 8px;
 
             padding: 15px;
-
             margin-bottom: 12px;
 
             cursor: pointer;
-
             transition: 0.2s;
         }
 
@@ -177,6 +170,7 @@
             margin-right: 13px;
 
             position: relative;
+            flex-shrink: 0;
         }
 
         .payment-method.selected .radio {
@@ -202,7 +196,6 @@
         .method-content h3 {
             font-size: 15px;
             color: #243b53;
-
             margin-bottom: 4px;
         }
 
@@ -237,7 +230,8 @@
             margin-bottom: 7px;
         }
 
-        input {
+        input,
+        select {
             width: 100%;
 
             padding: 12px;
@@ -248,10 +242,13 @@
             outline: none;
 
             font-size: 14px;
+            background: white;
         }
 
-        input:focus {
+        input:focus,
+        select:focus {
             border-color: #1976d2;
+            box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.08);
         }
 
         .form-row {
@@ -276,6 +273,8 @@
             font-size: 13px;
 
             margin-bottom: 15px;
+
+            line-height: 1.5;
         }
 
         /* ORDER SUMMARY */
@@ -295,6 +294,8 @@
             font-size: 14px;
 
             border-bottom: 1px solid #edf2f7;
+
+            gap: 15px;
         }
 
         .summary-row:last-of-type {
@@ -308,8 +309,8 @@
         .summary-value {
             color: #243b53;
             font-weight: bold;
-
             text-align: right;
+            word-break: break-word;
         }
 
         .total {
@@ -366,6 +367,26 @@
             font-size: 13px;
         }
 
+        /* SUCCESS */
+
+        .success-message {
+            display: none;
+
+            background: #f0fff4;
+
+            border: 1px solid #9ae6b4;
+
+            color: #276749;
+
+            padding: 12px;
+
+            border-radius: 7px;
+
+            margin-top: 15px;
+
+            font-size: 13px;
+        }
+
         /* BUTTON */
 
         .pay-button {
@@ -394,6 +415,11 @@
             background: #1565b8;
         }
 
+        .pay-button:disabled {
+            background: #9fb3c8;
+            cursor: not-allowed;
+        }
+
         .back-button {
             width: 100%;
 
@@ -420,6 +446,16 @@
             background: #d9e2ec;
         }
 
+        /* LOADING */
+
+        .loading {
+            display: none;
+            text-align: center;
+            color: #627d98;
+            font-size: 13px;
+            margin-top: 12px;
+        }
+
         /* RESPONSIVE */
 
         @media (max-width: 750px) {
@@ -436,14 +472,15 @@
                 width: 35px;
             }
 
+            .form-row {
+                grid-template-columns: 1fr;
+            }
         }
-
     </style>
 </head>
 
 
 <body>
-
 
     <!-- NAVBAR -->
 
@@ -460,9 +497,7 @@
     </div>
 
 
-
     <div class="container">
-
 
         <!-- PROGRESS -->
 
@@ -493,7 +528,6 @@
         </div>
 
 
-
         <!-- TITLE -->
 
         <div class="page-title">
@@ -504,20 +538,17 @@
 
             <p>
                 Select a payment method and complete the demo payment
-                to start the booking process.
+                to continue with your Tatkal booking.
             </p>
 
         </div>
 
 
-
         <div class="payment-layout">
-
 
             <!-- LEFT SIDE -->
 
             <div>
-
 
                 <div class="card">
 
@@ -551,7 +582,6 @@
                     </div>
 
 
-
                     <!-- CARD -->
 
                     <div
@@ -577,13 +607,12 @@
                     </div>
 
 
-
                     <!-- NET BANKING -->
 
                     <div
                         class="payment-method"
-                        id="netMethod"
-                        onclick="selectMethod('net')"
+                        id="netbankingMethod"
+                        onclick="selectMethod('netbanking')"
                     >
 
                         <div class="radio"></div>
@@ -595,13 +624,12 @@
                             </h3>
 
                             <p>
-                                Pay using your bank account
+                                Pay through your bank
                             </p>
 
                         </div>
 
                     </div>
-
 
 
                     <!-- UPI FORM -->
@@ -613,15 +641,14 @@
 
                         <div class="upi-info">
 
-                            Enter a demo UPI ID below.
-                            No real payment will be processed.
+                            This is a demonstration payment page.
+                            No real money will be charged.
 
                         </div>
 
-
                         <div class="form-group">
 
-                            <label>
+                            <label for="upiId">
                                 UPI ID
                             </label>
 
@@ -629,12 +656,12 @@
                                 type="text"
                                 id="upiId"
                                 placeholder="example@upi"
+                                autocomplete="off"
                             >
 
                         </div>
 
                     </div>
-
 
 
                     <!-- CARD FORM -->
@@ -646,15 +673,17 @@
 
                         <div class="form-group">
 
-                            <label>
+                            <label for="cardNumber">
                                 Card Number
                             </label>
 
                             <input
                                 type="text"
                                 id="cardNumber"
-                                maxlength="16"
                                 placeholder="1234 5678 9012 3456"
+                                maxlength="19"
+                                inputmode="numeric"
+                                autocomplete="cc-number"
                             >
 
                         </div>
@@ -664,7 +693,7 @@
 
                             <div class="form-group">
 
-                                <label>
+                                <label for="expiry">
                                     Expiry
                                 </label>
 
@@ -672,6 +701,9 @@
                                     type="text"
                                     id="expiry"
                                     placeholder="MM/YY"
+                                    maxlength="5"
+                                    inputmode="numeric"
+                                    autocomplete="cc-exp"
                                 >
 
                             </div>
@@ -679,15 +711,17 @@
 
                             <div class="form-group">
 
-                                <label>
+                                <label for="cvv">
                                     CVV
                                 </label>
 
                                 <input
                                     type="password"
                                     id="cvv"
-                                    maxlength="3"
                                     placeholder="123"
+                                    maxlength="3"
+                                    inputmode="numeric"
+                                    autocomplete="cc-csc"
                                 >
 
                             </div>
@@ -697,14 +731,15 @@
 
                         <div class="form-group">
 
-                            <label>
-                                Card Holder Name
+                            <label for="cardName">
+                                Name on Card
                             </label>
 
                             <input
                                 type="text"
                                 id="cardName"
-                                placeholder="Enter card holder name"
+                                placeholder="Enter name on card"
+                                autocomplete="cc-name"
                             >
 
                         </div>
@@ -712,51 +747,42 @@
                     </div>
 
 
-
                     <!-- NET BANKING FORM -->
 
                     <div
                         class="payment-form"
-                        id="netForm"
+                        id="netbankingForm"
                     >
 
                         <div class="form-group">
 
-                            <label>
+                            <label for="bank">
                                 Select Bank
                             </label>
 
-                            <select
-                                id="bank"
-                                style="
-                                    width:100%;
-                                    padding:12px;
-                                    border:1px solid #bcccdc;
-                                    border-radius:7px;
-                                "
-                            >
+                            <select id="bank">
 
                                 <option value="">
                                     Select your bank
                                 </option>
 
-                                <option>
+                                <option value="SBI">
                                     State Bank of India
                                 </option>
 
-                                <option>
+                                <option value="HDFC">
                                     HDFC Bank
                                 </option>
 
-                                <option>
+                                <option value="ICICI">
                                     ICICI Bank
                                 </option>
 
-                                <option>
+                                <option value="Axis">
                                     Axis Bank
                                 </option>
 
-                                <option>
+                                <option value="PNB">
                                     Punjab National Bank
                                 </option>
 
@@ -767,6 +793,7 @@
                     </div>
 
 
+                    <!-- ERROR -->
 
                     <div
                         class="error-message"
@@ -776,14 +803,36 @@
                     </div>
 
 
+                    <!-- SUCCESS -->
+
+                    <div
+                        class="success-message"
+                        id="successMessage"
+                    >
+                        Payment successful. Redirecting...
+                    </div>
+
+
+                    <div
+                        class="loading"
+                        id="loadingMessage"
+                    >
+                        Processing demo payment...
+                    </div>
+
+
+                    <!-- PAYMENT BUTTON -->
 
                     <button
                         class="pay-button"
-                        onclick="makePayment()"
+                        id="payButton"
+                        onclick="processPayment()"
                     >
-                        Pay ₹1,245
+                        Pay & Continue
                     </button>
 
+
+                    <!-- BACK -->
 
                     <button
                         class="back-button"
@@ -794,15 +843,12 @@
 
                 </div>
 
-
             </div>
-
 
 
             <!-- RIGHT SIDE -->
 
             <div>
-
 
                 <div class="card">
 
@@ -814,14 +860,30 @@
                     <div class="summary-row">
 
                         <span class="summary-label">
+                            Passenger
+                        </span>
+
+                        <span
+                            class="summary-value"
+                            id="summaryPassenger"
+                        >
+                            -
+                        </span>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span class="summary-label">
                             Train
                         </span>
 
                         <span
                             class="summary-value"
-                            id="train"
+                            id="summaryTrain"
                         >
-                            Bhopal Express
+                            -
                         </span>
 
                     </div>
@@ -830,11 +892,14 @@
                     <div class="summary-row">
 
                         <span class="summary-label">
-                            Journey
+                            Route
                         </span>
 
-                        <span class="summary-value">
-                            Bhopal → New Delhi
+                        <span
+                            class="summary-value"
+                            id="summaryRoute"
+                        >
+                            -
                         </span>
 
                     </div>
@@ -843,11 +908,14 @@
                     <div class="summary-row">
 
                         <span class="summary-label">
-                            Date
+                            Journey Date
                         </span>
 
-                        <span class="summary-value">
-                            25 Aug 2026
+                        <span
+                            class="summary-value"
+                            id="summaryDate"
+                        >
+                            -
                         </span>
 
                     </div>
@@ -861,25 +929,9 @@
 
                         <span
                             class="summary-value"
-                            id="travelClass"
+                            id="summaryClass"
                         >
-                            3A
-                        </span>
-
-                    </div>
-
-
-                    <div class="summary-row">
-
-                        <span class="summary-label">
-                            Passenger
-                        </span>
-
-                        <span
-                            class="summary-value"
-                            id="passenger"
-                        >
-                            Demo Passenger
+                            -
                         </span>
 
                     </div>
@@ -893,9 +945,9 @@
 
                         <span
                             class="summary-value"
-                            id="quota"
+                            id="summaryQuota"
                         >
-                            Tatkal
+                            -
                         </span>
 
                     </div>
@@ -904,11 +956,11 @@
                     <div class="total">
 
                         <span>
-                            Total
+                            Demo Fare
                         </span>
 
-                        <span>
-                            ₹1,245
+                        <span id="summaryFare">
+                            -
                         </span>
 
                     </div>
@@ -916,95 +968,157 @@
 
                     <div class="security-box">
 
-                        Demo payment mode is enabled for this
-                        exhibition prototype.
+                        <strong>
+                            Demo Payment Mode
+                        </strong>
 
-                        <br><br>
+                        <br>
 
-                        No real money will be transferred and
-                        no actual railway booking will be performed.
+                        This project uses simulated payment.
+                        No real card, bank account or UPI transaction
+                        will be performed.
 
                     </div>
 
                 </div>
 
-
             </div>
-
 
         </div>
 
     </div>
 
 
-
     <script>
 
+        /* =========================================
+           CURRENT PAYMENT METHOD
+        ========================================= */
 
         let selectedMethod = "upi";
 
 
-        /* LOAD SAVED DATA */
+        /* =========================================
+           FORMAT DATE
+        ========================================= */
 
-        window.onload = function() {
+        function formatDate(dateValue) {
 
-            const train =
-                localStorage.getItem("selectedTrain");
+            if (!dateValue) {
+                return "-";
+            }
 
-            const travelClass =
-                localStorage.getItem("travelClass");
+            const date =
+                new Date(dateValue + "T00:00:00");
+
+            if (isNaN(date.getTime())) {
+                return dateValue;
+            }
+
+            return date.toLocaleDateString(
+                "en-IN",
+                {
+                    day: "2-digit",
+                    month: "short",
+                    year: "numeric"
+                }
+            );
+
+        }
+
+
+        /* =========================================
+           LOAD BOOKING SUMMARY
+        ========================================= */
+
+        function loadSummary() {
 
             const passenger =
                 localStorage.getItem("passengerName");
 
+            const train =
+                localStorage.getItem("selectedTrain");
+
+            const from =
+                localStorage.getItem("fromStation");
+
+            const to =
+                localStorage.getItem("toStation");
+
+            const date =
+                localStorage.getItem("journeyDate");
+
+            const travelClass =
+                localStorage.getItem("travelClass");
+
             const quota =
                 localStorage.getItem("quota");
 
+            const maxFare =
+                localStorage.getItem("maxFare");
 
-            if (train) {
 
-                document.getElementById(
-                    "train"
-                ).textContent = train;
+            document.getElementById("summaryPassenger")
+                .textContent =
+                passenger || "-";
+
+
+            document.getElementById("summaryTrain")
+                .textContent =
+                train || "-";
+
+
+            document.getElementById("summaryRoute")
+                .textContent =
+                (from && to)
+                    ? from + " → " + to
+                    : "-";
+
+
+            document.getElementById("summaryDate")
+                .textContent =
+                formatDate(date);
+
+
+            document.getElementById("summaryClass")
+                .textContent =
+                travelClass || "-";
+
+
+            document.getElementById("summaryQuota")
+                .textContent =
+                quota || "-";
+
+
+            if (maxFare) {
+
+                document.getElementById("summaryFare")
+                    .textContent =
+                    "₹" +
+                    Number(maxFare)
+                        .toLocaleString("en-IN");
+
+            } else {
+
+                document.getElementById("summaryFare")
+                    .textContent =
+                    "-";
 
             }
 
-
-            if (travelClass) {
-
-                document.getElementById(
-                    "travelClass"
-                ).textContent = travelClass;
-
-            }
+        }
 
 
-            if (passenger) {
-
-                document.getElementById(
-                    "passenger"
-                ).textContent = passenger;
-
-            }
-
-
-            if (quota) {
-
-                document.getElementById(
-                    "quota"
-                ).textContent = quota;
-
-            }
-
-        };
-
-
-        /* SELECT PAYMENT METHOD */
+        /* =========================================
+           SELECT PAYMENT METHOD
+        ========================================= */
 
         function selectMethod(method) {
 
             selectedMethod = method;
 
+
+            /* REMOVE SELECTED */
 
             document
                 .querySelectorAll(".payment-method")
@@ -1015,6 +1129,8 @@
                 });
 
 
+            /* HIDE ALL FORMS */
+
             document
                 .querySelectorAll(".payment-form")
                 .forEach(function(element) {
@@ -1023,6 +1139,8 @@
 
                 });
 
+
+            /* SELECT METHOD */
 
             if (method === "upi") {
 
@@ -1050,152 +1168,336 @@
             }
 
 
-            if (method === "net") {
+            if (method === "netbanking") {
 
                 document
-                    .getElementById("netMethod")
+                    .getElementById("netbankingMethod")
                     .classList.add("selected");
 
                 document
-                    .getElementById("netForm")
+                    .getElementById("netbankingForm")
                     .classList.add("active");
 
             }
 
+
+            hideError();
+
         }
 
 
-        /* PAYMENT */
+        /* =========================================
+           ERROR
+        ========================================= */
 
-        function makePayment() {
+        function showError(message) {
 
             const error =
                 document.getElementById("errorMessage");
 
+            error.textContent =
+                message;
 
-            /* UPI */
+            error.style.display =
+                "block";
 
-            if (selectedMethod === "upi") {
-
-                const upi =
-                    document.getElementById("upiId")
-                    .value
-                    .trim();
-
-
-                if (
-                    upi === "" ||
-                    !upi.includes("@")
-                ) {
-
-                    error.style.display = "block";
-
-                    error.textContent =
-                        "Please enter a valid demo UPI ID.";
-
-                    return;
-
-                }
-
-            }
-
-
-            /* CARD */
-
-            if (selectedMethod === "card") {
-
-                const card =
-                    document.getElementById("cardNumber")
-                    .value
-                    .replace(/\s/g, "");
-
-                const expiry =
-                    document.getElementById("expiry")
-                    .value
-                    .trim();
-
-                const cvv =
-                    document.getElementById("cvv")
-                    .value
-                    .trim();
-
-                const name =
-                    document.getElementById("cardName")
-                    .value
-                    .trim();
-
-
-                if (
-                    card.length !== 16 ||
-                    expiry === "" ||
-                    cvv.length !== 3 ||
-                    name === ""
-                ) {
-
-                    error.style.display = "block";
-
-                    error.textContent =
-                        "Please enter valid demo card details.";
-
-                    return;
-
-                }
-
-            }
-
-
-            /* NET BANKING */
-
-            if (selectedMethod === "net") {
-
-                const bank =
-                    document.getElementById("bank").value;
-
-
-                if (bank === "") {
-
-                    error.style.display = "block";
-
-                    error.textContent =
-                        "Please select a bank.";
-
-                    return;
-
-                }
-
-            }
-
-
-            error.style.display = "none";
-
-
-            /*
-                Save payment information.
-            */
-
-            localStorage.setItem(
-                "paymentMethod",
-                selectedMethod
-            );
-
-
-            localStorage.setItem(
-                "paymentStatus",
-                "success"
-            );
-
-
-            /*
-                Move to booking automation status page.
-            */
-
-            window.location.href =
-                "status.html";
+            document
+                .getElementById("successMessage")
+                .style.display =
+                "none";
 
         }
 
 
-        /* BACK */
+        function hideError() {
+
+            document
+                .getElementById("errorMessage")
+                .style.display =
+                "none";
+
+        }
+
+
+        /* =========================================
+           UPI VALIDATION
+        ========================================= */
+
+        function validateUPI() {
+
+            const upi =
+                document
+                    .getElementById("upiId")
+                    .value
+                    .trim();
+
+
+            if (upi === "") {
+
+                showError(
+                    "Please enter your UPI ID."
+                );
+
+                return false;
+
+            }
+
+
+            /*
+             * Demo validation.
+             * Example: name@upi
+             */
+
+            if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+$/.test(upi)) {
+
+                showError(
+                    "Please enter a valid UPI ID, for example example@upi."
+                );
+
+                return false;
+
+            }
+
+
+            return true;
+
+        }
+
+
+        /* =========================================
+           CARD VALIDATION
+        ========================================= */
+
+        function validateCard() {
+
+            const cardNumber =
+                document
+                    .getElementById("cardNumber")
+                    .value
+                    .replace(/\s/g, "");
+
+
+            const expiry =
+                document
+                    .getElementById("expiry")
+                    .value
+                    .trim();
+
+
+            const cvv =
+                document
+                    .getElementById("cvv")
+                    .value
+                    .trim();
+
+
+            const cardName =
+                document
+                    .getElementById("cardName")
+                    .value
+                    .trim();
+
+
+            if (!/^[0-9]{16}$/.test(cardNumber)) {
+
+                showError(
+                    "Please enter a valid 16-digit card number."
+                );
+
+                return false;
+
+            }
+
+
+            if (!/^(0[1-9]|1[0-2])\/[0-9]{2}$/.test(expiry)) {
+
+                showError(
+                    "Please enter expiry in MM/YY format."
+                );
+
+                return false;
+
+            }
+
+
+            if (!/^[0-9]{3}$/.test(cvv)) {
+
+                showError(
+                    "Please enter a valid 3-digit CVV."
+                );
+
+                return false;
+
+            }
+
+
+            if (cardName.length < 2) {
+
+                showError(
+                    "Please enter the name on the card."
+                );
+
+                return false;
+
+            }
+
+
+            return true;
+
+        }
+
+
+        /* =========================================
+           NET BANKING VALIDATION
+        ========================================= */
+
+        function validateNetBanking() {
+
+            const bank =
+                document
+                    .getElementById("bank")
+                    .value;
+
+
+            if (bank === "") {
+
+                showError(
+                    "Please select your bank."
+                );
+
+                return false;
+
+            }
+
+
+            return true;
+
+        }
+
+
+        /* =========================================
+           PROCESS PAYMENT
+        ========================================= */
+
+        function processPayment() {
+
+            hideError();
+
+
+            let valid = false;
+
+
+            if (selectedMethod === "upi") {
+
+                valid =
+                    validateUPI();
+
+            }
+
+
+            else if (selectedMethod === "card") {
+
+                valid =
+                    validateCard();
+
+            }
+
+
+            else if (selectedMethod === "netbanking") {
+
+                valid =
+                    validateNetBanking();
+
+            }
+
+
+            if (!valid) {
+
+                return;
+
+            }
+
+
+            /* DISABLE BUTTON */
+
+            const button =
+                document.getElementById("payButton");
+
+            button.disabled =
+                true;
+
+            button.textContent =
+                "Processing...";
+
+
+            document
+                .getElementById("loadingMessage")
+                .style.display =
+                "block";
+
+
+            /*
+             * DEMO PAYMENT DELAY
+             *
+             * No real payment is performed.
+             */
+
+            setTimeout(function() {
+
+                localStorage.setItem(
+                    "paymentMethod",
+                    selectedMethod
+                );
+
+
+                localStorage.setItem(
+                    "paymentStatus",
+                    "success"
+                );
+
+
+                localStorage.setItem(
+                    "bookingConfirmed",
+                    "true"
+                );
+
+
+                document
+                    .getElementById("loadingMessage")
+                    .style.display =
+                    "none";
+
+
+                document
+                    .getElementById("successMessage")
+                    .style.display =
+                    "block";
+
+
+                button.textContent =
+                    "Payment Successful";
+
+
+                /*
+                 * Go to booking status page
+                 */
+
+                setTimeout(function() {
+
+                    window.location.href =
+                        "status.html";
+
+                }, 800);
+
+
+            }, 1200);
+
+        }
+
+
+        /* =========================================
+           BACK TO CONFIRM
+        ========================================= */
 
         function goBack() {
 
@@ -1204,7 +1506,103 @@
 
         }
 
+
+        /* =========================================
+           CARD NUMBER FORMATTING
+        ========================================= */
+
+        document
+            .getElementById("cardNumber")
+            .addEventListener(
+                "input",
+                function() {
+
+                    let value =
+                        this.value
+                            .replace(/\D/g, "")
+                            .substring(0, 16);
+
+
+                    value =
+                        value.match(/.{1,4}/g);
+
+
+                    this.value =
+                        value
+                            ? value.join(" ")
+                            : "";
+
+                }
+            );
+
+
+        /* =========================================
+           EXPIRY FORMATTING
+        ========================================= */
+
+        document
+            .getElementById("expiry")
+            .addEventListener(
+                "input",
+                function() {
+
+                    let value =
+                        this.value
+                            .replace(/\D/g, "")
+                            .substring(0, 4);
+
+
+                    if (value.length >= 3) {
+
+                        value =
+                            value.substring(0, 2)
+                            + "/"
+                            + value.substring(2);
+
+                    }
+
+
+                    this.value =
+                        value;
+
+                }
+            );
+
+
+        /* =========================================
+           CVV NUMBERS ONLY
+        ========================================= */
+
+        document
+            .getElementById("cvv")
+            .addEventListener(
+                "input",
+                function() {
+
+                    this.value =
+                        this.value
+                            .replace(/\D/g, "")
+                            .substring(0, 3);
+
+                }
+            );
+
+
+        /* =========================================
+           INITIALIZE
+        ========================================= */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function() {
+
+                loadSummary();
+
+            }
+        );
+
     </script>
 
 </body>
+
 </html>
