@@ -1039,6 +1039,26 @@
 
     </script>
 
+    
+
+<head>
+    <title>Tatkal Sathi</title>
+</head>
+
+
+    <h1>Tatkal Sathi</h1>
+
+    <button onclick="testBackend()">Test Backend</button>
+
+    <script>
+        async function testBackend() {
+            const response = await fetch("http://127.0.0.1:8000/hello");
+
+            const data = await response.json();
+
+            console.log(data);
+        }
+    </script>
 
 </body>
 
