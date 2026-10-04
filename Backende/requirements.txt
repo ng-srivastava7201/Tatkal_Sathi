@@ -1,3 +1,6 @@
 pandas
+numpy
+faker
+openpyxl
 uvicorn
 fastapi
