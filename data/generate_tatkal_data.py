@@ -30,6 +30,23 @@ ROUTES = [
     ("T014", "Bangalore-Hyderabad","Bangalore","Hyderabad",    570, 0.50),
     ("T015", "Chennai-Delhi",     "Chennai",   "New Delhi",  2180, 0.60),
 ]
+RUNNING_DAYS = {
+    "T001": ["Monday", "Wednesday", "Friday"],
+    "T002": ["Tuesday", "Thursday", "Saturday"],
+    "T003": ["Monday", "Wednesday", "Saturday"],
+    "T004": ["Tuesday", "Thursday", "Sunday"],
+    "T005": ["Monday", "Wednesday", "Friday"],
+    "T006": ["Tuesday", "Thursday", "Saturday"],
+    "T007": ["Monday", "Thursday", "Sunday"],
+    "T008": ["Tuesday", "Friday", "Sunday"],
+    "T009": ["Monday", "Wednesday", "Friday"],
+    "T010": ["Tuesday", "Thursday", "Saturday"],
+    "T011": ["Monday", "Wednesday", "Saturday"],
+    "T012": ["Tuesday", "Thursday", "Sunday"],
+    "T013": ["Monday", "Wednesday", "Friday"],
+    "T014": ["Tuesday", "Thursday", "Saturday"],
+    "T015": ["Monday", "Thursday", "Sunday"],
+}
 
 CLASSES = {
     
@@ -83,8 +100,14 @@ for _ in range(N_ROWS):
     quota = rng.choice(["Tatkal", "General"], p=[0.68, 0.32])
     quota_ease = QUOTA_EASE[quota]
 
-    date = random_date()
-    day_name = date.strftime("%A")
+    allowed_days = RUNNING_DAYS[train_id]
+
+    while True:
+        date = random_date()
+        day_name = date.strftime("%A")
+
+        if day_name in allowed_days:
+            break
     is_weekend = day_name in ("Saturday", "Sunday")
     is_festival = is_near_festival(date)
 
@@ -122,6 +145,7 @@ for _ in range(N_ROWS):
         "route": route,
         "source": source,
         "destination": dest,
+        "running_days": ", ".join(RUNNING_DAYS[train_id]),
         "distance_km": distance,
         "class": train_class,
         "quota": quota,
