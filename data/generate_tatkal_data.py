@@ -1,4 +1,5 @@
 import numpy as np
+import os
 import pandas as pd
 from faker import Faker
 from datetime import datetime, timedelta
@@ -157,6 +158,8 @@ inconsistent = df[
 ]
 print("Inconsistent rows:", len(inconsistent), "(should be 0)")
 
-OUT_PATH = "tatkal_sathi_dataset_generated.xlsx"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+OUT_PATH = os.path.join(BASE_DIR, "tatkal_sathi_dataset_generated.xlsx")
+
 df.to_excel(OUT_PATH, index=False)
 print(f"\nSaved {len(df)} rows to {OUT_PATH}")
