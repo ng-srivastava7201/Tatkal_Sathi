@@ -24,11 +24,17 @@ for _, row in df.iterrows():          # <-- fixed
 
 
 def search_trains(source, destination, date):
+    requested_day = pd.to_datetime(date).strftime("%A")
+
     results = df[
         (df["source"].str.lower() == source.lower()) &
         (df["destination"].str.lower() == destination.lower()) &
-        (df["date"].astype(str) == str(date))
+        (df["date"].astype(str) == str(date)) &
+        (df["running_days"].apply(
+            lambda days: requested_day in days.split(", ")
+        ))
     ]
+
     return results.to_dict(orient="records")
 
 
