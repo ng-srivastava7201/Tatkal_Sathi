@@ -1,6 +1,8 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from Backende.mock_irctc import search_trains, book_ticket
+from fastapi.middleware.cors import CORSMiddleware
+#from Backende.mock_irctc import search_trains, book_ticket
+from mock_irctc import search_trains, book_ticket
 # cd Backende
 # uvicorn main:app --reload
 
@@ -24,6 +26,19 @@ class BookingRequest(BaseModel):
     quota: str
     seats_requested: int
 
+origins =[
+    "file:///E:/Project_backend/Tatkal_Sathi/Frontend/index.html"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+memory_db={"trains": []}
 
 @app.get("/")
 def home():
