@@ -1,0 +1,13 @@
+{
+  "name": "tatkal-sathi",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "frontend": "npm --prefix Frontend run dev",
+    "backend": "cd Backende && venv\\Scripts\\python.exe -m uvicorn main:app --reload",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
