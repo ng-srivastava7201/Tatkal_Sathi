@@ -1,41 +1,24 @@
 from apscheduler.schedulers.background import BackgroundScheduler
-from datetime import datetime
 import time
 
-from booking_simulator import simulate_booking
-
-
-def tatkal_booking_job():
-    print("\n================================")
-    print("TATKAL BOOKING AUTO-TRIGGER")
-    print("Trigger Time:", datetime.now())
-    print("================================")
-
-    simulate_booking()
-
+from automation_engine import run_booking_automation
 
 scheduler = BackgroundScheduler()
-
 scheduler.add_job(
-    tatkal_booking_job,
+    run_booking_automation,
     "cron",
     hour=10,
     minute=0,
     id="tatkal_booking_trigger",
-    replace_existing=True
+    replace_existing=True,
 )
-
 scheduler.start()
 
-print("Tatkal Sathi Scheduler Started")
-print("Daily booking trigger scheduled for 10:00 AM.")
-print("Waiting for scheduled trigger...")
-
+print("Tatkal Sathi Scheduler Started — daily trigger at 10:00 AM")
 
 try:
     while True:
         time.sleep(1)
-
 except (KeyboardInterrupt, SystemExit):
     print("\nScheduler stopped.")
     scheduler.shutdown()
