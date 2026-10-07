@@ -1,6 +1,10 @@
+fastapi
+uvicorn
+sqlalchemy
+apscheduler
 pandas
 numpy
 faker
 openpyxl
-uvicorn
-fastapi
+scikit-learn
+joblib

@@ -2,19 +2,11 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Tatkal Sathi | Login</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatkal Sathi | Login & Sign Up</title>
 
     <style>
-
-        
-
         * {
             margin: 0;
             padding: 0;
@@ -22,1013 +14,584 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
-
-        /* ==============================
-           BODY
-        ============================== */
-
         body {
-
             min-height: 100vh;
-
             display: flex;
-
             justify-content: center;
-
             align-items: center;
-
-            background: linear-gradient(
-                135deg,
-                #eef4fb,
-                #f8fafc
-            );
-
+            background: linear-gradient(135deg, #eef4fb, #f8fafc);
             color: #1e293b;
+            padding: 20px;
         }
-
-
-        /* ==============================
-           MAIN CONTAINER
-        ============================== */
 
         .container {
-
-            width: 900px;
-
-            min-height: 560px;
-
+            width: 940px;
+            min-height: 590px;
             background: white;
-
             border-radius: 18px;
-
             overflow: hidden;
-
             display: flex;
-
-            box-shadow:
-                0 15px 40px rgba(15, 23, 42, 0.12);
+            box-shadow: 0 15px 40px rgba(15, 23, 42, 0.12);
         }
-
-
-        /* ==============================
-           LEFT SECTION
-        ============================== */
 
         .left-section {
-
-            width: 50%;
-
-            background: linear-gradient(
-                145deg,
-                #183b63,
-                #285b89
-            );
-
+            width: 48%;
+            background: linear-gradient(145deg, #183b63, #285b89);
             color: white;
-
-            padding: 55px 45px;
-
+            padding: 50px 40px;
             display: flex;
-
             flex-direction: column;
-
             justify-content: center;
         }
-
-
-        /* LOGO */
 
         .logo {
-
-            width: 62px;
-
-            height: 62px;
-
+            width: 60px;
+            height: 60px;
             border-radius: 14px;
-
-            background: rgba(255,255,255,0.14);
-
-            border: 1px solid rgba(255,255,255,0.25);
-
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.25);
             display: flex;
-
             justify-content: center;
-
             align-items: center;
-
             font-size: 26px;
-
             font-weight: bold;
-
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
 
-
-        /* PROJECT NAME */
-
         .left-section h1 {
-
-            font-size: 36px;
-
+            font-size: 34px;
             margin-bottom: 8px;
-
             letter-spacing: -0.5px;
         }
 
-
         .left-section h2 {
-
-            font-size: 20px;
-
+            font-size: 19px;
             font-weight: normal;
-
             color: #dbeafe;
-
-            margin-bottom: 22px;
+            margin-bottom: 20px;
         }
 
-
-        /* DESCRIPTION */
-
         .description {
-
             font-size: 14px;
-
-            line-height: 1.8;
-
+            line-height: 1.7;
             color: #e2e8f0;
-
-            margin-bottom: 28px;
-
+            margin-bottom: 24px;
             max-width: 370px;
         }
 
-
-        /* FEATURES */
-
         .features {
-
             list-style: none;
         }
 
-
         .features li {
-
-            font-size: 14px;
-
-            margin: 14px 0;
-
+            font-size: 13.5px;
+            margin: 12px 0;
             color: #f1f5f9;
-
             padding-left: 18px;
-
             position: relative;
         }
 
-
         .features li::before {
-
             content: "";
-
             width: 6px;
-
             height: 6px;
-
             border-radius: 50%;
-
             background: #bfdbfe;
-
             position: absolute;
-
             left: 0;
-
             top: 7px;
         }
 
-
-        /* DEMO LABEL */
-
-        .demo-label {
-
-            display: inline-block;
-
+        .backend-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             width: fit-content;
-
             margin-top: 24px;
-
-            padding: 8px 13px;
-
+            padding: 7px 14px;
             border-radius: 20px;
-
-            border: 1px solid rgba(255,255,255,0.25);
-
-            background: rgba(255,255,255,0.08);
-
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            background: rgba(255, 255, 255, 0.1);
             color: #dbeafe;
-
             font-size: 11px;
+            font-weight: 600;
         }
 
-
-        /* ==============================
-           RIGHT LOGIN SECTION
-        ============================== */
+        .dot-pulse {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #4ade80;
+            box-shadow: 0 0 8px #4ade80;
+        }
 
         .right-section {
-
-            width: 50%;
-
-            padding: 55px 50px;
-
+            width: 52%;
+            padding: 45px 45px;
             display: flex;
-
             flex-direction: column;
-
             justify-content: center;
         }
 
-
-        .right-section h2 {
-
-            font-size: 29px;
-
-            color: #172033;
-
-            margin-bottom: 8px;
+        .auth-tabs {
+            display: flex;
+            background: #f1f5f9;
+            border-radius: 10px;
+            padding: 4px;
+            margin-bottom: 24px;
         }
 
+        .tab-btn {
+            flex: 1;
+            padding: 9px 0;
+            border: none;
+            background: transparent;
+            font-size: 13.5px;
+            font-weight: 600;
+            color: #64748b;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .tab-btn.active {
+            background: white;
+            color: #183b63;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        .section-title {
+            font-size: 26px;
+            color: #172033;
+            margin-bottom: 6px;
+        }
 
         .subtitle {
-
             color: #64748b;
-
-            font-size: 14px;
-
-            margin-bottom: 30px;
+            font-size: 13.5px;
+            margin-bottom: 22px;
         }
-
 
         /* ==============================
            FORM
         ============================== */
-
         .form-group {
-
-            margin-bottom: 19px;
+            margin-bottom: 16px;
         }
-
 
         label {
-
             display: block;
-
-            font-size: 13px;
-
+            font-size: 12.5px;
             font-weight: bold;
-
             color: #334155;
-
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
-
         input {
-
             width: 100%;
-
-            padding: 13px 14px;
-
+            padding: 11px 13px;
             border: 1px solid #d6dee8;
-
-            border-radius: 9px;
-
+            border-radius: 8px;
             background: #ffffff;
-
-            font-size: 14px;
-
+            font-size: 13.5px;
             outline: none;
-
             transition: 0.2s;
         }
 
-
         input:focus {
-
             border-color: #3974a8;
-
-            box-shadow:
-                0 0 0 3px #e5f0fa;
+            box-shadow: 0 0 0 3px #e5f0fa;
         }
 
-
-        /* ==============================
-           PASSWORD
-        ============================== */
-
         .password-box {
-
             position: relative;
         }
 
-
         .password-box input {
-
-            padding-right: 50px;
+            padding-right: 55px;
         }
 
-
         .show-password {
-
             position: absolute;
-
             right: 12px;
-
             top: 50%;
-
             transform: translateY(-50%);
-
             border: none;
-
             background: transparent;
-
             color: #64748b;
-
             cursor: pointer;
-
-            font-size: 12px;
-
+            font-size: 11px;
             font-weight: bold;
         }
 
-
-        /* ==============================
-           OPTIONS
-        ============================== */
-
         .options {
-
             display: flex;
-
             justify-content: space-between;
-
             align-items: center;
-
-            margin: 2px 0 22px;
-
+            margin: 2px 0 18px;
             font-size: 12px;
         }
 
-
         .remember {
-
             display: flex;
-
             align-items: center;
-
-            gap: 7px;
-
+            gap: 6px;
             color: #64748b;
         }
 
-
         .remember input {
-
             width: auto;
-
             accent-color: #285b89;
         }
 
-
         .forgot {
-
             color: #285b89;
-
             text-decoration: none;
-
             font-weight: bold;
         }
 
-
         .forgot:hover {
-
             text-decoration: underline;
         }
 
-
-        /* ==============================
-           LOGIN BUTTON
-        ============================== */
-
-        .login-btn {
-
+        .submit-btn {
             width: 100%;
-
-            padding: 13px;
-
+            padding: 12px;
             border: none;
-
             border-radius: 9px;
-
             background: #285b89;
-
             color: white;
-
-            font-size: 15px;
-
+            font-size: 14.5px;
             font-weight: bold;
-
             cursor: pointer;
-
             transition: 0.2s;
         }
 
-
-        .login-btn:hover {
-
+        .submit-btn:hover {
             background: #183b63;
-
             transform: translateY(-1px);
         }
 
-
-        /* ==============================
-           MESSAGE
-        ============================== */
-
         .message {
-
             display: none;
-
-            padding: 11px;
-
+            padding: 10px;
             margin-top: 14px;
-
             border-radius: 8px;
-
             text-align: center;
-
-            font-size: 12px;
+            font-size: 12.5px;
+            line-height: 1.4;
         }
 
-
         .success {
-
             display: block;
-
             background: #effaf3;
-
             color: #166534;
-
             border: 1px solid #bbf7d0;
         }
 
-
         .error {
-
             display: block;
-
             background: #fff1f2;
-
             color: #be123c;
-
             border: 1px solid #fecdd3;
         }
 
-
-        /* ==============================
-           DEMO LOGIN
-        ============================== */
-
         .demo-login {
-
-            margin-top: 19px;
-
-            padding: 12px;
-
-            border-radius: 9px;
-
+            margin-top: 16px;
+            padding: 10px 14px;
+            border-radius: 8px;
             background: #f8fafc;
-
             border: 1px dashed #cbd5e1;
-
             text-align: center;
-
             color: #64748b;
-
-            font-size: 11px;
-
-            line-height: 1.7;
+            font-size: 11.5px;
+            line-height: 1.6;
         }
 
-
         .demo-login strong {
-
             color: #334155;
         }
 
-
-        /* ==============================
-           SIGN UP
-        ============================== */
-
-        .signup {
-
-            text-align: center;
-
-            margin-top: 20px;
-
-            color: #64748b;
-
-            font-size: 13px;
-        }
-
-
-        .signup a {
-
-            color: #285b89;
-
-            text-decoration: none;
-
-            font-weight: bold;
-        }
-
-
-        /* ==============================
-           FOOTER
-        ============================== */
-
         .footer {
-
             text-align: center;
-
-            margin-top: 22px;
-
+            margin-top: 18px;
             color: #94a3b8;
-
-            font-size: 10px;
+            font-size: 10.5px;
         }
 
-
-        /* ==============================
-           RESPONSIVE
-        ============================== */
-
-        @media (max-width: 750px) {
-
+        @media (max-width: 800px) {
             .container {
-
-                width: 92%;
-
+                width: 100%;
                 flex-direction: column;
             }
-
-
-            .left-section {
-
+            .left-section, .right-section {
                 width: 100%;
-
-                padding: 35px;
+                padding: 30px;
             }
-
-
-            .right-section {
-
-                width: 100%;
-
-                padding: 35px;
-            }
-
-
             .features {
-
                 display: none;
             }
-
-
-            .left-section h1 {
-
-                font-size: 30px;
-            }
-
         }
-
     </style>
-
 </head>
-
 
 <body>
 
-
     <div class="container">
 
-
-        <!-- ==========================
-             LEFT SIDE
-        =========================== -->
-
         <div class="left-section">
-
-
-            <div class="logo">
-                TS
-            </div>
-
-
-            <h1>
-                Tatkal Sathi
-            </h1>
-
-
-            <h2>
-                Smart Tatkal Booking
-            </h2>
-
+            <div class="logo">TS</div>
+            <h1>Tatkal Sathi</h1>
+            <h2>Smart Tatkal Booking</h2>
 
             <p class="description">
-
-                A smart ticket booking and tracking
-                system designed to make Tatkal
-                booking faster, reliable and easier.
-
+                A smart Tatkal ticket booking & tracking system with live database auth, automated 10:00 AM booking engine, and alternate route intelligence.
             </p>
 
-
             <ul class="features">
-
-                <li>
-                    Smart train availability
-                </li>
-
-                <li>
-                    Alternative train suggestions
-                </li>
-
-                <li>
-                    Booking status tracking
-                </li>
-
-                <li>
-                    Intelligent fallback support
-                </li>
-
+                <li>SQLite Database user login & signup</li>
+                <li>Dynamic multi-route train availability</li>
+                <li>AI Tatkal seat probability ranking</li>
+                <li>10:00 AM Auto-trigger & session hold</li>
+                <li>Automatic alternate route fallback</li>
             </ul>
 
-
-            <span class="demo-label">
-
-                Frontend Prototype | Sample Data
-
-            </span>
-
-
+            <div class="backend-badge">
+                <span class="dot-pulse"></span>
+                FastAPI & SQLite Database Connected
+            </div>
         </div>
-
-
-
-        <!-- ==========================
-             RIGHT LOGIN SECTION
-        =========================== -->
 
         <div class="right-section">
 
+            <!-- TAB TOGGLE -->
+            <div class="auth-tabs">
+                <button type="button" class="tab-btn active" id="tabLogin" onclick="switchTab('login')">Login</button>
+                <button type="button" class="tab-btn" id="tabSignup" onclick="switchTab('signup')">Create Account</button>
+            </div>
 
-            <h2>
-                Welcome Back
-            </h2>
+            <div id="loginView">
+                <h2 class="section-title">Welcome Back</h2>
+                <p class="subtitle">Login with your database account to continue</p>
 
-
-            <p class="subtitle">
-
-                Login to continue to Tatkal Sathi
-
-            </p>
-
-
-
-            <!-- LOGIN FORM -->
-
-            <form id="loginForm">
-
-
-                <!-- USERNAME -->
-
-                <div class="form-group">
-
-                    <label for="username">
-
-                        Email / Username
-
-                    </label>
-
-
-                    <input
-                        type="text"
-                        id="username"
-                        placeholder="Enter your email or username"
-                        required
-                    >
-
-                </div>
-
-
-
-                <!-- PASSWORD -->
-
-                <div class="form-group">
-
-                    <label for="password">
-
-                        Password
-
-                    </label>
-
-
-                    <div class="password-box">
-
-
-                        <input
-                            type="password"
-                            id="password"
-                            placeholder="Enter your password"
-                            required
-                        >
-
-
-                        <button
-                            type="button"
-                            class="show-password"
-                            onclick="togglePassword()"
-                        >
-
-                            SHOW
-
-                        </button>
-
-
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">Username or Email</label>
+                        <input type="text" id="username" placeholder="e.g. demo@tatkalsathi.com or username" required>
                     </div>
 
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="password-box">
+                            <input type="password" id="password" placeholder="Enter your password" required>
+                            <button type="button" class="show-password" onclick="togglePassword('password', this)">SHOW</button>
+                        </div>
+                    </div>
+
+                    <div class="options">
+                        <label class="remember">
+                            <input type="checkbox" id="remember" checked>
+                            Remember me
+                        </label>
+                        <a href="#" class="forgot" onclick="forgotPassword(event)">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="loginBtn">Login to Tatkal Sathi</button>
+                    <div id="loginMessage" class="message"></div>
+                </form>
+
+                <div class="demo-login">
+                    <strong>Default Database Demo User</strong><br>
+                    Username: <b>demo</b> or <b>demo@tatkalsathi.com</b> | Password: <b>123456</b>
                 </div>
-
-
-
-                <!-- OPTIONS -->
-
-                <div class="options">
-
-
-                    <label class="remember">
-
-                        <input
-                            type="checkbox"
-                            id="remember"
-                        >
-
-                        Remember me
-
-                    </label>
-
-
-                    <a
-                        href="#"
-                        class="forgot"
-                        onclick="forgotPassword(event)"
-                    >
-
-                        Forgot Password?
-
-                    </a>
-
-
-                </div>
-
-
-
-                <!-- LOGIN BUTTON -->
-
-                <button
-                    type="submit"
-                    class="login-btn"
-                >
-
-                    Login
-
-                </button>
-
-
-                <div
-                    id="message"
-                    class="message"
-                ></div>
-
-
-            </form>
-
-
-
-            <!-- DEMO CREDENTIALS -->
-
-            <div class="demo-login">
-
-                <strong>Demo Login</strong>
-
-                <br>
-
-                Username:
-                demo@tatkalsathi.com
-
-                <br>
-
-                Password:
-                123456
-
             </div>
 
+            <div id="signupView" style="display: none;">
+                <h2 class="section-title">Create Account</h2>
+                <p class="subtitle">Join Tatkal Sathi to track and auto-book tickets</p>
+
+                <form id="signupForm">
+                    <div class="form-group">
+                        <label for="regFullName">Full Name</label>
+                        <input type="text" id="regFullName" placeholder="e.g. Rahul Sharma" required>
+                    </div>
 
 
-        
+                    <div class="form-group">
+                        <label for="regUsername">Username</label>
+                        <input type="text" id="regUsername" placeholder="e.g. rahul_sathi" required>
+                    </div>
 
+                    <div class="form-group">
+                        <label for="regEmail">Email Address</label>
+                        <input type="email" id="regEmail" placeholder="e.g. rahul@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regPassword">Password</label>
+                        <div class="password-box">
+                            <input type="password" id="regPassword" placeholder="Min. 4 characters" required>
+                            <button type="button" class="show-password" onclick="togglePassword('regPassword', this)">SHOW</button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="signupBtn">Sign Up & Save to Database</button>
+                    <div id="signupMessage" class="message"></div>
+                </form>
+            </div>
 
             <div class="footer">
-
-                © 2026 Tatkal Sathi | Project Exhibition Prototype
-
+                © 2026 Tatkal Sathi | Team 35 Project Exhibition
             </div>
-
 
         </div>
 
     </div>
 
-
-
-    <!-- ==========================
-         JAVASCRIPT
-    =========================== -->
-
     <script>
+        const API_BASE_URL = "http://127.0.0.1:8000";
 
+        function switchTab(mode) {
+            const loginView = document.getElementById("loginView");
+            const signupView = document.getElementById("signupView");
+            const tabLogin = document.getElementById("tabLogin");
+            const tabSignup = document.getElementById("tabSignup");
 
-        /* ==============================
-           SHOW / HIDE PASSWORD
-        ============================== */
-
-        function togglePassword() {
-
-            const password =
-                document.getElementById("password");
-
-            const button =
-                document.querySelector(".show-password");
-
-
-            if (password.type === "password") {
-
-                password.type = "text";
-
-                button.textContent = "HIDE";
-
+            if (mode === "login") {
+                loginView.style.display = "block";
+                signupView.style.display = "none";
+                tabLogin.classList.add("active");
+                tabSignup.classList.remove("active");
+            } else {
+                loginView.style.display = "none";
+                signupView.style.display = "block";
+                tabLogin.classList.remove("active");
+                tabSignup.classList.add("active");
             }
-
-            else {
-
-                password.type = "password";
-
-                button.textContent = "SHOW";
-
-            }
-
         }
 
+        function togglePassword(inputId, btn) {
+            const field = document.getElementById(inputId);
+            if (field.type === "password") {
+                field.type = "text";
+                btn.textContent = "HIDE";
+            } else {
+                field.type = "password";
+                btn.textContent = "SHOW";
+            }
+        }
 
+        document.getElementById("loginForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value;
+            const message = document.getElementById("loginMessage");
+            const submitBtn = document.getElementById("loginBtn");
 
-        /* ==============================
-           LOGIN
-        ============================== */
+            submitBtn.textContent = "Authenticating...";
+            submitBtn.disabled = true;
 
-        document
-            .getElementById("loginForm")
-            .addEventListener(
-                "submit",
-                function(event) {
+            try {
+                const response = await fetch(`${API_BASE_URL}/api/auth/login`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ username: username, password: password })
+                });
 
-                    event.preventDefault();
+                const data = await response.json();
 
+                if (response.ok && data.status === "success") {
+                    message.className = "message success";
+                    message.textContent = `Login successful! Welcome ${data.user.full_name || data.user.username}. Redirecting...`;
 
-                    const username =
-                        document
-                        .getElementById("username")
-                        .value
-                        .trim();
+                    localStorage.setItem("user", JSON.stringify(data.user));
+                    localStorage.setItem("username", data.user.username);
+                    localStorage.setItem("isLoggedIn", "true");
 
-
-                    const password =
-                        document
-                        .getElementById("password")
-                        .value;
-
-
-                    const message =
-                        document.getElementById("message");
-
-
-                    /*
-                       DEMO LOGIN
-
-                       This will later be
-                       replaced by backend API.
-                    */
-
-                    if (
-                        username ===
-                        "demo@tatkalsathi.com"
-                        &&
-                        password === "123456"
-                    ) {
-
-                        message.className =
-                            "message success";
-
-                        message.textContent =
-                            "Login successful. Redirecting...";
-
-
-                        /*
-                           GO TO BOOKING PAGE
-                        */
-
-                        setTimeout(function() {
-
-                            window.location.href =
-                                "booking.html";
-
-                        }, 800);
-
-                    }
-
-                    else {
-
-                        message.className =
-                            "message error";
-
-                        message.textContent =
-                            "Invalid username or password.";
-
-                    }
-
+                    setTimeout(function() {
+                        window.location.href = "booking.html";
+                    }, 800);
+                } else {
+                    message.className = "message error";
+                    message.textContent = data.detail || data.message || "Invalid credentials.";
                 }
-            );
+            } catch (err) {
+                console.warn("Backend not reached, checking local fallback:", err);
+                if (username === "demo@tatkalsathi.com" || username === "demo") {
+                    if (password === "123456") {
+                        message.className = "message success";
+                        message.textContent = "Login successful (Demo Mode). Redirecting...";
+                        localStorage.setItem("username", "demo");
+                        localStorage.setItem("isLoggedIn", "true");
+                        setTimeout(() => window.location.href = "booking.html", 800);
+                        return;
+                    }
+                }
+                message.className = "message error";
+                message.textContent = "Cannot connect to backend server at http://127.0.0.1:8000. Please start main.py.";
+            } finally {
+                submitBtn.textContent = "Login to Tatkal Sathi";
+                submitBtn.disabled = false;
+            }
+        });
+        document.getElementById("signupForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+            const fullName = document.getElementById("regFullName").value.trim();
+            const username = document.getElementById("regUsername").value.trim();
+            const email = document.getElementById("regEmail").value.trim();
+            const password = document.getElementById("regPassword").value;
+            const message = document.getElementById("signupMessage");
+            const submitBtn = document.getElementById("signupBtn");
 
+            submitBtn.textContent = "Creating Account in Database...";
+            submitBtn.disabled = true;
 
+            try {
+                const response = await fetch(`${API_BASE_URL}/api/auth/signup`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        username: username,
+                        email: email,
+                        password: password,
+                        full_name: fullName
+                    })
+                });
 
-        /* ==============================
-           FORGOT PASSWORD
-        ============================== */
+                const data = await response.json();
+
+                if (response.ok && data.status === "success") {
+                    message.className = "message success";
+                    message.textContent = "Account registered in SQLite Database! Switching to login...";
+
+                    document.getElementById("username").value = username;
+                    document.getElementById("password").value = password;
+
+                    setTimeout(function() {
+                        switchTab("login");
+                        const loginMsg = document.getElementById("loginMessage");
+                        loginMsg.className = "message success";
+                        loginMsg.textContent = "Account created! Click Login to continue.";
+                    }, 1200);
+                } else {
+                    message.className = "message error";
+                    message.textContent = data.detail || data.message || "Sign up failed.";
+                }
+            } catch (err) {
+                console.error("Sign up error:", err);
+                message.className = "message error";
+                message.textContent = "Cannot connect to backend server at http://127.0.0.1:8000. Please ensure main.py is running.";
+            } finally {
+                submitBtn.textContent = "Sign Up & Save to Database";
+                submitBtn.disabled = false;
+            }
+        });
 
         function forgotPassword(event) {
-
             event.preventDefault();
-
-
-            const message =
-                document.getElementById("message");
-
-
-            message.className =
-                "message success";
-
-
-            message.textContent =
-                "Password reset will be connected later.";
-
+            alert("For demonstration purposes, you can use the default demo credentials (demo / 123456) or create a new account.");
         }
-
-
-
-        /* ==============================
-           CREATE ACCOUNT
-        ============================== */
-
-        function createAccount(event) {
-
-            event.preventDefault();
-
-
-            const message =
-                document.getElementById("message");
-
-
-            message.className =
-                "message success";
-
-
-            message.textContent =
-                "Registration page will be added later.";
-
-        }
-
     </script>
-
 
 </body>
 

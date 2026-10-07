@@ -17,81 +17,73 @@ RANDOM_STATE = 42
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH = os.path.join(BASE_DIR, "..", "data", "tatkal_sathi_dataset_generated.xlsx")
-df = pd.read_excel(DATA_PATH)
+MODEL_PATH = os.path.join(BASE_DIR, "model1_seat_probability.pkl")
 
-print(f"Loaded {len(df)} rows, {df.shape[1]} columns")
-print(df["booking_outcome"].value_counts(normalize=True))
+_df = None
 
-df["date"] = pd.to_datetime(df["date"])
-df["month"] = df["date"].dt.month
-df["is_weekend"] = df["day_of_week"].isin(["Saturday", "Sunday"]).astype(int)
+def get_df():
+    global _df
+    if _df is None:
+        if os.path.exists(DATA_PATH):
+            _df = pd.read_excel(DATA_PATH)
+        else:
+            _df = pd.DataFrame()
+    return _df
 
-df["seat_pressure"] = df["seats_requested"] / df["total_seats"]
 
-FEATURES = [
-    "route",
-    "class",
-    "quota",
-    "day_of_week",
-    "month",
-    "is_weekend",
-    "is_holiday_or_festival",
-    "distance_km",
-    "seats_requested",
-    "total_seats",
-    "seat_pressure",
-]
-TARGET = "booking_outcome"
+def train_model():
+    df = get_df()
+    if df.empty:
+        return None
 
-X = df[FEATURES]
-y = (df[TARGET] == "success").astype(int)  
+    df["date"] = pd.to_datetime(df["date"])
+    df["month"] = df["date"].dt.month
+    df["day_of_week"] = df["date"].dt.day_name()
+    df["is_weekend"] = df["day_of_week"].isin(["Saturday", "Sunday"]).astype(int)
+    df["seat_pressure"] = df["seats_requested"] / df["total_seats"]
 
-CATEGORICAL = ["route", "class", "quota", "day_of_week"]
-NUMERIC = [c for c in FEATURES if c not in CATEGORICAL]
+    features = [
+        "route", "class", "quota", "day_of_week", "month",
+        "is_weekend", "is_holiday_or_festival", "distance_km",
+        "seats_requested", "total_seats", "seat_pressure",
+    ]
+    categorical = ["route", "class", "quota", "day_of_week"]
 
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=RANDOM_STATE, stratify=y
-)
+    X = df[features]
+    y = (df["booking_outcome"] == "success").astype(int)
 
-preprocessor = ColumnTransformer(
-    transformers=[
-        ("cat", OneHotEncoder(handle_unknown="ignore"), CATEGORICAL),
-    ],
-    remainder="passthrough",  
-)
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.2, random_state=RANDOM_STATE, stratify=y
+    )
 
-model = RandomForestClassifier(
-    n_estimators=300,
-    max_depth=6,
-    class_weight="balanced",
-    random_state=RANDOM_STATE,
-)
+    preprocessor = ColumnTransformer(
+        transformers=[
+            ("cat", OneHotEncoder(handle_unknown="ignore"), categorical),
+        ],
+        remainder="passthrough",
+    )
 
-pipeline = Pipeline(steps=[("preprocess", preprocessor), ("model", model)])
+    model = RandomForestClassifier(
+        n_estimators=100,
+        max_depth=6,
+        class_weight="balanced",
+        random_state=RANDOM_STATE,
+    )
 
-pipeline.fit(X_train, y_train)
+    pipe = Pipeline(steps=[("preprocess", preprocessor), ("model", model)])
+    pipe.fit(X_train, y_train)
+    joblib.dump(pipe, MODEL_PATH)
+    return pipe
 
-y_pred = pipeline.predict(X_test)
-y_proba = pipeline.predict_proba(X_test)[:, 1]
 
-print("\n--- Evaluation ---")
-print(classification_report(y_test, y_pred, target_names=["fail", "success"]))
-print("ROC-AUC:", round(roc_auc_score(y_test, y_proba), 3))
-print("Confusion matrix:\n", confusion_matrix(y_test, y_pred))
+if os.path.exists(MODEL_PATH):
+    try:
+        pipeline = joblib.load(MODEL_PATH)
+    except Exception:
+        pipeline = train_model()
+else:
+    pipeline = train_model()
 
-ohe = pipeline.named_steps["preprocess"].named_transformers_["cat"]
-cat_names = ohe.get_feature_names_out(CATEGORICAL)
-all_feature_names = list(cat_names) + NUMERIC
-importances = pipeline.named_steps["model"].feature_importances_
-
-print("\n--- Top 10 most important features ---")
-imp_df = pd.DataFrame(
-    {"feature": all_feature_names, "importance": importances}
-).sort_values("importance", ascending=False)
-print(imp_df.head(10).to_string(index=False))
-
-joblib.dump(pipeline, "model1_seat_probability.pkl")
-print("\nSaved model to model1_seat_probability.pkl")
 
 
 def predict_seat_probability(

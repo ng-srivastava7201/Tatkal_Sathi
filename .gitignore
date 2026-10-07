@@ -216,3 +216,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# Tatkal Sathi
+*.db
+*.sqlite
+*.sqlite3
+
+# Node.js
+node_modules/
