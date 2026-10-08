@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "frontend": "npm --prefix Frontend run dev",
-    "backend": "cd Backende && venv\\Scripts\\python.exe -m uvicorn main:app --reload",
+    "backend": "cd Backende && ..\\env\\Scripts\\python.exe -m uvicorn main:app --reload --port 8000",
     "dev": "concurrently \"npm run backend\" \"npm run frontend\""
   },
   "devDependencies": {
-    "concurrently": "^9.2.1"
+    "concurrently": "^9.2.4"
   }
 }

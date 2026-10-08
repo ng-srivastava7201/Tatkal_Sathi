@@ -81,7 +81,6 @@
             background: #1976d2;
         }
 
-        /* TITLE */
 
         .page-title {
             margin-bottom: 25px;
@@ -468,7 +467,6 @@
 
 <body>
 
-    <!-- NAVBAR -->
 
     <div class="navbar">
 
@@ -485,7 +483,6 @@
 
     <div class="container">
 
-        <!-- PROGRESS -->
 
         <div class="progress-container">
 
@@ -506,8 +503,6 @@
         </div>
 
 
-        <!-- TITLE -->
-
         <div class="page-title">
 
             <h1>
@@ -522,7 +517,6 @@
         </div>
 
 
-        <!-- CURRENT BOOKING -->
 
         <div class="booking-info">
 
@@ -600,8 +594,6 @@
         </div>
 
 
-        <!-- TRAIN PRIORITY -->
-
         <div class="card">
 
             <h2>
@@ -614,234 +606,109 @@
             </p>
 
 
-            <!-- TRAIN 1 -->
-
             <div
                 class="train-option selected"
                 id="trainOption1"
                 onclick="selectTrain(this, 1)"
             >
-
                 <div class="train-top">
-
-                    <div class="train-name">
-                        12001 - Bhopal Express
+                    <div class="train-name" id="trainName1">
+                        Vande Bharat Express (Rani Kamlapati - Hazrat Nizamuddin)
                     </div>
-
                     <div class="priority">
-                        Priority 1
+                        Priority 1 (Selected)
                     </div>
-
                 </div>
 
                 <div class="train-details">
-
                     <div>
-
-                        <div class="detail-label">
-                            DEPARTURE
-                        </div>
-
-                        <div class="detail-value">
-                            08:00 AM
-                        </div>
-
+                        <div class="detail-label">DEPARTURE</div>
+                        <div class="detail-value" id="trainDep1">05:40 AM</div>
                     </div>
-
                     <div>
-
-                        <div class="detail-label">
-                            ARRIVAL
-                        </div>
-
-                        <div class="detail-value">
-                            05:30 PM
-                        </div>
-
+                        <div class="detail-label">ARRIVAL</div>
+                        <div class="detail-value" id="trainArr1">01:10 PM</div>
                     </div>
-
                     <div>
-
-                        <div class="detail-label">
-                            CLASS
-                        </div>
-
-                        <div class="detail-value">
-                            3A
-                        </div>
-
+                        <div class="detail-label">CLASS</div>
+                        <div class="detail-value" id="trainClass1">CC</div>
                     </div>
-
                     <div>
-
-                        <div class="detail-label">
-                            FARE
-                        </div>
-
-                        <div class="detail-value">
-                            ₹1,245
-                        </div>
-
+                        <div class="detail-label">FARE</div>
+                        <div class="detail-value" id="trainFare1">₹1,450</div>
                     </div>
-
                 </div>
-
             </div>
-
-
-            <!-- TRAIN 2 -->
 
             <div
                 class="train-option"
                 id="trainOption2"
                 onclick="selectTrain(this, 2)"
             >
-
                 <div class="train-top">
-
-                    <div class="train-name">
-                        12155 - Shaan-e-Bhopal
+                    <div class="train-name" id="trainName2">
+                        12002 - New Delhi - Bhopal Shatabdi Express
                     </div>
-
                     <div class="priority">
                         Priority 2
                     </div>
-
                 </div>
 
                 <div class="train-details">
-
                     <div>
-
-                        <div class="detail-label">
-                            DEPARTURE
-                        </div>
-
-                        <div class="detail-value">
-                            06:15 AM
-                        </div>
-
+                        <div class="detail-label">DEPARTURE</div>
+                        <div class="detail-value" id="trainDep2">03:10 PM</div>
                     </div>
-
                     <div>
-
-                        <div class="detail-label">
-                            ARRIVAL
-                        </div>
-
-                        <div class="detail-value">
-                            03:45 PM
-                        </div>
-
+                        <div class="detail-label">ARRIVAL</div>
+                        <div class="detail-value" id="trainArr2">11:50 PM</div>
                     </div>
-
                     <div>
-
-                        <div class="detail-label">
-                            CLASS
-                        </div>
-
-                        <div class="detail-value">
-                            3A
-                        </div>
-
+                        <div class="detail-label">CLASS</div>
+                        <div class="detail-value" id="trainClass2">CC</div>
                     </div>
-
                     <div>
-
-                        <div class="detail-label">
-                            FARE
-                        </div>
-
-                        <div class="detail-value">
-                            ₹1,180
-                        </div>
-
+                        <div class="detail-label">FARE</div>
+                        <div class="detail-value" id="trainFare2">₹1,240</div>
                     </div>
-
                 </div>
-
             </div>
-
-
-            <!-- TRAIN 3 -->
-
             <div
                 class="train-option"
                 id="trainOption3"
                 onclick="selectTrain(this, 3)"
             >
-
                 <div class="train-top">
-
-                    <div class="train-name">
-                        12627 - Karnataka Express
+                    <div class="train-name" id="trainName3">
+                        12155 - Shaan-e-Bhopal SF Express
                     </div>
-
                     <div class="priority">
                         Priority 3
                     </div>
-
                 </div>
 
                 <div class="train-details">
-
                     <div>
-
-                        <div class="detail-label">
-                            DEPARTURE
-                        </div>
-
-                        <div class="detail-value">
-                            10:30 AM
-                        </div>
-
+                        <div class="detail-label">DEPARTURE</div>
+                        <div class="detail-value" id="trainDep3">10:40 PM</div>
                     </div>
-
                     <div>
-
-                        <div class="detail-label">
-                            ARRIVAL
-                        </div>
-
-                        <div class="detail-value">
-                            08:15 PM
-                        </div>
-
+                        <div class="detail-label">ARRIVAL</div>
+                        <div class="detail-value" id="trainArr3">07:50 AM</div>
                     </div>
-
                     <div>
-
-                        <div class="detail-label">
-                            CLASS
-                        </div>
-
-                        <div class="detail-value">
-                            3A
-                        </div>
-
+                        <div class="detail-label">CLASS</div>
+                        <div class="detail-value" id="trainClass3">3A</div>
                     </div>
-
                     <div>
-
-                        <div class="detail-label">
-                            FARE
-                        </div>
-
-                        <div class="detail-value">
-                            ₹1,320
-                        </div>
-
+                        <div class="detail-label">FARE</div>
+                        <div class="detail-value" id="trainFare3">₹1,050</div>
                     </div>
-
                 </div>
-
             </div>
 
         </div>
 
-
-        <!-- BOOKING SETTINGS -->
 
         <div class="card">
 
@@ -864,7 +731,6 @@
 
             <div class="form-grid">
 
-                <!-- QUOTA -->
 
                 <div class="form-group">
 
@@ -887,7 +753,6 @@
                 </div>
 
 
-                <!-- CLASS -->
 
                 <div class="form-group">
 
@@ -938,7 +803,6 @@
                 </div>
 
 
-                <!-- PRIORITY -->
 
                 <div class="form-group">
 
@@ -970,8 +834,6 @@
 
             </div>
 
-
-            <!-- FARE SUMMARY -->
 
             <div class="fare-box">
 
@@ -1025,8 +887,6 @@
         </div>
 
 
-        <!-- AUTOMATION SETTINGS -->
-
         <div class="card">
 
             <h2>
@@ -1039,7 +899,6 @@
             </p>
 
 
-            <!-- AUTO SWITCH -->
 
             <div class="toggle-row">
 
@@ -1071,8 +930,6 @@
             </div>
 
 
-            <!-- AUTO BOOKING -->
-
             <div class="toggle-row">
 
                 <div class="toggle-text">
@@ -1102,8 +959,6 @@
 
             </div>
 
-
-            <!-- NOTIFICATIONS -->
 
             <div class="toggle-row">
 
@@ -1137,8 +992,6 @@
         </div>
 
 
-        <!-- BUTTONS -->
-
         <div class="button-container">
 
             <button
@@ -1165,133 +1018,95 @@
 
     <script>
 
-        /* =========================================
-           CURRENT SELECTED TRAIN
-        ========================================= */
+        let selectedTrainNumber = 1;
+        let selectedTrainName = localStorage.getItem("selectedTrain") || "Vande Bharat Express (Rani Kamlapati - Hazrat Nizamuddin)";
 
-        let selectedTrainNumber = 0;
-
-        let selectedTrainName =
-            localStorage.getItem("selectedTrain") || "";
-
-
-        /* =========================================
-           TRAIN DATA
-        ========================================= */
-
-        const trainNames = {
-
-            1: "12001 - Bhopal Express",
-
-            2: "12155 - Shaan-e-Bhopal",
-
-            3: "12627 - Karnataka Express"
-
+        let trainNames = {
+            1: selectedTrainName,
+            2: "12002 - New Delhi - Bhopal Shatabdi Express",
+            3: "12155 - Shaan-e-Bhopal SF Express"
         };
 
-
-        /* =========================================
-           SELECT TRAIN
-        ========================================= */
-
         function selectTrain(element, trainNumber) {
-
-            document
-                .querySelectorAll(".train-option")
-                .forEach(function(train) {
-
-                    train.classList.remove("selected");
-
-                });
-
+            document.querySelectorAll(".train-option").forEach(function(train) {
+                train.classList.remove("selected");
+            });
 
             element.classList.add("selected");
-
-
             selectedTrainNumber = trainNumber;
-
-            selectedTrainName =
-                trainNames[trainNumber];
-
+            selectedTrainName = trainNames[trainNumber];
         }
-
-
-        /* =========================================
-           LOAD CURRENT BOOKING
-        ========================================= */
 
         function loadCurrentBooking() {
+            const train = localStorage.getItem("selectedTrain") || "Vande Bharat Express (Rani Kamlapati - Hazrat Nizamuddin)";
+            const from = localStorage.getItem("fromStation") || "Bhopal";
+            const to = localStorage.getItem("toStation") || "New Delhi";
+            const date = localStorage.getItem("journeyDate");
+            const travelClass = localStorage.getItem("travelClass") || "CC";
+            const fare = localStorage.getItem("fare") || "1450";
 
-            const train =
-                localStorage.getItem("selectedTrain");
-
-            const from =
-                localStorage.getItem("fromStation");
-
-            const to =
-                localStorage.getItem("toStation");
-
-            const date =
-                localStorage.getItem("journeyDate");
-
-
-            if (train) {
-
-                document.getElementById("currentTrain")
-                    .textContent = train;
-
+            if (document.getElementById("currentTrain")) {
+                document.getElementById("currentTrain").textContent = train;
             }
-
-
-            if (from) {
-
-                document.getElementById("currentFrom")
-                    .textContent = from;
-
+            if (document.getElementById("currentFrom")) {
+                document.getElementById("currentFrom").textContent = from;
             }
-
-
-            if (to) {
-
-                document.getElementById("currentTo")
-                    .textContent = to;
-
+            if (document.getElementById("currentTo")) {
+                document.getElementById("currentTo").textContent = to;
             }
-
 
             if (date) {
-
-                const dateObject =
-                    new Date(date + "T00:00:00");
-
+                const dateObject = new Date(date + "T00:00:00");
                 if (!isNaN(dateObject.getTime())) {
-
-                    document.getElementById("currentDate")
-                        .textContent =
-                        dateObject.toLocaleDateString(
-                            "en-IN",
-                            {
-                                day: "2-digit",
-                                month: "short",
-                                year: "numeric"
-                            }
-                        );
-
+                    document.getElementById("currentDate").textContent =
+                        dateObject.toLocaleDateString("en-IN", {
+                            day: "2-digit",
+                            month: "short",
+                            year: "numeric"
+                        });
                 } else {
-
-                    document.getElementById("currentDate")
-                        .textContent = date;
-
+                    document.getElementById("currentDate").textContent = date;
                 }
+            }
+            selectedTrainName = train;
+            trainNames[1] = train;
 
+            if (document.getElementById("trainName1")) {
+                document.getElementById("trainName1").textContent = train;
+            }
+            if (document.getElementById("trainClass1")) {
+                document.getElementById("trainClass1").textContent = travelClass;
+            }
+            if (document.getElementById("trainFare1")) {
+                document.getElementById("trainFare1").textContent = "₹" + Number(fare).toLocaleString("en-IN");
             }
 
+            const isDelhiMumbai = (from.toLowerCase().includes("delhi") && to.toLowerCase().includes("mumbai")) ||
+                                  (from.toLowerCase().includes("mumbai") && to.toLowerCase().includes("delhi"));
+
+            if (isDelhiMumbai) {
+                trainNames[2] = "12954 - August Kranti Rajdhani Express";
+                trainNames[3] = "12926 - Paschim Superfast Express";
+                if (document.getElementById("trainName2")) document.getElementById("trainName2").textContent = trainNames[2];
+                if (document.getElementById("trainName3")) document.getElementById("trainName3").textContent = trainNames[3];
+                if (document.getElementById("trainDep2")) document.getElementById("trainDep2").textContent = "05:15 PM";
+                if (document.getElementById("trainArr2")) document.getElementById("trainArr2").textContent = "10:05 AM";
+            } else {
+                if (train.toLowerCase().includes("vande bharat")) {
+                    trainNames[2] = "12002 - New Delhi - Bhopal Shatabdi Express";
+                    trainNames[3] = "12155 - Shaan-e-Bhopal SF Express";
+                } else if (train.toLowerCase().includes("shatabdi")) {
+                    trainNames[2] = "20172 - Vande Bharat Express";
+                    trainNames[3] = "12155 - Shaan-e-Bhopal SF Express";
+                } else {
+                    trainNames[2] = "12002 - Bhopal Shatabdi Express";
+                    trainNames[3] = "20172 - Vande Bharat Express";
+                }
+                if (document.getElementById("trainName2")) document.getElementById("trainName2").textContent = trainNames[2];
+                if (document.getElementById("trainName3")) document.getElementById("trainName3").textContent = trainNames[3];
+            }
         }
 
-
-        /* =========================================
-           LOAD SAVED PREFERENCES
-        ========================================= */
 
         function loadSavedPreferences() {
 
@@ -1378,10 +1193,6 @@
         }
 
 
-        /* =========================================
-           UPDATE SUMMARY
-        ========================================= */
-
         function updateSummary() {
 
             const fare =
@@ -1422,9 +1233,6 @@
         }
 
 
-        /* =========================================
-           CLASS CHANGE
-        ========================================= */
 
         document
             .getElementById("travelClass")
@@ -1434,9 +1242,6 @@
             );
 
 
-        /* =========================================
-           FARE CHANGE
-        ========================================= */
 
         document
             .getElementById("maxFare")
@@ -1446,10 +1251,6 @@
             );
 
 
-        /* =========================================
-           AUTO SWITCH CHANGE
-        ========================================= */
-
         document
             .getElementById("autoSwitch")
             .addEventListener(
@@ -1458,9 +1259,6 @@
             );
 
 
-        /* =========================================
-           BACK
-        ========================================= */
 
         function goBack() {
 
@@ -1470,9 +1268,6 @@
         }
 
 
-        /* =========================================
-           CONTINUE
-        ========================================= */
 
         function continueToConfirm() {
 
@@ -1510,17 +1305,6 @@
             error.style.display = "none";
 
 
-            /* =====================================
-               SAVE PREFERENCES
-            ===================================== */
-
-            /*
-             * If the user selected a train on this page,
-             * save that train.
-             *
-             * Otherwise keep the train selected on
-             * booking.html.
-             */
 
             if (selectedTrainNumber !== 0) {
 
@@ -1574,19 +1358,11 @@
             );
 
 
-            /* =====================================
-               GO TO CONFIRM PAGE
-            ===================================== */
-
             window.location.href =
                 "confirm.html";
 
         }
 
-
-        /* =========================================
-           PAGE INITIALIZATION
-        ========================================= */
 
         document.addEventListener(
             "DOMContentLoaded",
