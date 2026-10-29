@@ -580,7 +580,7 @@
 
     </main>
 
-    <script type = "module">
+    <script type="module">
         const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000";
 
         function initializeDefaultDate() {
@@ -997,6 +997,13 @@ Session Holding: Pre-warmed IRCTC Session Active (No Logoffs)<br>
             btn.textContent = " Test 10:00 AM Auto-Trigger Now";
             btn.disabled = false;
         }
+
+        window.logout = logout;
+        window.selectQuota = selectQuota;
+        window.searchTrains = searchTrains;
+        window.selectTrain = selectTrain;
+        window.bookTrain = bookTrain;
+        window.triggerAutomationSimulation = triggerAutomationSimulation;
     </script>
 
 </body>
