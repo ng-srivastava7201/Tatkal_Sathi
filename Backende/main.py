@@ -6,7 +6,7 @@ from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 
 # & "..\env\Scripts\python.exe" -m uvicorn main:app --reload --port 8000
-# or npm dev run
+# or npm run dev
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(BASE_DIR, ".."))
